@@ -1,0 +1,39 @@
+"DOTAAbilities"
+{
+	"Version"	"1"
+  "item_dagon" "REMOVED"
+  "item_blood_grenade" {
+    "ItemStockTime"					"1"
+  }
+  "item_tome_of_knowledge" {
+    "ID"							"257"
+    "ItemStackable"					"1"
+    "ItemPurchasable"				"1"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+    "ItemStockMax"					"4"
+		"ItemStockInitial"				"4"
+		"ItemStockTime"					"99999999"
+    "IsObsolete"					"0"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+    "Model"							"models/gameplay/attrib_tome_xp.vmdl"
+    "ItemCost"						"75"
+    "ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+    "AbilitySharedCooldown"			"tome"
+    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_bonus"				"200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_per_use"			"50"
+			}
+		}
+  }
+}

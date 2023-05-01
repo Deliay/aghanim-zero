@@ -1,0 +1,31 @@
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: 
+	//=================================================================================================================
+	"npc_dota_hero_ogre_magi_aghsfort"
+	{
+		"override_hero"		"npc_dota_hero_ogre_magi"
+		"MaxModelScaleMultiplier"	"10.0"
+
+		"Ability1"		"aghsfort_ogre_magi_fireblast"
+		"Ability2"		"aghsfort_ogre_magi_ignite"
+		"Ability3"		"aghsfort_ogre_magi_bloodlust"
+		"Ability4"		"aghsfort_ogre_magi_unrefined_fireblast"
+		// "Ability5"		"aghsfort_undying_tombstone"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"aghsfort_ogre_magi_multicast"
+		"Ability10"		"special_bonus_unique_ogre_magi_ignite+damage"
+		"Ability11"		"special_bonus_unique_ogre_magi_fireblast-cd"
+		"Ability12"		"special_bonus_attack_damage_80"
+		"Ability13"		"special_bonus_hp_275"
+		"Ability14"		"special_bonus_strength_25"
+		"Ability15"		"special_bonus_unique_ogre_magi_bloodlust+as"
+		// "Ability16"		"special_bonus_20_bash_2"
+		"Ability16"		"special_bonus_unique_ogre_magi_ignite+target"
+		"Ability17"		"special_bonus_unique_ogre_magi_fireblast+damage"
+
+		"ArmorPhysical"		"6.000000"
+		"MovementSpeed"		"290"
+	}
+}

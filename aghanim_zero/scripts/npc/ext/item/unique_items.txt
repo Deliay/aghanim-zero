@@ -1,0 +1,113 @@
+// These items can be only one in game
+"DOTAAbilities"
+{
+  	"item_recipe_phantom_wings"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20112"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"					"item_recipe_thermail_active"
+		"AbilityBehavior"						"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"	
+		"ItemShopTags"						""
+        "ItemStockMax"					"1"
+		"ItemStockTime"					"99999999.0"	
+        "ItemKillable"					"0"
+		// "ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_phantom_wings"
+		"ItemRequirements"
+		{
+			"01"						"item_manta;item_renge"
+		}
+    }	
+	//=================================================================================================================
+	// 
+	//=================================================================================================================
+	"item_phantom_wings"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20113"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		// "Model"							"models/items/wraith_king/blistering_shade/mesh/blistering_shade_alt.vmdl"
+
+		"FightRecapLevel"				"1"
+
+		"BaseClass"					    "item_lua"
+		"AbilityTextureName"			"item_iwingb"
+		"ScriptFile"					"items/ext/item_phantom_wings"
+
+		"ItemRequiresCharges"			"0"
+		"ItemDisplayCharges"			"0"
+		"ItemStackable"					"0"
+		"ItemPermanent"					"1"
+
+		"AbilityCastRange"				"650"
+		"AbilityCooldown"				"7.5"
+		"AbilityManaCost"				"25"
+		"AbilitySharedCooldown"			"renge"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"agi;str;int;attack_speed;regen_mana;damage;move_speed;hard_to_tag;teleport"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"iwing"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"99999999.0"	
+        "ItemSellable"                  "0"
+        "ItemKillable"					"0"
+		
+		"precache"
+		{
+		}
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"blink_range"			"650"
+			"melee_cd"				"7.5"
+			"range_cd"				"10"
+			"sec_cast"				"1.5"
+			"bonus_range"			"350"
+			"bonus_as"				"500"
+			"attack_point"			"0.1"
+			"movement_slow"			"100"
+			"slow_duration"			"0.8"
+			"attacks"				"2"
+
+			"bonus_health"			"200"
+			"bonus_mana_regen"		"4.0"
+			"bonus_damage"			"35"
+
+			"bonus_strength"		"24"
+			"bonus_agility"			"26"
+			"bonus_intellect"		"20"
+			"bonus_attack_speed"	"25"
+			"bonus_movement_speed"	"10"
+			"illusion_duration"			"8"
+
+			// these all needs -100
+			"outgoing_melee"			"45"
+			"incoming_damage"			"250"
+			"outgoing_ranged"			"30"
+
+			"invuln_duration"		"0.1"
+		}
+	}
+}

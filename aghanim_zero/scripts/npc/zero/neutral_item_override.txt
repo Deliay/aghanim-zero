@@ -1,0 +1,237 @@
+	"item_pogo_stick" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_chipped_vest" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_oblivions_locket " {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_precious_egg" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_unstable_wand" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_longclaws_amulet" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_bear_cloak" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_winter_embrace" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_poor_mans_shield" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_mysterious_hat" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_possessed_mask" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_creed_of_omniscience" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_broom_handle" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_keen_optic" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ocean_heart" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_faded_broach" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_arcane_ring" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_dragon_scale" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_essence_ring" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_bullwhip" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_paw_of_lucius" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ogre_seal_totem" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_bogduggs_baldric" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_pelt_of_the_old_wolf" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_quicksilver_amulet" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ice_dragon_maw" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_nether_shawl" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_misericorde" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ambient_sorcery" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_vambrace" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ring_of_aquila" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_pupils_gift" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_grove_bow" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_craggy_coat" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_imp_claw" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_enchanted_quiver" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_greater_faerie_fire" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_vampire_fangs" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_cloak_of_flames" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_sign_of_the_arachnid" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_preserved_skull" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_gravel_foot" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_bogduggs_cudgel" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_psychic_headband" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_quickening_charm" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_titan_sliver" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ceremonial_robe" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_elven_tunic" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_orb_of_destruction" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_paladin_sword" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_penta_edged_sword" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ascetic_cap" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_spy_gadget" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_the_leveller" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_trickster_cloak" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_stormcrafter" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_stony_coat" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_bogduggs_lucky_femur" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_stonework_pendant" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_spell_prism" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_timeless_relic" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_watchers_gaze" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_guardian_shell" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_havoc_hammer" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_witless_shako" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_panic_button" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_minotaur_horn" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ex_machina" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_wand_of_the_brine" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_fallen_sky" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_treads_of_ermacor" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_force_boots" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_slippers_of_the_abyss" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_glimmerdark_shield" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_desolator_2" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_force_field" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_carapace_of_qaldin" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_book_of_shadows" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_apex" {
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}

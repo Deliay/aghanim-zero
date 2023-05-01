@@ -1,0 +1,24 @@
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Nevermore
+	//=================================================================================================================
+	"npc_dota_hero_nevermore_aghsfort"
+	{
+		"override_hero"		"npc_dota_hero_nevermore"
+		"Ability1"		"aghsfort_nevermore_shadowraze1"
+		"Ability2"		"aghsfort_nevermore_shadowraze2"
+		"Ability3"		"aghsfort_nevermore_shadowraze3"
+		"Ability4"		"aghsfort_nevermore_necromastery"
+		"Ability5"		"aghsfort_nevermore_dark_lord"
+		"Ability6"		"aghsfort_nevermore_requiem"
+		"Ability10"		"special_bonus_unique_aghsfort_nevermore_necromastery+amp"
+		"Ability11"		"special_bonus_attack_speed_20"
+		"Ability12"		"special_bonus_attack_range_125"
+		"Ability13"		"special_bonus_movement_speed_25"
+		"Ability14"		"special_bonus_unique_aghsfort_nevermore_necromastery+atk"
+		"Ability15"		"special_bonus_unique_aghsfort_nevermore_shadowraze+damage"
+		"Ability16"		"special_bonus_unique_aghsfort_nevermore_dark_lord-armor"
+		"Ability17"		"special_bonus_unique_aghsfort_nevermore_requiem-cd"
+	}
+}

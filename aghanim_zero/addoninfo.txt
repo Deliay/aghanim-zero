@@ -1,0 +1,19 @@
+"AddonInfo"
+{
+	"maps"				"hub"
+	"MinimalPrecache"	"1"
+	"IsPlayable"		"1"
+	"EventGame"			"1"
+	"aghanim"
+	{
+		"MaxPlayers"	"4"
+	}
+	"main"
+	{
+		"MaxPlayers"	"4"
+	}
+	"hub"
+	{
+		"MaxPlayers"	"4"
+	}
+}

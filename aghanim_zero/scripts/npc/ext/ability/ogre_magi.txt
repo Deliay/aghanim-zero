@@ -1,0 +1,754 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Ogre Magi: Fireblast
+	//=================================================================================================================
+	"aghsfort_ogre_magi_fireblast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/fireblast"
+		"AbilityTextureName"			"ogre_magi_fireblast"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"aghsfort_ogre_magi_unrefined_fireblast"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_OgreMagi.Fireblast.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"475"
+		"AbilityCastPoint"				"0.45"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11 10 9 8"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 80 90 100"
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_duration"		"1.5"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"multicast_delay"	"0.6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fireblast_damage"		"70 130 190 250"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_fireblast+damage"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range"		    "475"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Unrefined Fireblast ( scepter ability )
+	//=================================================================================================================
+	"aghsfort_ogre_magi_unrefined_fireblast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/unrefined_fireblast"
+		"AbilityTextureName"			"ogre_magi_unrefined_fireblast"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"aghsfort_ogre_magi_fireblast"
+
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"475"
+		"AbilityCastPoint"				"0.45"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"400"
+		
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_duration"		"1.5"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"multicast_delay"	"0.6"
+			}
+
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"mana"		"35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fireblast_damage"		"100 150 200 250"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_fireblast+damage"
+			}
+            "05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_damage"   		"0.5 1 1.5 2"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range"		    "475"
+			}
+		}
+	}
+
+    "special_bonus_unique_ogre_magi_fireblast+damage"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"150"
+                "ad_linked_ability"	   "aghsfort_ogre_magi_fireblast"
+			}
+        }   
+	}
+
+    "special_bonus_unique_ogre_magi_fireblast-cd"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"				"1"
+                "ad_linked_ability"	   "aghsfort_ogre_magi_fireblast"
+			}
+        }   
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Ignite
+	//=================================================================================================================
+	"aghsfort_ogre_magi_ignite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/ignite"
+		"AbilityTextureName"			"ogre_magi_ignite"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_OgreMagi.Ignite.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700 800 900 1000"
+		"AbilityCastPoint"				"0.35"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 110"
+				
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5 6 7 8"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"burn_damage"		"20 30 40 50"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_ignite+damage"
+			}		
+
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow_movement_speed_pct"		"-20 -22 -24 -26"
+			}
+
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1000"
+			}
+            	
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"multicast_delay"	"0.6"
+			}	
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"targets"		        "2"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_ignite+target"
+			}	
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+    "special_bonus_unique_ogre_magi_ignite+damage"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"16"
+                "ad_linked_ability"	   "aghsfort_ogre_magi_ignite"
+			}
+        }   
+	}
+
+    "special_bonus_unique_ogre_magi_ignite+target"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"3"
+                "ad_linked_ability"	   "aghsfort_ogre_magi_ignite"
+			}
+        }   
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Bloodlust
+	//=================================================================================================================
+	"aghsfort_ogre_magi_bloodlust"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/bloodlust"
+		"AbilityTextureName"			"ogre_magi_bloodlust"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_OgreMagi.Bloodlust.Target"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.45"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 16 14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 55 60 65"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"modelscale"		"25"
+			}	
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"		"7 9 11 13"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"30 40 50 60"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_bloodlust+as"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"self_bonus"	"30 50 70 90"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_bloodlust+as"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"30"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_bloodlust_aoe"			"700"
+			}
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+    "special_bonus_unique_ogre_magi_bloodlust+as"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"25"
+                "ad_linked_ability"	   "aghsfort_ogre_magi_bloodlust"
+			}
+        }   
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Multicast
+	//=================================================================================================================
+	"aghsfort_ogre_magi_multicast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/multicast"
+		"AbilityTextureName"			"ogre_magi_multicast"
+		"MaxLevel"						"3"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_om/ogre_magi_multicast.vpcf"
+        }
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_2_times"		"75 75 75"
+			}
+
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_3_times"		"0 30 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_4_times"		"0 0 15"
+			}
+            "04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_5_times"		"10"
+			}
+            "04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"default_delay" 		"0"
+			}
+            "05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range_buffer" 		"600"
+			}
+            "06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"no_target_delay" 		"0.6"
+			}
+            "07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"aoe_bias"   		"150"
+			}
+		}
+	}
+   "aghsfort_ogre_magi_legend_fireblast_unref"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_fireblast"
+        "AbilityParentName"             "aghsfort_ogre_magi_fireblast"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana"            		"35"
+			}
+        }
+	}
+   "aghsfort_ogre_magi_legend_fireblast_aoe"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_fireblast"
+        "AbilityParentName"             "aghsfort_ogre_magi_fireblast"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aoe"            		"300"
+			}
+        }
+	}
+   "aghsfort_ogre_magi_legend_fireblast_atk"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_fireblast"
+        "AbilityParentName"             "aghsfort_ogre_magi_fireblast"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance"            		"14"
+			}
+        }
+	}
+
+   "aghsfort_ogre_magi_legend_ignite_ground"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_ignite"
+        "AbilityParentName"             "aghsfort_ogre_magi_ignite"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_om/ogre_magi_ignite_ground.vpcf"
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aoe"            		"300"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_mul"        		"0.5"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"interval"            		"0.5"
+			}
+            "04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"            		"2.0"
+			}
+        }
+	}
+   "aghsfort_ogre_magi_legend_ignite_splash"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_ignite"
+        "AbilityParentName"             "aghsfort_ogre_magi_ignite"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aoe"            		"350"
+			}
+        }
+	}
+   "aghsfort_ogre_magi_legend_ignite_stack"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_ignite"
+        "AbilityParentName"             "aghsfort_ogre_magi_ignite"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_mul"        		"0.1"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration_pct"        		"10"
+			}
+        }
+	}
+
+   "aghsfort_ogre_magi_legend_bloodlust_multicast"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_bloodlust"
+        "AbilityParentName"             "aghsfort_ogre_magi_bloodlust"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+   "aghsfort_ogre_magi_legend_bloodlust_shield"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_bloodlust"
+        "AbilityParentName"             "aghsfort_ogre_magi_bloodlust"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stack_time"        		"5.0"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_stack"        		"3"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"        		"1000"
+			}
+            "04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_thres"        		"5"
+			}
+        }
+	}
+   "aghsfort_ogre_magi_legend_bloodlust_str"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_bloodlust"
+        "AbilityParentName"             "aghsfort_ogre_magi_bloodlust"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"str_mul"        		"0.6"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_scale"        		"10"
+			}
+        }
+	}
+
+   "aghsfort_ogre_magi_legend_multicast_midas"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_multicast"
+        "AbilityParentName"             "aghsfort_ogre_magi_multicast"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+   "aghsfort_ogre_magi_legend_multicast_five"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_multicast"
+        "AbilityParentName"             "aghsfort_ogre_magi_multicast"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+   "aghsfort_ogre_magi_legend_multicast_stupid"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/ogre_magi/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "ogre_magi_multicast"
+        "AbilityParentName"             "aghsfort_ogre_magi_multicast"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"transfer_mul"        		"0.8"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"str_scale"        		"0.2"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"transfer_pct"        		"80"
+			}
+        }
+	}
+}

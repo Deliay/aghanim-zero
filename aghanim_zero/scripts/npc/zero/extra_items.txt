@@ -1,0 +1,48 @@
+"DOTAAbilities"
+{
+	"Version"	"1"
+  "item_recipe_dual_rapier" {
+    "ID"  "13128"
+    "BaseClass" "item_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "ItemCost" "1000"
+		"AbilityTextureName" "item_recipe"
+		"Model" "models/props_gameplay/recipe.vmdl"
+    "ItemRecipe"  "1"
+    "ItemStockMax"  "1"
+    "ItemStockTime" "99999999.0"	
+		"ItemShopTags"  ""
+    "ItemResult"  "item_dual_rapier"
+    "ItemRequirements" {
+      "01"  "item_rapier;item_rapier"
+    }
+  }
+  "item_dual_rapier" {
+    "ID"  "13129"
+		"Model" "models/props_gameplay/divine_rapier.vmdl"
+    "BaseClass" "item_lua"
+		"ScriptFile" "items/zero/item_dual_rapier"
+		"AbilityTextureName"			"item_rapier"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "ItemStockMax"  "1"
+    "ItemStockTime" "99999999.0"	
+		"ItemShopTags" "damage"
+		"ItemQuality" "epic"
+		"ItemAliases" "dual divine rapier"
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		"ItemSellable" "0"
+		"ItemKillable" "0"
+		"ItemDeclarations" "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+		"ItemContributesToNetWorthWhenDropped" "0"
+		"AllowedInBackpack" "0"
+		"IsTempestDoubleClonable" "0"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ShouldBeSuggested" "1"
+		"AbilitySpecial" {
+			"01" {
+				"var_type" "FIELD_INTEGER"
+				"bonus_damage" "700"
+			}
+		}
+  }
+}
