@@ -29,4 +29,4 @@ New-Item -Type SymbolicLink -Target 当前目录/aghanim-zero -Name aghanim_zero
 > 完全没问题
 
 ## 特别鸣谢
-阿哈利姆2 EXT作者CyFio
+阿哈利姆2 EXT作者CyFio (https://github.com/CyFio)
