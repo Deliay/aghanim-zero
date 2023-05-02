@@ -122,21 +122,6 @@
 		"item"		"item_renge"
 		"item"		"item_phantom_wings"
 
-		"item"		"item_greater_crit_v2"
-		"item"		"item_moon_butterfly"
-		"item"		"item_majo_thorn"
-		"item"		"item_save_world"
-		"item"		"item_ocean_pillar"
-		
-		"item"		"item_chrysanthemail"
-		"item"		"item_tarrasque_halberd"
-		"item"		"item_dyson_sphere"
-		"item"		"item_ollie_guard"
-		"item"		"item_gavuric"
-		"item"		"item_cuiradiance"
-		
-		"item"		"item_octarine_veil"
-		"item"		"item_thor_force"
 	}	
 	
 	// Level 1 - Green Recipes
@@ -319,6 +304,22 @@
 		"item"		"item_reaver"
 		"item"		"item_eagle"
 		"item"		"item_relic"
+		
+		"item"		"item_greater_crit_v2"
+		"item"		"item_moon_butterfly"
+		"item"		"item_majo_thorn"
+		"item"		"item_save_world"
+		"item"		"item_ocean_pillar"
+		
+		"item"		"item_chrysanthemail"
+		"item"		"item_tarrasque_halberd"
+		"item"		"item_dyson_sphere"
+		"item"		"item_ollie_guard"
+		"item"		"item_gavuric"
+		"item"		"item_cuiradiance"
+		
+		"item"		"item_octarine_veil"
+		"item"		"item_thor_force"
 	}
 
 	"pregame"
