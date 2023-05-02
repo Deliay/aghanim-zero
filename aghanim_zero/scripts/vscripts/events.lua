@@ -930,6 +930,7 @@ end
 
 function CAghanim:OnPlayerChat( event )
 	local nPlayerID = event.playerid
+	local sChatMsg = event.text
 	if nPlayerID == -1 then
 		return
 	end
@@ -965,7 +966,6 @@ function CAghanim:OnPlayerChat( event )
 		return
 	end
 
-	local sChatMsg = event.text
 	if sChatMsg:find( '^-win_encounter$' ) then
 		self:Dev_WinEncounter()
 	elseif sChatMsg:find( '^-win_game$' ) then
