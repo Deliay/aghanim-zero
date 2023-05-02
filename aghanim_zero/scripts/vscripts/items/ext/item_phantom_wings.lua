@@ -223,7 +223,7 @@ end
 function modifier_item_phantom_wings_sec_cast:OnDestroy()
 	if IsServer() and IsValid(self:GetAbility()) then
 		self:GetAbility():SetCurrentCharges(0)
-		self:GetAbility():UseResources(false, false, true)
+		self:GetAbility():UseResources(false, false, false, true)
 	end
 end
 -- 

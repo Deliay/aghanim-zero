@@ -243,6 +243,7 @@
 
 		"DOTA_HUD_TopBar_Difficulty"										"{s:difficulty_name}"
 
+		"ext"															"EXT 商店"
 		"boss_shop"															"钢背饰品店"
 		"DOTA_Subshop_1"													"基础"
 		"DOTA_Subshop_2"													"饰物"
@@ -1610,21 +1611,6 @@
 		"DOTA_Tooltip_modifier_aghsfort_special_void_spirit_astral_step_breach_burn"				"突破口"
 		"DOTA_Tooltip_modifier_aghsfort_special_void_spirit_astral_step_breach_burn_Description"	"持续受到伤害。"
 
-	  "DOTA_Tooltip_Ability_item_blink_frag"				"(EXT) 闪烁碎片"
-	  "DOTA_Tooltip_ability_item_blink_frag_Description"							"<h1>主动：闪烁</h1>传送到最远%blink_range%距离的位置。<br><br>受到来自敌方英雄或肉山的攻击时，闪烁碎片将在%blink_damage_cooldown%秒内无法使用。"
-	  "DOTA_Tooltip_ability_item_blink_frag_Note0"									"快速点击两次会将自己往己方泉水方向传送。"
-	  "DOTA_Tooltip_ability_item_blink_frag_Note1"									"如果闪烁传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
-
-	  "DOTA_Tooltip_Ability_item_blinger"						"(EXT) 闪刀"
-	  "DOTA_Tooltip_Ability_item_blinger_Description"			"<h1>主动：闪击</h1>传送到最远%blink_range%距离的位置。近战使用传送后，接下来的攻击必中且又远又快。<br><br>冷却(近战): %melee_cd%<br>冷却(远程): %range_cd%"
-	  "DOTA_Tooltip_Ability_item_renge"						"(EXT) 莲华"
-	  "DOTA_Tooltip_Ability_item_renge_Description"			"<h1>主动：闪击</h1>传送到最远%blink_range%距离的位置。近战使用传送后，接下来的%attacks%次攻击必中且又远又快。<br><br>冷却(近战): %melee_cd%<br>冷却(远程): %range_cd%"
-
-	  "DOTA_Tooltip_Ability_item_phantom_wings"											"(EXT) <font color='#aeaeff'>幻影翼</font>"
-	  "DOTA_Tooltip_Ability_item_phantom_wings_description"								"<h1><font color='#aeaeff'>主动：移形换影</font></h1>创建一个不可控幻象，自身瞬移到最远%blink_range%的位置。施放后%sec_cast%秒内可二段施法，创建幻象并将该幻象瞬移至最远%blink_range%的位置。每段施放都会获得%invuln_duration%秒无敌并施加弱驱散。近战使用时，本体和创建的幻象的下%attacks%次攻击又快又远。<br><br>冷却(近战): %melee_cd%<br>冷却(远程): %range_cd%"
-	  "DOTA_Tooltip_Ability_item_phantom_wings_Note0"									"幻象承受%incoming_damage%%%伤害，近战的幻象造成%outgoing_melee%%%伤害，远程的幻象造成%outgoing_ranged%%%伤害。"
-	  "DOTA_Tooltip_Ability_item_phantom_wings_bonus_damage"						"+基础攻击力"
-
 	 // Nevermore Begin
 	  // Legendary
 		// "DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"Fire the Tail"
@@ -1879,6 +1865,114 @@
 		"DOTA_Tooltip_modifier_aghsfort_ogre_magi_legend_multicast_stupid"			"我们还行吧"
 		"DOTA_Tooltip_modifier_aghsfort_ogre_magi_legend_multicast_stupid_Description"			"失去 %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%智力，获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%力量。"
 	 // Ogre Magi End
+
+	  // Double Daedalous
+	  "DOTA_Tooltip_ability_item_greater_crit_v2"									"(EXT) <font color='#FFC0CB'>达布洛斯之殇</font>"
+	  "DOTA_Tooltip_ability_item_greater_crit_v2_description"						"<h1><font color='#FFFF00'>被动：究极爆裂</font></h1>每次攻击都有%crit_chance%%% 几率造成%crit_multiplier%%% 暴击。"
+	  "DOTA_Tooltip_ability_item_greater_crit_v2_bonus_damage"								"+$damage"
+
+	  // Moon Fly
+	  "DOTA_Tooltip_ability_item_moon_butterfly"									"(EXT) <font color='#51f2ee'>月神闪蝶</font>"
+	  "DOTA_Tooltip_ability_item_moon_butterfly_description"						"<h1><font color='#51f2ee'>主动：月夜振翅</font></h1>立即进入持续%night_duration%秒的短暂夜晚并在期间获得飞行效果。夜间获得%bonus_night_vision%额外视野、增加%bonus_evasion_night%%%闪避以及提供%bonus_agi_night_pct%%% 敏捷和%bonus_ms_night_pct%%% 移速加成。"
+	  "DOTA_Tooltip_ability_item_moon_butterfly_bonus_agility"							"+$agi"
+	  "DOTA_Tooltip_ability_item_moon_butterfly_bonus_damage"							"+$damage"
+	  "DOTA_Tooltip_ability_item_moon_butterfly_bonus_evasion"							"+$evasion"
+	  "DOTA_Tooltip_ability_item_moon_butterfly_bonus_attack_speed"						"+$attack"
+	  "DOTA_Tooltip_modifier_item_moon_butterfly_night"									"月夜振翅"
+
+	  // Majo Thorn
+	  "DOTA_Tooltip_ability_item_majo_thorn"									"(EXT) <font color='#f90bff'>魔女之棘</font>"
+	  "DOTA_Tooltip_ability_item_majo_thorn_description"						"<h1><font color='#f90bff'>主动：灵魂粉碎</font></h1>沉默目标%silence_duration%秒。沉默结束时，对目标造成与沉默期间受到伤害总量%silence_damage_percent%%% 等额的魔法结算伤害。<br></br>沉默期间所有对目标的攻击不会落空，并有%tooltip_crit_chance%%% 概率造成%target_crit_multiplier%%% 暴击。英雄对沉默目标的攻击还会附带 %target_int_as_dmg%%% 智力值的魔法伤害。 \n<h1><font color='#f90bff'>被动：魔女印记</font></h1>每隔几秒，下一次攻击会对目标造成%slow%%% 减速，持续%slow_duration%秒。期间目标每秒受到你智力值%int_damage_multiplier%x 倍的魔法伤害。这次攻击不会落空。"
+	  "DOTA_Tooltip_ability_item_majo_thorn_bonus_damage"								"+$damage"
+	  "DOTA_Tooltip_ability_item_majo_thorn_bonus_attack_speed"							"+$attack"
+	  "DOTA_Tooltip_ability_item_majo_thorn_bonus_intellect"							"+$int"
+	  "DOTA_Tooltip_ability_item_majo_thorn_bonus_armor"								"+$armor"
+	  "DOTA_Tooltip_ability_item_majo_thorn_projectile_speed"							"+$projectile_speed"
+	  "DOTA_Tooltip_ability_item_majo_thorn_bonus_mana_regen"							"+$mana_regen"
+
+	  // Octarine Veil
+	  "DOTA_Tooltip_ability_item_octarine_veil"									"(EXT) <font color='#8477df'>幻彩面纱</font>"
+	  "DOTA_Tooltip_ability_item_octarine_veil_description"						"<h1><font color='#8477df'>主动：魔导粉碎</font></h1>发出一波弱化冲击，使%debuff_radius%范围内敌人受到的技能伤害增加%spell_amp%%% 。使用指向性技能时会自动触发一次%passive_radius_mul%倍范围的冲击。 \n<h1><font color='#8477df'>被动：圣人光环</font></h1>向友军提供%aura_mana_regen%点/秒魔法恢复和与其他减冷却叠加的%aura_cd_reduction%%% 冷却减少。\n<h1>被动：冷却缩减</h1>减少%bonus_cooldown%%% 所有技能冷却。不与玲珑心叠加。"
+	  "DOTA_Tooltip_modifier_item_octarine_veil_buff"									"圣人光环"
+	  "DOTA_Tooltip_modifier_item_octarine_veil_buff_description"						"提供%dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%每秒魔法回复和%dMODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING%%% 与其他效果叠加的冷却缩减。"
+
+	  "DOTA_Tooltip_ability_item_dodo"												"(EXT) 呆毛"
+	  "DOTA_Tooltip_ability_item_dodo_description"									"那个女人的一撮头发"
+
+	  "DOTA_Tooltip_Ability_item_blink_frag"				"(EXT) 闪烁碎片"
+	  "DOTA_Tooltip_ability_item_blink_frag_Description"							"<h1>主动：闪烁</h1>传送到最远%blink_range%距离的位置。<br><br>受到来自敌方英雄或肉山的攻击时，闪烁碎片将在%blink_damage_cooldown%秒内无法使用。"
+	  "DOTA_Tooltip_ability_item_blink_frag_Note0"									"快速点击两次会将自己往己方泉水方向传送。"
+	  "DOTA_Tooltip_ability_item_blink_frag_Note1"									"如果闪烁传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+
+	  "DOTA_Tooltip_Ability_item_blinger"						"(EXT) 闪刀"
+	  "DOTA_Tooltip_Ability_item_blinger_Description"			"<h1>主动：闪击</h1>传送到最远%blink_range%距离的位置。近战使用传送后，接下来的攻击必中且又远又快。<br><br>冷却(近战): %melee_cd%<br>冷却(远程): %range_cd%"
+	  "DOTA_Tooltip_Ability_item_renge"						"(EXT) 莲华"
+	  "DOTA_Tooltip_Ability_item_renge_Description"			"<h1>主动：闪击</h1>传送到最远%blink_range%距离的位置。近战使用传送后，接下来的%attacks%次攻击必中且又远又快。<br><br>冷却(近战): %melee_cd%<br>冷却(远程): %range_cd%"
+	  
+	  "DOTA_Tooltip_Ability_item_phantom_wings"											"<font color='#aeaeff'>幻影翼</font>"
+	  "DOTA_Tooltip_Ability_item_phantom_wings_description"								"<h1><font color='#aeaeff'>主动：移形换影</font></h1>创建一个不可控幻象，自身瞬移到最远%blink_range%的位置。施放后%sec_cast%秒内可二段施法，创建幻象并将该幻象瞬移至最远%blink_range%的位置。每段施放都会获得%invuln_duration%秒无敌并施加弱驱散。近战使用时，本体和创建的幻象的下%attacks%次攻击又快又远。<br><br>冷却(近战): %melee_cd%<br>冷却(远程): %range_cd%"
+	  "DOTA_Tooltip_Ability_item_phantom_wings_Note0"									"幻象承受%incoming_damage%%%伤害，近战的幻象造成%outgoing_melee%%%伤害，远程的幻象造成%outgoing_ranged%%%伤害。"
+	  "DOTA_Tooltip_Ability_item_phantom_wings_bonus_damage"						"+基础攻击力"
+
+	  "DOTA_Tooltip_Ability_item_urn_of_shadows_aghs2"			"(EXT) 密库影之灵龛"
+	  "DOTA_Tooltip_Ability_item_recipe_urn_of_shadows_aghs2"	"图纸（密库影之灵龛）"
+	  "DOTA_Tooltip_ability_item_urn_of_shadows_aghs2_Description"					"<h1>主动：灵魂释放</h1> 对友方单位施放时提供%soul_heal_amount%点/秒生命恢复，对敌方单位则造成%soul_damage_amount%点每秒伤害。<br><br>持续%duration%秒。<br><br>每当敌方精英或者总计%creep_stack%个敌方普通单位在%soul_radius%范围内死亡时获得1充能。<br><br>施法距离：%abilitycastrange%" 
+	  "DOTA_Tooltip_ability_item_urn_of_shadows_aghs2_Note0"					"如果对已经被施放灵魂释放的英雄使用，那么将刷新它的持续时间。"
+	  "DOTA_Tooltip_ability_item_urn_of_shadows_aghs2_Lore"							"内含强大恶魔的骨灰。"
+
+	  "DOTA_Tooltip_Ability_item_recipe_spirit_vessel_aghs2"		"(EXT) 图纸（密库魂之灵瓮）"
+	  "DOTA_Tooltip_Ability_item_spirit_vessel_aghs2"				"密库魂之灵瓮"
+	  "DOTA_Tooltip_ability_item_spirit_vessel_aghs2_Description"					"<h1>主动：灵魂释放</h1>对敌人使用时，生命恢复、治疗、吸血和技能吸血效果降低%hp_regen_reduction_enemy%%%。每秒造成%soul_damage_amount%点伤害。<br><br>对友军使用时，提供%soul_heal_amount%点/秒生命恢复。<br><br>持续%duration%秒。<br><br>每当敌方精英或者总计%creep_stack%个敌方普通单位在%soul_radius%范围内死亡时获得1充能。<br><br>施法距离：%abilitycastrange%" 		
+	  "DOTA_Tooltip_ability_item_spirit_vessel_aghs2_lore"					"由一位神铸造，用来俘获同类的灵魂。" 		
+	  "DOTA_Tooltip_modifier_item_urn_of_shadows_aghs2"					"普通灵魂计数" 		
+	  "DOTA_Tooltip_modifier_item_spirit_vessel_aghs2"					"普通灵魂计数" 
+	  
+	  "DOTA_Tooltip_Ability_item_shadow_amulet_ext"			"(EXT) 暗影护符"
+	  "DOTA_Tooltip_ability_item_shadow_amulet_ext_Description"					"<h1>主动：渐隐</h1>让自己或友方单位静止不动的情况下获得隐身效果。<br><br>拥有%fade_time%秒渐隐时间，如果移动将立刻打破隐身。<br><br>对自身使用时没有冷却时间。<br><br>对友军施法距离：%abilitycastrange%"
+	  "DOTA_Tooltip_ability_item_shadow_amulet_ext_Lore"							"一件小小的护符，握住了完全不动就能隔开敌人的感应。"
+	  "DOTA_Tooltip_Ability_item_refesher_ext"				"(EXT) 刷新球"
+	  "DOTA_Tooltip_Ability_item_refresher_shard_ext"			"刷新球碎片"
+	  "DOTA_Tooltip_Ability_item_refresher_shard_ext_Description"				"<h1>主动：完全重置</h1>重置所有物品和技能的冷却时间。"
+	  "DOTA_Tooltip_Ability_item_refresher_shard_ext_lore"					"无尽之战时代的前前后后，不朽者的求胜之志始终从未动摇。"
+	  "DOTA_Tooltip_ability_item_refresher_shard_ext_Note0"								"刷新球碎片可以共享。"
+	  "DOTA_Tooltip_ability_item_refesher_ext_Description"						"<h1>主动：完全重置</h1>重置所有物品和技能的冷却时间。"
+	  "DOTA_Tooltip_ability_item_refesher_ext_Lore"								"一件为巫师量身定做的强力物品。"
+	  "DOTA_Tooltip_ability_item_refesher_ext_bonus_health_regen"				"+$hp_regen"
+	  "DOTA_Tooltip_ability_item_refesher_ext_bonus_mana_regen"					"+$mana_regen"
+	  // Heavens Heart
+	  "DOTA_Tooltip_Ability_item_tarrasque_halberd"									"(EXT) <font color='#dc1814'>恐鳌之戟</font>"
+	  "DOTA_Tooltip_Ability_item_tarrasque_halberd_description"						"<h1><font color='#dc1814'>主动：缴械</font></h1>禁止目标的攻击，对近战目标持续%disarm_melee%秒，对远程目标持续%disarm_range%秒。当装备穿戴者闪避敌人的攻击时，此效果自动施加给攻击者。"
+	  "DOTA_Tooltip_Ability_item_tarrasque_halberd_health_regen_pct"				"%+最大生命值回复"
+	  "DOTA_Tooltip_Ability_item_tarrasque_halberd_hp_regen_amp"				"%+生命回复和吸血增强"
+
+	  // 钢菊重铠
+	  "DOTA_Tooltip_Ability_item_chrysanthemail"									"(EXT) <font color='#f2fd3d'>钢菊重铠</font>"
+	  "DOTA_Tooltip_Ability_item_chrysanthemail_description"						"<h1><font color='#f2fd3d'>主动：神圣护罩-反射镜力</font></h1>为范围内所有友军创建一个复合护罩，提供%active_reflection_tooltip%%% 所有伤害反弹、%block_damage_melee_active% 攻击格挡和指向性技能反弹<br><br> 范围： %bonus_aoe_radius% \n<h1>被动：伤害格挡</h1>有%block_chance%%% 几率抵挡攻击伤害，近战英雄的抵挡值为%block_damage_melee%，远程英雄的为%block_damage_ranged%。\n<h1>被动：反伤</h1>受到攻击时，反弹%passive_reflection_constant%加%passive_reflection_pct%%% 该次攻击的伤害。"
+	  
+	  // 拯救世界
+	  "DOTA_Tooltip_Ability_item_save_world"										"(EXT) <font color='#ffaa05'>拯救世界</font>"
+	  "DOTA_Tooltip_Ability_item_save_world_description"							"<h1><font color='#ffaa05'>主动：砍伐</font></h1>砍伐一根指定树木。 \n<h1>被动：压制</h1> 对非英雄单位进行物理攻击会造成额外伤害，近战英雄为%quelling_bonus%点，远程英雄为%quelling_bonus_ranged%点。 \n<h1>被动：分裂</h1>普通攻击时对目标周围最远%cleave_distance%距离的锥形区域内敌人造成%cleave_damage_percent%%%物理伤害。对非英雄单位造成%cleave_damage_percent_creep%%%物理伤害。（仅近战有效）"
+
+	  "DOTA_Tooltip_Ability_item_ocean_pillar"										"(EXT) <font color='#2bebef'>定海神针</font>"
+	  "DOTA_Tooltip_Ability_item_ocean_pillar_description"							"<h1><font color='#2bebef'>被动：连锁闪电</font></h1>攻击有%bash_chance%%% 几率释放一道连环闪电，在%chain_radius%范围内%chain_strikes%个目标之间跳跃，每次造成%bonus_chance_damage%点魔法伤害和%bash_ministun%秒短暂眩晕。 \n<h1>被动：克敌机先</h1>攻击不会落空。增加%bonus_magical_damage%点攻击魔法伤害。"
+
+	  "DOTA_Tooltip_Ability_item_dyson_sphere"										"(EXT) <font color='#66ccff'>天盖星•戴森球</font>"
+	  "DOTA_Tooltip_Ability_item_dyson_sphere_description"							"<h1><font color='#66ccff'>主动：森罗万象</font></h1>为%radius%范围内所有友方英雄施加指向性技能抵挡护盾。 \n<h1>被动：法术抵抗</h1>当物品未处于冷却下，可以被动抵挡一次大部分指向性法术，触发时自动发动森罗万象并进入冷却。 \n<h1>被动：霜冻攻击</h1>攻击附带霜冻效果，可以降低敌人的移动速度和攻击速度，并且他们的治疗、生命恢复和吸血效果降低%heal_reduction%%%，持续%cold_duration%秒。对敌方远程目标将减缓%cold_slow_ranged%%%移动速度，降低50攻击速度。对敌方近战目标将减缓%cold_slow_melee%%%移动速度，降低%cold_slow_melee%攻击速度。"
+	  "DOTA_Tooltip_Ability_item_ollie_guard"										"(EXT) <font color='#a7afff'>奥莉之守护</font>"
+	  "DOTA_Tooltip_Ability_item_ollie_guard_description"							"<h1><font color='#a7afff'>主动：极寒之力</font></h1>将目标向其面朝方向推出%push_length%距离并以目标为中心发出一道寒冷波动，对对敌人造成%blast_damage%点魔法伤害并减速%blast_movement_speed%%%，持续%blast_debuff_duration%秒。同时，该波动会为击中的友军施加 %barrier_block%点魔法伤害吸收护盾，该护盾会将所有吸收的伤害转化为魔法回复。<br><br>波动作用范围：%blast_radius%<br>护盾持续时间：%barrier_duration% \n<h1>被动：霜冷光环</h1>降低敌人%aura_attack_speed%攻击速度，和%hp_regen_degen_aura%%%所有治疗、恢复和吸血效果。<br><br>范围：%aura_radius%"
+	
+	  "DOTA_Tooltip_Ability_item_thor_force"										"(EXT) <font color='#48efff'>索尔之角</font>"
+	  "DOTA_Tooltip_Ability_item_thor_force_description"							"<h1><font color='#48efff'>主动：索尔之神力</font></h1>对%radius%目标范围内每个敌人发射魔能波动，造成大量爆发伤害并缠绕他们%duration%秒。爆发伤害为%active_damage%+%int_damage%倍使用者智力值。  \n<h1>被动：连锁闪电</h1>攻击有%chain_chance%%% 几率释放一道连环闪电，在%chain_radius%范围内%chain_strikes%个目标之间跳跃，每次造成%chain_damage%点魔法伤害。具有%chain_cooldown%秒内置冷却。"
+
+	  "DOTA_Tooltip_Ability_item_gavuric"											"(EXT) <font color='#ff0000'>恶魔的左臂</font>"
+	  "DOTA_Tooltip_Ability_item_gavuric_description"								"<h1><font color='#ff0000'>主动：恶堕</font></h1>暂时将被动吸血提升至%unholy_lifesteal_total_tooltip%%%并获得技能免疫，同时提供%magic_resist%%%的魔抗，持续%duration%秒。施加强驱散。"
+	
+	  "DOTA_Tooltip_Ability_item_cuiradiance"											"(EXT) <font color='#FFcc00'>炎帝铠甲</font>"
+	  "DOTA_Tooltip_Ability_item_cuiradiance_description"								"<h1><font color='#FFcc00'>被动：炎王光环</font></h1>对周围友军提供%aura_attack_speed%攻速和%aura_positive_armor%护甲，同时减少范围内敌人%aura_negative_armor%点护甲。开启时，还会持续灼烧%active_radius%范围内敌人，每秒造成%aura_damage%伤害，并且每%attack_time%秒会对范围内所有精英敌人和一个额外目标施加一次攻击特效。 <br><br> 光环范围：%aura_radius%<br> 开启效果范围：%active_radius%"
+	  "DOTA_Tooltip_Ability_item_cuiradiance_upgrade_day_vision"						"+白天视野"
+	  "DOTA_Tooltip_modifier_item_cuiradiance_buff"							"炎王光环"
+	  "DOTA_Tooltip_modifier_item_cuiradiance_debuff"						"炎王光环"
+	  "DOTA_Tooltip_modifier_item_cuiradiance_active"						"炎王光环"
 
 	}
 }
