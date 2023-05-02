@@ -939,6 +939,31 @@ function CAghanim:OnPlayerChat( event )
 		self:Dev_WinEncounter()
 	elseif sChatMsg:find( '^-win_game$' ) then
 		self:Dev_WinGame()
+	elseif sChatMsg:find('^-jump') then
+		self._fLastJumpTime = self._fLastJumpTime or GameRules:GetGameTime() - 5
+		local dt = 5 + self._fLastJumpTime - GameRules:GetGameTime()
+		if dt > 0 then
+			GameRules:SendCustomMessage("Can't jump too fast! CD: "..dt ,DOTA_TEAM_GOODGUYS, nPlayerID)
+			return
+		end
+		local room = self:GetCurrentRoom()
+		if room and room:GetEncounter() then
+			if room:GetEncounter():HasStarted() == false or room:GetEncounter():IsComplete() then
+				local hPlayerHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
+				if hPlayerHero then
+					-- add modifier_generic_arc_lua to jump
+					hPlayerHero:AddNewModifier(hPlayerHero, nil, "modifier_generic_arc_lua", {
+						duration = 1.0,
+						height = 750,
+						isStun = 1,
+					})
+					hPlayerHero:EmitSound("Item.PogoStick.Cast")
+				end
+				self._fLastJumpTime = GameRules:GetGameTime()
+			else
+				GameRules:SendCustomMessage("Can't jump during encounter!",DOTA_TEAM_GOODGUYS, nPlayerID)
+			end
+		end
 	elseif sChatMsg:find( '^-kill_beast$' ) then
 		self:Dev_KillBeast()
 	elseif sChatMsg:find( '^-n[1-5]$' ) then
@@ -1013,6 +1038,7 @@ function CAghanim:OnPlayerChat( event )
 			end
 		end--]]
 	end
+	
 end
 
 --------------------------------------------------------------------------------

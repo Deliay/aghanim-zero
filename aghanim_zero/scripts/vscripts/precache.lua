@@ -136,6 +136,7 @@ function Awake()
 	LinkLuaModifier("modifier_illusion_uncontrollable", "modifiers/ext/modifier_illusion_uncontrollable", LUA_MODIFIER_MOTION_NONE)
 	LinkLuaModifier("modifier_hero_immortal", "modifiers/ext/modifier_hero_immortal", LUA_MODIFIER_MOTION_NONE)
 	LinkLuaModifier("modifier_generic_ring_lua", "modifiers/ext/modifier_generic_ring", LUA_MODIFIER_MOTION_NONE)
+	LinkLuaModifier("modifier_generic_arc_lua", "modifiers/ext/modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH)
 
 	print("custom awake ends")
 end
