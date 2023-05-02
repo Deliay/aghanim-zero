@@ -3,13 +3,14 @@
 
 ## 本地如何运行？
 1. 环境准备
-```powershell
-cd # cd到你的dota2自定义游戏目录
+```bash
+# cd到你的dota2自定义游戏目录
+cd $your_dota2_game_addon_folder
 git clone git@jihulab.com:aghanim-zero/aghanim-zero.git
 ```
 **注** 如果你想fork出自己的天地迷宫并上传游廊，不能用这种方式，这样会将隐藏的.git目录一并上传。
 
-2. 运行 Dota2 Tools
+2. 运行 Dota2 Tools，加载即可
 
 ## 如何协作？
 1. fork本仓库到你自己的账号下
