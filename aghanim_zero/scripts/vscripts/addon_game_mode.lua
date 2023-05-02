@@ -2447,6 +2447,30 @@ function CAghanim:ClearFowBlockers( vMins, vMaxs )
 end
 
 --------------------------------------------------------------------------------
+function CAghanim:AddMinorUpgradeToTable( upgradeTable, szSpecialValueName, upgradeItem )
+	-- the item needs to be deepcopy!
+	local item = deepcopy(upgradeItem)
+	local last_id = #upgradeTable
+	if last_id > 0 then
+		if upgradeTable[last_id][ "operator" ] == item[ "operator" ] then
+			if item[ "operator" ] == MINOR_ABILITY_UPGRADE_OP_ADD then
+				-- print(szSpecialValueName..":"..upgradeTable[last_id][ "value" ].."+"..item[ "value" ])
+				upgradeTable[last_id][ "value" ] = upgradeTable[last_id][ "value" ] + item[ "value" ]
+				-- print(szSpecialValueName..":"..upgradeTable[last_id][ "value" ])
+				return
+			elseif item[ "operator" ] == MINOR_ABILITY_UPGRADE_OP_MUL then
+				if szSpecialValueName == "cooldown" or szSpecialValueName == "mana_cost" then
+					upgradeTable[last_id][ "value" ] = 100 - (100 - upgradeTable[last_id][ "value" ])*(100 - item[ "value" ])/100
+				else
+					upgradeTable[last_id][ "value" ] = (100 + upgradeTable[last_id][ "value" ])*(100 + item[ "value" ])/100 - 100
+				end
+			end
+			return
+		end
+	end
+	table.insert( upgradeTable, item )
+	return
+end
 
 function CAghanim:AddMinorAbilityUpgrade( hHero, upgradeTable )
 	--print( "Adding minor ability upgrade for playerID " .. hHero:GetPlayerOwnerID() )
@@ -2461,6 +2485,18 @@ function CAghanim:AddMinorAbilityUpgrade( hHero, upgradeTable )
 		hHero.MinorAbilityUpgrades[ szAbilityName ] = {}
 	end
 
+	-- Multi Abilities found
+	local linked_abilities = upgradeTable[ "linked_abilities" ]
+	if linked_abilities ~= nil then
+		print("this shard has linked abilities!")
+		for _,linked_ability in pairs( linked_abilities ) do 
+			if hHero.MinorAbilityUpgrades[ linked_ability ] == nil then
+				hHero.MinorAbilityUpgrades[ linked_ability ] = {}
+			end
+		end
+	else
+		print("a normal singlar shard")
+	end
 	
 	local szSpecialValueName = upgradeTable[ "special_value_name" ]
 	if szSpecialValueName ~= nil then 
@@ -2471,7 +2507,21 @@ function CAghanim:AddMinorAbilityUpgrade( hHero, upgradeTable )
 		newUpgradeTable[ "operator" ] = upgradeTable[ "operator" ]
 		newUpgradeTable[ "value" ] = upgradeTable[ "value" ]
 		newUpgradeTable[ "elite" ] = upgradeTable[ "elite" ]
-		table.insert( hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ], newUpgradeTable )
+		-- table.insert( hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ], newUpgradeTable )
+		self:AddMinorUpgradeToTable( hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ], szSpecialValueName, newUpgradeTable )
+		-- print("ability:"..szAbilityName.."  special:"..szSpecialValueName)
+		-- PrintTable(hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ])
+		-- linked ability apply
+		if linked_abilities ~= nil then
+			for _,linked_ability in pairs( linked_abilities ) do 
+				if hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ] == nil then
+					hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ] = {}
+				end
+				-- table.insert( hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ], newUpgradeTable )
+				self:AddMinorUpgradeToTable( hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ], szSpecialValueName, newUpgradeTable )
+			end
+		end
+
 	else
 		local SpecialValues = upgradeTable[ "special_values" ]
 		if SpecialValues == nil then 
@@ -2492,7 +2542,23 @@ function CAghanim:AddMinorAbilityUpgrade( hHero, upgradeTable )
 			newUpgradeTable[ "elite" ] = upgradeTable[ "elite" ]
 			--print( "inserting new ugprade table" )
 			--PrintTable( newUpgradeTable, " -> " )
-			table.insert( hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ], newUpgradeTable )
+			-- table.insert( hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ], newUpgradeTable )
+			print(szAbilityName.."%$^$%")
+			self:AddMinorUpgradeToTable( hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ], szSpecialValueName, newUpgradeTable )
+			-- print("ability:"..szAbilityName.."  special:"..szSpecialValueName)
+			-- PrintTable(hHero.MinorAbilityUpgrades[ szAbilityName ][ szSpecialValueName ])
+		
+			-- linked ability apply
+			if linked_abilities ~= nil then
+				for _,linked_ability in pairs( linked_abilities ) do 
+					if hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ] == nil then
+						hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ] = {}
+					end
+					print(linked_ability.."%$^$%")
+					-- table.insert( hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ], newUpgradeTable )
+					self:AddMinorUpgradeToTable( hHero.MinorAbilityUpgrades[ linked_ability ][ szSpecialValueName ], szSpecialValueName, newUpgradeTable )
+				end
+			end
 		end
 	end
 
