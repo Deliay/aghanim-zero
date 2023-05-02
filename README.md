@@ -27,3 +27,6 @@ New-Item -Type SymbolicLink -Target 当前目录/aghanim-zero -Name aghanim_zero
 
 3. 一起完善出更好的版本：
 > 完全没问题
+
+## 特别鸣谢
+阿哈利姆2 EXT作者CyFio
