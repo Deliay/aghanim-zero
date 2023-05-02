@@ -296,7 +296,7 @@ function CAghanim:InitGameMode()
 
  	GameRules:GetGameModeEntity():SetLoseGoldOnDeath( false )
  	GameRules:GetGameModeEntity():SetFriendlyBuildingMoveToEnabled( true )
- 	GameRules:GetGameModeEntity():SetHudCombatEventsDisabled( false )
+ 	GameRules:GetGameModeEntity():SetHudCombatEventsDisabled( true )
 	GameRules:GetGameModeEntity():SetWeatherEffectsDisabled( true )
 	GameRules:GetGameModeEntity():SetCameraSmoothCountOverride( 2 )
 	GameRules:GetGameModeEntity():SetSelectionGoldPenaltyEnabled( false )
