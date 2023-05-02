@@ -930,16 +930,11 @@ end
 
 function CAghanim:OnPlayerChat( event )
 	local nPlayerID = event.playerid
-	if nPlayerID == -1 or GameRules:IsDev() == false then
+	if nPlayerID == -1 then
 		return
 	end
 
-	local sChatMsg = event.text
-	if sChatMsg:find( '^-win_encounter$' ) then
-		self:Dev_WinEncounter()
-	elseif sChatMsg:find( '^-win_game$' ) then
-		self:Dev_WinGame()
-	elseif sChatMsg:find('^-jump') then
+	if sChatMsg:find('^-jump') then
 		self._fLastJumpTime = self._fLastJumpTime or GameRules:GetGameTime() - 5
 		local dt = 5 + self._fLastJumpTime - GameRules:GetGameTime()
 		if dt > 0 then
@@ -964,46 +959,19 @@ function CAghanim:OnPlayerChat( event )
 				GameRules:SendCustomMessage("Can't jump during encounter!",DOTA_TEAM_GOODGUYS, nPlayerID)
 			end
 		end
+	end
+
+	if IsInToolsMode() == false then
+		return
+	end
+
+	local sChatMsg = event.text
+	if sChatMsg:find( '^-win_encounter$' ) then
+		self:Dev_WinEncounter()
+	elseif sChatMsg:find( '^-win_game$' ) then
+		self:Dev_WinGame()
 	elseif sChatMsg:find( '^-kill_beast$' ) then
 		self:Dev_KillBeast()
-	elseif sChatMsg:find( '^-n[1-5]$' ) then
-		if self:GetAscensionLevel() == 0 then
-			local level = string.match( sChatMsg, '^-n[1-5]$' )
-			if self._levelSelection == nil then
-				self._levelSelection = {}
-			end
-			self._levelSelection[nPlayerID] = level
-			local playerName = PlayerResource:GetPlayerName(nPlayerID);
-			GameRules:SendCustomMessageToTeam( "Player"..playerName.."select skill level "..level.."!", DOTA_TEAM_GOODGUYS, 0, DOTA_TEAM_GOODGUYS)
-
-			local count = #(self._levelSelection)
-			if count >= #(self:GetConnectedPlayers()) then
-				-- 定义一个table来存储每个value出现的次数。
-				local count_table = {}
-
-				-- 遍历counter中的每个元素，将每个value出现的次数记录到count_table中。
-				for _, value in pairs(counter) do
-						if count_table[value] then
-								count_table[value] = count_table[value] + 1
-						else
-								count_table[value] = 1
-						end
-				end
-				-- 在count_table中查找出现次数最多的value。
-				local max_value = nil
-				local max_count = 0
-
-				for value, count in pairs(count_table) do
-						if count > max_count then
-								max_value = value
-								max_count = count
-						end
-				end
-				self:SetAscensionLevel(tonumber(max_value))
-				GameRules:SendCustomMessageToTeam("skill level set to"..max_value.."("..max_count.." players selected)", DOTA_TEAM_GOODGUYS, 0, DOTA_TEAM_GOODGUYS)
-			end
-
-		end
 	elseif sChatMsg:find( '^-extra_lives$' ) then
 		self:Dev_ExtraLives( nPlayerID )
 	elseif sChatMsg:find( '^-feed$' ) then

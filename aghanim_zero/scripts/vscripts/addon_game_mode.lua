@@ -124,7 +124,14 @@ end
 -- Create the game mode when we activate
 function _Activate()
 	local inst = CAghanim()
-	wrapper(CAghanim, inst)
+	if IsInToolsMode() then
+		print('******* now in development mode, will not register sentry handler ******')
+	else
+		print('******* start wrapping all CAghanim with sentry handler ******')
+		wrapper(CAghanim, inst)
+		
+		print('******* wrapped all CAghanim with sentry handler ******')
+	end
 	GameRules.Aghanim = inst
 	GameRules.Aghanim:InitGameMode()
 	LinkModifiers()
