@@ -8,6 +8,7 @@ end
 -- Required .lua files, which help organize functions contained in our addon.
 -- Make sure to call these beneath the mode's class creation.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+require("sentry")
 require("libraries/utils/common")
 require("libraries/utils/timers")
 require("libraries/utils/data_structure")
@@ -98,14 +99,41 @@ function Precache( context )
 	Awake()
 end
 
+local function sentry_wrapper(func)
+	return function(self, ...)
+			-- local result = func(self, ...)
+			local result = sentryHandler(func, self, ...)
+			return result
+	end
+end
+
+local function wrapper(baseClass, instance)
+	local mt = getmetatable(instance) or {}
+	mt.__index = function(t, k)
+			local v = rawget(baseClass, k)
+			if type(v) == "function" then
+					v = sentry_wrapper(v)
+					rawset(t, k, v)
+			end
+			return v
+	end
+	setmetatable(instance, mt)
+end 
 --------------------------------------------------------------------------------
 
 -- Create the game mode when we activate
-function Activate()
-	GameRules.Aghanim = CAghanim()
+function _Activate()
+	local inst = CAghanim()
+	wrapper(CAghanim, inst)
+	GameRules.Aghanim = inst
 	GameRules.Aghanim:InitGameMode()
 	LinkModifiers()
 	GameRules.Aghanim:GetAnnouncer():GetUnit():AddNewModifier( GameRules.Aghanim:GetAnnouncer():GetUnit(), nil, "modifier_announcer_ontakedamage", {} )
+end
+
+function Activate()
+	-- sentryHandler(_Activate)
+	_Activate()
 end
 
 --------------------------------------------------------------------------------
