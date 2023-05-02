@@ -4,12 +4,11 @@
 ## 本地如何运行？
 1. 环境准备
 ```powershell
-pwd # 记住你的当前目录
-git clone git@jihulab.com:aghanim-zero/aghanim-zero.git
 cd # cd到你的dota2自定义游戏目录
-# 创建符号链接
-New-Item -Type SymbolicLink -Target 当前目录/aghanim-zero -Name aghanim_zero
+git clone git@jihulab.com:aghanim-zero/aghanim-zero.git
 ```
+**注** 如果你想fork出自己的天地迷宫并上传游廊，不能用这种方式，这样会将隐藏的.git目录一并上传。
+
 2. 运行 Dota2 Tools
 
 ## 如何协作？
