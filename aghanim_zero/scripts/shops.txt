@@ -102,6 +102,27 @@
 		"item"		"item_shadow_amulet"	
 		"item"		"item_ghost"
 		"item"		"item_blink"
+		
+		"item"		"item_blink_frag"
+		"item"		"item_blinger"
+		"item"		"item_renge"
+		"item"		"item_phantom_wings"
+
+		"item"		"item_greater_crit_v2"
+		"item"		"item_moon_butterfly"
+		"item"		"item_majo_thorn"
+		"item"		"item_save_world"
+		"item"		"item_ocean_pillar"
+		
+		"item"		"item_chrysanthemail"
+		"item"		"item_tarrasque_halberd"
+		"item"		"item_dyson_sphere"
+		"item"		"item_ollie_guard"
+		"item"		"item_gavuric"
+		"item"		"item_cuiradiance"
+		
+		"item"		"item_octarine_veil"
+		"item"		"item_thor_force"
 	}	
 	
 	// Level 1 - Green Recipes
