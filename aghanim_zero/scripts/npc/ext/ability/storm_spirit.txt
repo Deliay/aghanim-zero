@@ -7,6 +7,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+		"ID"									"5098"	
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"abilities/heroes/storm_spirit/static_remnant"
 		"AbilityTextureName"			"storm_spirit_static_remnant"
