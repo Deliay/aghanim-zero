@@ -9997,7 +9997,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/well_skull.vmdl"
-		"ModelScale" 				"0.6"
+		"ModelScale" 				"0.5"
 		"Level"						"1"
 		
 		// Abilities
@@ -10036,7 +10036,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/well_skull.vmdl"
-		"ModelScale" 				"1"
+		"ModelScale" 				"0.65"
 		"Level"						"1"
 		
 		// Abilities
@@ -10075,7 +10075,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/well_skull.vmdl"
-		"ModelScale" 				"1.4"
+		"ModelScale" 				"0.9"
 		"Level"						"1"
 		
 		// Abilities
@@ -10105,6 +10105,44 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 	}	
 
+	//=================================================================================
+	// Ascension Level picker (for use in outpost previews only -- doesn't actually do anything)
+	//=================================================================================
+	"aghsfort_ascension_level_picker_5"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/props_structures/well_skull.vmdl"
+		"ModelScale" 				"1.05"
+		"Level"						"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					""			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementSpeed"				"0"			// Speed
+		"MovementTurnRate"			"0"			// Turning rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+	}	
 	"npc_dota_aghsfort_effigy"
 	{
 		// General

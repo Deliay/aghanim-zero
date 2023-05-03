@@ -144,9 +144,17 @@ function CMapEncounter_Hub:Start()
 				AscensionLevelPicker = 1,
 			}
 
-			CreateUnitFromTable( pickerTable, vOrigin )
+			print("ent:".."ascension_picker_locator_" .. ( nOption + 1 )..",pos "..pickerTable.origin..",ang "..pickerTable.angles..", opt="..pickerTable.OptionNumber)
+
+			local picker = CreateUnitFromTable(pickerTable, vOrigin)
+			local nFxIndex = ParticleManager:CreateParticle(
+					"particles/units/heroes/hero_abaddon/abaddon_curse_counter_stack.vpcf", PATTACH_CUSTOMORIGIN, picker)
+			ParticleManager:SetParticleControl(nFxIndex, 0, picker:GetAbsOrigin() + Vector(0, 0, 125 + (nOption * 20)))
+			ParticleManager:SetParticleControl(nFxIndex, 1, Vector(nOption + 1, nOption + 1, nOption + 1))
+			ParticleManager:ReleaseParticleIndex(nFxIndex)
 			nOption = nOption + 1
 		end
+
 
 		if nOption == 0 then
 			print( "Unable to find ascension_picker_locator_ entities!\n" )
