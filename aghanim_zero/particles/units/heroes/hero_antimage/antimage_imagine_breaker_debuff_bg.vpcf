@@ -1,0 +1,129 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{d15c9157-10e0-47bc-9333-1ac81da07b8d} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flConstantRadius = 60.000000
+	m_ConstantColor = 
+	[
+		167,
+		234,
+		255,
+		255,
+	]
+	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				128,
+				0,
+				128,
+			]
+		},
+		
+		{
+			_class = "C_OP_SetToCP"
+			m_vecOffset = 
+			[
+				0.000000,
+				0.000000,
+				20.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_flLerpTime = 0.250000
+			m_nFieldOutput = 7
+			m_flOutput = 0.000000
+		},
+		
+		{
+			_class = "C_OP_EndCapTimedDecay"
+			m_flDecayTime = 0.250000
+		},
+		
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_flOutput = 0.000000
+			m_flLerpTime = 0.250000
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 8
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			VisibilityInputs = 
+			{
+				m_flCameraBias = -5.000000
+			}
+			m_flDepthBias = -10.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/water_whirl_01.vtex"
+				},
+			]
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_antimage/antimage_imagine_breaker_debuff_bg_start.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_antimage/antimage_imagine_breaker_debuff_flash.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_antimage/antimage_imagine_breaker_debuff_bg_end.vpcf"
+		},
+	]
+}
