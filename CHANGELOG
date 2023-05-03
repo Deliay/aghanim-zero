@@ -44,3 +44,8 @@
 - fix: -jump command working now
 
 - add: new heros from EXT: Dragon Knight, Anti-Mage, Crystal Maiden, Spirit Breaker, Bounty Hunter, Storm Spirit, Lion, Venomancer
+
+- fix: venomancer botany icon
+- fix: remove thinker in AM blink abilities
+- fix: dead recursion of lion impale tripple with impale split
+- add: damage counter

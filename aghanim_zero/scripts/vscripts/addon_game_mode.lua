@@ -682,7 +682,7 @@ function CAghanim:InitScoreboardInfo()
 			kills = 0,
 			death_count = 0,
 			gold_bags = 0,
-			damage = 1,
+			damage = 0,
 			heal = 0,
 		}
 		CustomNetTables:SetTableValue( "aghanim_scores", tostring( nPlayerID ), kv )
