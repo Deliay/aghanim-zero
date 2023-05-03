@@ -1,5 +1,5 @@
 require("abilities/heroes/antimage/legends")
-aghsfort_antimage_blink = {}
+aghsfort_antimage_blink = aghsfort_antimage_blink or {}
 
 function aghsfort_antimage_blink:OnSpellStart()
     -- 让施法者躲避弹道
@@ -17,8 +17,7 @@ function aghsfort_antimage_blink:OnSpellStart()
     local max_distance = self:getMaxDistance()
     -- print("max_distance:"..max_distance)
 
-    local sound_start = CreateModifierThinker(caster, self, "modifier_dummy_thinker", {duration = 2.0}, caster:GetAbsOrigin(), caster:GetTeamNumber(), false)
-	sound_start:EmitSound("Hero_Antimage.Blink_out")
+	caster:EmitSound("Hero_Antimage.Blink_out")
 
     local pfx_start_name = "particles/units/heroes/hero_antimage/antimage_blink_start.vpcf"
 	local pfx_end_name = "particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
@@ -48,8 +47,7 @@ function aghsfort_antimage_blink:OnSpellStart()
     -- 播放跳入特效
     local pfx_end = ParticleManager:CreateParticle(pfx_end_name, PATTACH_POINT_FOLLOW, caster)
 	ParticleManager:SetParticleControlEnt(pfx_end, 0, caster, PATTACH_POINT_FOLLOW, "attach_hitloc", caster:GetAbsOrigin(), true)
-	local sound_end = CreateModifierThinker(caster, self, "modifier_dummy_thinker", {duration = 2.0}, caster:GetAbsOrigin(), caster:GetTeamNumber(), false)
-	sound_end:EmitSound("Hero_Antimage.Blink_in")
+	caster:EmitSound("Hero_Antimage.Blink_in")
 	ParticleManager:ReleaseParticleIndex(pfx_start)
 	ParticleManager:ReleaseParticleIndex(pfx_end)
 end
