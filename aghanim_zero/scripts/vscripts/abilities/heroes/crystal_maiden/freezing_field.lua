@@ -24,11 +24,12 @@ function aghsfort_rylai_freezing_field:CastFilterResultTarget(hTarget)
     if hTarget:GetTeamNumber() ~= team_num then
         return UF_FAIL_ENEMY
     end
+    return UF_SUCCESS
 end
 
 function aghsfort_rylai_freezing_field:GetCastRange()
     if self:GetCaster():HasModifier("modifier_aghsfort_rylai_legend_letgo") then
-        return self:GetSpecialValueFor("radius") + self:GetCaster():GetCastRangeBonus()
+        return self:GetSpecialValueFor("radius")
     end
     return self:GetSpecialValueFor("radius")
 end
@@ -46,7 +47,7 @@ function aghsfort_rylai_freezing_field:OnSpellStart()
     local caster = self:GetCaster()
 
     if self:GetCaster():HasModifier("modifier_aghsfort_rylai_legend_letgo") then
-        print("let it go!")
+        -- print("let it go!")
         local target = self:GetCursorTarget()
         if IsValidNPC(target) then
             if self:GetAutoCastState() then
@@ -123,9 +124,9 @@ function modifier_aghsfort_rylai_freezing_field:IsPurgable()
     return false
 end
 
--- function modifier_aghsfort_rylai_freezing_field:GetAttributes()
---     return MODIFIER_ATTRIBUTE_MULTIPLE
--- end
+function modifier_aghsfort_rylai_freezing_field:GetAttributes()
+    return MODIFIER_ATTRIBUTE_MULTIPLE
+end
 
 --------------------------------------------------------------------------------
 -- Aura
@@ -172,7 +173,7 @@ function modifier_aghsfort_rylai_freezing_field:OnCreated(kv)
         if IsValid(shard) then
             self.nova_chance = shard:GetSpecialValueFor("chance")
             self.nova = self.caster:FindAbilityByName("aghsfort_rylai_crystal_nova")
-            print("nova storm comming.." .. self.nova_chance)
+            -- print("nova storm comming.." .. self.nova_chance)
         end
         -- generate data
         self.quartal = RandomInt(0, 3)
@@ -331,7 +332,7 @@ function modifier_aghsfort_rylai_freezing_field_debuff:OnCreated(kv)
         local shard = self.caster:FindAbilityByName("aghsfort_rylai_legend_absolute_zero")
         self.frost = self.caster:FindAbilityByName("aghsfort_rylai_frostbite")
         if IsValid(shard) and IsValid(self.frost) then
-            print("absolute zero!")
+            -- print("absolute zero!")
             self.delay = shard:GetSpecialValueFor("delay")
             self:StartIntervalThink(shard:GetSpecialValueFor("interval"))
             self:OnIntervalThink()
@@ -347,7 +348,7 @@ end
 
 function modifier_aghsfort_rylai_freezing_field_debuff:OnIntervalThink()
     if IsServer() then
-        print(self:GetParent():GetName().."!")
+        -- print(self:GetParent():GetName().."!")
         if self.frost:GetLevel() > 0 then
             self:GetParent():AddNewModifier(self:GetCaster(), self.frost, "modifier_rylai_absolute_zero", {
                 duration = self.delay
