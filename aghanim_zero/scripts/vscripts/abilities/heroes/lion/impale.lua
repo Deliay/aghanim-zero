@@ -2,16 +2,9 @@ LinkLuaModifier( "modifier_aghsfort_lion_impale_air", "abilities/heroes/lion/imp
 --Abilities
 aghsfort_lion_impale = {}
 
-function aghsfort_lion_impale:GetCooldown(iLevel)
-    local cooldown = self.BaseClass.GetCooldown(self, iLevel) -
-                         GetTalentValue(self:GetCaster(), "lion_impale-cd")
-    return math.max(cooldown, 0)
+function aghsfort_lion_impale:Spawn()
+	self._secondary_dmg = 0
 end
-
-function aghsfort_lion_impale:GetCastRange()
-	return self:GetSpecialValueFor("cast_range") + GetTalentValue(self:GetCaster(), "lion_impale+range")
-end
-
 function aghsfort_lion_impale:OnUpgrade()
 	self.caster = self:GetCaster()
     self.hex = self.caster:FindAbilityByName("aghsfort_lion_voodoo")
@@ -33,14 +26,16 @@ function aghsfort_lion_impale:OnSpellStart()
 	end
 	local start_pos = caster:GetAbsOrigin()
 	local direction = DirectionVector(pos, start_pos)
-	local length = self:GetSpecialValueFor("cast_range") + self:GetSpecialValueFor("length_buffer") + caster:GetCastRangeBonus() + GetTalentValue(caster, "lion_impale+range")
+	local length = self:GetSpecialValueFor("cast_range") + self:GetSpecialValueFor("length_buffer") + caster:GetCastRangeBonus()
 
+	-- PrintTable(self._hit_data)
 	self:doAction({
 		caster = caster,
 		target = target,
 		pos = start_pos,
 		direction = direction,
 		length = length,
+		splitted = true,
 	})
 
 	if IsValid(self.shard_tripple) then
@@ -52,36 +47,25 @@ function aghsfort_lion_impale:OnSpellStart()
 	end
 end
 
-function aghsfort_lion_impale:OnProjectileThink_ExtraData(vLocation, ExtraData)
-	if ExtraData.bSecondary and ExtraData.bSecondary == 0 then
-		local thinker = EntIndexToHScript(ExtraData.thinker_id)
-		if IsValid(thinker) then
-			thinker:SetAbsOrigin(vLocation)
-		end
-	end
-end
-
 function aghsfort_lion_impale:OnProjectileHit_ExtraData(hTarget, vLocation, ExtraData)
-	local thinker = EntIndexToHScript(ExtraData.thinker_id)
 	local caster = EntIndexToHScript(ExtraData.caster_id)
-	if IsValid(hTarget) and IsValid(thinker) and IsValid(caster) then
-		-- print(hTarget:GetName())
-		local target_id = hTarget:entindex()
-		if thinker._hit_table[target_id] then
-			return
+	if IsValid(hTarget) and IsValid(caster) then
+		local bSecondary = 0
+		if ExtraData.thinker_id then
+			local target_id = hTarget:entindex()
+			if target_id == ExtraData.thinker_id then
+				return
+			end
+			bSecondary = 1
 		end
-		thinker._hit_table[target_id] = true
 		if TriggerStandardTargetSpell(hTarget, self) then
 			return
 		end
 		self:playEffects({
 			target = hTarget
 		})
-
 	
-		local air_time = 0.5
-		local height = 350
-		hTarget:AddNewModifier(caster, self, "modifier_aghsfort_lion_impale_air", {duration = air_time, height = height})
+		hTarget:AddNewModifier(caster, self, "modifier_aghsfort_lion_impale_air", {duration = ExtraData.air_time, height = ExtraData.height, bSecondary = bSecondary})
 		AddModifierConsiderResist(hTarget, caster, self, "modifier_stunned", {duration = ExtraData.duration})
 
 		if IsValid(self.shard_shred) then
@@ -101,6 +85,16 @@ function aghsfort_lion_impale:OnProjectileHit_ExtraData(hTarget, vLocation, Extr
 	
 	else
 		if hTarget == nil then
+			-- if ExtraData.thinker_id then
+			-- 	local hit_table = self._hit_data[ExtraData.thinker_id]
+			-- 	if hit_table then
+			-- 		hit_table.count = hit_table.count - 1
+			-- 		if hit_table.count <= 0 then
+			-- 			-- print("deleted!")
+			-- 			self._hit_data[ExtraData.thinker_id] = nil
+			-- 		end
+			-- 	end
+			-- end
 			ParticleManager:DestroyParticle(ExtraData.pfx, false)
 		end
 	end
@@ -116,30 +110,21 @@ function aghsfort_lion_impale:doAction(kv)
 	local direction = kv.direction
 	local length = kv.length
 	local thinker_id = kv.thinker_id
-	local bSecondary = 0
-	if thinker_id then
-		bSecondary = 1
-	end
+	local canSplit = kv.canSplit
+
 
 	local speed = self:GetSpecialValueFor("speed")
 	local width = self:GetSpecialValueFor("width")
+	local height = self:GetSpecialValueFor("height")
+	local air_time = self:GetSpecialValueFor("air_time")
 	-- local damage = self:GetSpecialValueFor("damage")
 	local duration = self:GetSpecialValueFor("duration")
 
-	local thinker_duration = length / speed + 1.0
+	local thinker_duration = length / speed + 2.0
 
 	local end_pos = pos + direction * length
 
-	local spike_thinker = nil
-	if bSecondary ~= 0 then
-		spike_thinker = EntIndexToHScript(thinker_id)
-		local thinker_mod = spike_thinker:FindModifierByName("modifier_dummy_thinker")
-		thinker_mod:SetDuration(math.max(thinker_mod:GetRemainingTime(), thinker_duration), false)
-	else
-		spike_thinker = CreateModifierThinker(caster, self, "modifier_dummy_thinker", {duration = thinker_duration}, pos, team, false)
-		spike_thinker._hit_table = {}
-	end
-	spike_thinker:EmitSound("Hero_Lion.Impale")
+	EmitSoundOnLocationWithCaster(pos, "Hero_Lion.Impale", caster)
 	
 	-- 这里需要交给回调事件销毁之
 	local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_lion/lion_spell_impale.vpcf", PATTACH_WORLDORIGIN, nil)
@@ -160,25 +145,32 @@ function aghsfort_lion_impale:doAction(kv)
 		fEndRadius = width,
 		vVelocity = direction * speed,
 		ExtraData = {
-			thinker_id = spike_thinker:entindex(),
+			thinker_id = thinker_id,
 			caster_id = caster:entindex(),
 			duration = duration,
 			-- damage = damage,
 			pfx = pfx,
-			bSecondary = bSecondary
+			-- bSecondary = bSecondary,
+			height = height,
+			air_time = air_time
 		}
 	}
 	ProjectileManager:CreateLinearProjectile(projectile_info)
-	if bSecondary == 0 then
+	if thinker_id == nil then
 		-- print(IsValid(self.shard_split))
 		if IsValid(self.shard_split) then
 			-- print("split!")
-			self.shard_split:doAction({
-				projectile_info = projectile_info,
-				length = length,
-				dir_x = direction.x,
-				dir_y = direction.y,
-			})
+			if IsValid(self.shard_tripple) and canSplit then
+				print("]]]]]]]]]]]]]]]]] splitted now!")
+				self.shard_split:doAction({
+					projectile_info = projectile_info,
+					length = length,
+					dir_x = direction.x,
+					dir_y = direction.y,
+				})
+			else
+				print("]]]]]]]]]]]]]]]]] already splitted!")
+			end
 		end
 	end
 end
@@ -290,5 +282,8 @@ function modifier_aghsfort_lion_impale_air:updateData(kv)
 		self.height = kv.height
 		self.alpha = 4 * self.height / (self.air_time * self.air_time)
 		self.damage_table.damage = self.ability:GetSpecialValueFor("damage")
+		if kv.bSecondary > 0 then
+			self.damage_table.damage = self.damage_table.damage * self.ability._secondary_dmg
+		end
 	end
 end

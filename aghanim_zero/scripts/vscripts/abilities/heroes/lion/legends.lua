@@ -21,7 +21,8 @@ function aghsfort_lion_legend_impale_split:OnProjectileHit_ExtraData(hTarget, vL
             pos = vLocation,
             direction = dir,
             length = ExtraData.length,
-            thinker_id = ExtraData.thinker_id
+            thinker_id = ExtraData.thinker_id,
+            canSplit = false,
         }
 
         local lines = self:GetSpecialValueFor("pieces")
@@ -45,6 +46,7 @@ function aghsfort_lion_legend_impale_split:doAction(kv)
     projectile_info.ExtraData.length = length
     projectile_info.ExtraData.x = dir_x
     projectile_info.ExtraData.y = dir_y
+    projectile_info.ExtraData.canSplit = false
     ProjectileManager:CreateLinearProjectile(projectile_info)
 end
 
@@ -97,12 +99,13 @@ function aghsfort_lion_legend_impale_tripple:doAction(kv)
     local pos = kv.pos
     local dir = kv.direction
     local length = kv.length
-    
+
     local action_table = {
         caster = self:GetCaster(),
         pos = pos,
         direction = dir,
         length = length,
+        canSplit = true,
     }
     -- print(dir)
 
