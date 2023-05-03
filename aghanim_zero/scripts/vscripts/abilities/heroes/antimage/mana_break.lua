@@ -68,7 +68,7 @@ function modifier_aghsfort_antimage_mana_break:GetModifierProcAttack_BonusDamage
             local mana_burn = mana_break + mana * mana_pct
             local damage = 0
             if mana ~= 0 then
-                target:ReduceMana(math.min(mana, mana_burn))
+                target:Script_ReduceMana(math.min(mana, mana_burn), self)
                 damage = mana_burn * damage_pct
             else
                 damage = mana_break * damage_pct
