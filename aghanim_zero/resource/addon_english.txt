@@ -1617,10 +1617,345 @@
 		"DOTA_Tooltip_modifier_aghsfort_special_void_spirit_astral_step_breach_burn"				"Breach"
 		"DOTA_Tooltip_modifier_aghsfort_special_void_spirit_astral_step_breach_burn_Description"	"Taking damage over time."
 
-	 // Nevermore Begin
+	 // Dragon Knight Begin
+		"#npc_dota_hero_dragon_knight" "(EXT) Dragon Knight"
+		"npc_dota_hero_dragon_knight" "(EXT) Dragon Knight"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"(EXT) Fire the Tail"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun_Description"   				"Each unit hit by Breathe Fire has a %chance%%% chance to be stunned and damaged by the current level of Dragon Tail"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_macropyre"   					"(EXT) Dracarys"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_macropyre_Description"   		"Dragon breath now leaves a track on the road which lasting for %duration% secs, burning enemies continuesly and apply dragon breath debuff to them"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_crit_lifesteal"   				"(EXT) Sundering Flame"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_crit_lifesteal_Description"  	"While attacking a unit currently afflicted with the Breathe Fire debuff, Dragon Knight has %chance%%% chance to critical strike for %crit_mult%%% damage. These critical attacks heals Dragon Knight for %lifesteal%%% of the damage dealt"
+
+
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_passive"   						"(EXT) ReTailer"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_passive_Description"   			"When attacked,Dragon Knight has a %chance%%% chance to immediately retaliate with the current level of Dragon Tail."
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_bounce"   						"(EXT) Swift Saphira"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_bounce_Description"   			"Dragon Tail gains %bonus_range% bonus cast range. Upon impact, it bounces %bounces% additional times to nearby enemies. After its final bounce, the projectile returns to Dragon Knight, stunning all foes around him"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_chain"   							"(EXT) Soul Feast"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_chain_Description"   				"Dragon Blood passively charges up over %max_stack% seconds, empowering Dragon Knight's next strike with bonus magical damage. The amount of bonus damage gained every second is equal to Dragon Knight's total health regeneration. If proc'd at maximum damage, the attack also heals Dragon Knight for %heal%%% of damage dealt"
+
+
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_damage"	                   	 	"(EXT) Boiling Veins"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_damage_Description"	        	"Dragon Blood passively charges up over %max_stack% seconds, empowering Dragon Knight's next strike with bonus magical damage. The amount of bonus damage gained every second is equal to Dragon Knight's total health regeneration. If proc'd at maximum damage, the attack also heals Dragon Knight for %heal%%% of damage dealt"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_gold"	                        "(EXT) Hoard of Babylon"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_gold_Description"	            "For every %gold_per_armor% unspent gold, Dragon Knight gains 1 bonus armor. For every %gold_per_magic_resist% unspent gold, he also gains 1% magic resistance"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_active"	                    	"(EXT) Pyroclastic Conflagration"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_active_Description"	        	"Dragon Blood can be activated to grant Dragon Knight %duration% seconds of magic immunity. When activated, it creates a fiery blast that knocks back enemies within a %radius% radius. Affected units are stunned for %stun_duration% seconds and take damage equal to %regen_damage_mult%%% of Dragon Knight's total health regeneration"
+		
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_attack"	                	"(EXT) Fang of Galakrond"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_attack_Description"	    	"After every %attack% attacks in human form, Dragon Knight's next attack is empowered by the current level of Elder Dragon Form. While transformed, Dragon Knight's attack projectile bounces to an additional nearby target, dealing full damage and applying Elder Dragon Form's debuff"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_fear"	                    "(EXT) Beneath The Shadow of My Wings"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_fear_Description"	        "Upon transforming into Dragon Form, Dragon Knight casts the current level of Breathe Fire in all directions around himself and applies fear to all enemies within a %radius% radius for %duration% seconds"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_cdr"	                    "(EXT) Blessing of Ancalagon"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_cdr_Description"	        "The cooldown of Elder Dragon Form is reduced by %cdr% seconds every time Dragon Knight takes damage. If Dragon Knight receives lethal damage while Elder Dragon Form is off cooldown, the ability is instantly activated and he is healed to %heal%%% of his max health"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire"	                                "Breathe Fire"
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_Description"	                    "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal."
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_range"		                    "Distance: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_reduction"		                "%Attack Damage Reduction: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_duration"		                "Debuff Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_damage"		                    "Damage: "
+		
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail"	                                "Dragon Tail"
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_Description"	                    "Dragon Knight smites an enemy unit in melee range with his shield, stunning and performing an instant attack upon the target along with any nearby foe. When in Elder Dragon Form, the cast range and effect radius are increased. Instant attacks performed by Dragon Tail can proc on-hit effects."
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_stun_duration"	                "Stun Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_dragon_cast_range"	            "Bonus Dragon Form Cast Range: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_attack_damage"	                "%Instant Attack Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_radius"	                        "Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_dragon_radius_mult"	            "%Bonus Dragon Form Radius: "
+		
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood"	                                "Dragon Blood"
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood_Description"                     "The life blood of the Dragon improves health regeneration and strengthens armor."
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood_bonus_health_regen"	            "Health Regen Bonus: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood_bonus_armor"	                    "Armor Bonus: "
+		
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form"	             		    "Elder Dragon Form"
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_Description"	 		    "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers. \n<font color=\"#9acd32\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal poison damage over time.\n<font color=\"#ff0000\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks affect all enemies near the primary target.\n<font color=\"#34a8eb\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed and attack speed of affected units."
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_duration"	                "Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_bonus_movement_speed"	    "Bonus Movement Speed: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_bonus_attack_range"	        "Bonus Attack Range: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_bonus_attack_damage"	    "Bonus Attack Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_corrosive_breath_damage"	"Corrosive Damage per Second: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_corrosive_breath_duration"	"Corrosive Debuff Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_splash_radius"	            "Splash Attack Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_splash_damage_percent"	    "%Splash Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_frost_bonus_movement_speed"	"Frost Movement Speed Reduction: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_frost_bonus_attack_speed"	"Frost Attack Speed Reduction: "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_frost_duration"	            "Frost Debuff Duration: "
+		
+		
+	  //Minor
+		"aghsfort_dk_breathe_fire_range"			                                    "+{s:value} {s:ability_name} Distance"
+		"aghsfort_dk_breathe_fire_reduction"			                                "+{s:value}% {s:ability_name} Attack Damage Reduction"
+		"aghsfort_dk_breathe_fire_duration"			                                    "+{s:value}s {s:ability_name} Debuff Duration"
+		"aghsfort_dk_breathe_fire_damage"			                                    "+{s:value} {s:ability_name} Damage"
+		"aghsfort_dk_breathe_fire_pct_cooldown"			                                "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		
+		"aghsfort_dk_dragon_tail_stun_duration"			                                "+{s:value}s {s:ability_name} Stun Duration"
+		"aghsfort_dk_dragon_tail_attack_damage"			                                "+{s:value}% {s:ability_name} Instant Attack Damage"
+		"aghsfort_dk_dragon_tail_radius"			                                    "+{s:value} {s:ability_name} Effect Radius"
+		"aghsfort_dk_dragon_tail_pct_cooldown"			                                "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		
+		"aghsfort_dk_dragon_blood_bonus_health_regen"			                        "+{s:value} {s:ability_name} Health Regeneration Bonus"
+		"aghsfort_dk_dragon_blood_bonus_armor"			                                "+{s:value} {s:ability_name} Armour Bonus"
+		
+		"aghsfort_dk_elder_dragon_form_duration"			                            "+{s:value}s {s:ability_name} Duration"
+		"aghsfort_dk_elder_dragon_form_bonus_movement_speed"			                "+{s:value} {s:ability_name} Bonus Movement Speed"
+		"aghsfort_dk_elder_dragon_form_bonus_attack_range"			                    "+{s:value} {s:ability_name} Bonus Attack Range"
+		"aghsfort_dk_elder_dragon_form_bonus_attack_damage"			                    "+{s:value} {s:ability_name} Bonus Attack Damage"
+		"aghsfort_dk_elder_dragon_form_pct_cooldown"			                        "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+	
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_aghsfort_dk_dragon_tail+radius"	                    "+{s:value} Dragon Tail Radius"
+		"DOTA_Tooltip_Ability_special_bonus_aghsfort_dk_elder_dragon_form+bonus_attack_range"	    "+{s:value} Dragon Form Bonus Attack Range"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_dk_breathe_fire"	                                "Breathe Fire Reduces All Damage Types"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form"                                                 "Big Scary Dragon"
+		"DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form_Description"                                     "Look at me I'm a big strong lizard, rawr!"
+		
+		"DOTA_Tooltip_modifier_aghsfort_dk_breathe_fire"                                                      "Breathed Fire"
+		"DOTA_Tooltip_modifier_aghsfort_dk_breathe_fire_Description"                                          "Damage currently reduced."
+		
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_tail_chain"                                                 "Bound by Blood"
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_tail_chain_Description"                                     "Health is being drained, while receiving a portion of damage taken by Dragon Knight."
+		
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_blood_damage"                                               "Draconic Fury"
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_blood_damage_Description"                                   "Empowering Dragon Knight's next attack with bonus damage equal to number of stacks. If proc'd at max stacks, also heals Dragon Knight for damage dealt"
+		
+	 // Dragon Knight End
+	 // Antimage Begin
+		"#npc_dota_hero_antimage" "(EXT) Anti-Mage"
+		"npc_dota_hero_antimage" "(EXT) Anti-Mage"
 	  // Legendary
 		// "DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"Fire the Tail"
-			"#npc_dota_hero_nevermore" "(EXT) Nevermore"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_transfer"     					"(EXT) Mana Transfer"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_transfer_Description"     		"While breaking mana, Antimage transfer them to his health for %transfer_pct%%  of the amount"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_explosion"    					"(EXT) Mana Explosion" 
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_explosion_Description"    		"Antimages have a %chance%%  chance to cast a Mana Void with %effect_pct%%  effect after each mana break" 
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_imagine_breaker"   					"(EXT) Imagine Breaker"  
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_imagine_breaker_Description"			"Mana Break also applies a stackable spell damage reduction debuff lasting %duration% secs, the reduction amount per stack is the same as Mana Breaker's max mana pct"  
+
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_illusion"     					"(EXT) Blinking Illusion"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_illusion_Description"   		"Blink now leaves an uncontrollable illusion. This illusion replicate's Counterspell casting."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_illusion_Note0"				"This illusion replicate's Counterspell casting."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_counter"     					"(EXT) Heroic Blink"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_counter_Description"   		"Blink and Fragment now trigger an addtional Counterspell when casted"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_fragment"				   		"(EXT) Blink Fragment"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_fragment_Description"   		"New ability: Antimage blinks an illusion to the target position. The new ability's cooldown/manacost and blink distance are bound to origin ability. blinked illusion replicate's Counterspell casting."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_fragment_Note0"		   		"This illusion replicate's Counterspell casting."
+		
+		
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_comprehensive_counter"     			"(EXT) Comprehensive Counter"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_comprehensive_counter_Description" 	"Counterspell passive now grants a %aura_radius% radius aura, benefits other allies for %aura_pct%% of the effect. When casted, it also applies its active effect to allies affected."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_turstarkuri_guardiance"     			"(EXT) Turstarkuri Guardiance"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_turstarkuri_guardiance_Description" 	"Counterspell active now also generate a stackable sheild, lasting %duration_multipiler%x as long as the Counterspell sheild . Each stack can block incoming spell damage instance and dispel the one who under protection once."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_arcande_discipliner"     			"(EXT) Arcande Dicipliner"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_arcande_discipliner_Description"  	"Antimages have a chance equal to Counterspell resistance bonus to proc immediate attack against enemy in %aura_radius% range when they cast any spell. Antimage himself's proc attack also creates an illusion at the caster position."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_arcande_discipliner_Note0"     		"This illusion replicate's Counterspell casting."
+		
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_secondary_void"   					"(EXT) Secondary Void"  
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_secondary_void_Description"  		"Units affected by each inital Mana Void AOE will receive a secondary Mana Void in %delay%s. The secondary Void has %effect_pct%%  effect of that of the inital one."  
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_release"     					"(EXT) Mana Release"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_release_Description"    		"Mana Void now can be cast on allies. Targeted allies receive healing instead of damage & ministun, get mana restored to max, and receive opposite effects granted by other Mana Void legendary shards."
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_ability_ban"     					"(EXT) Ability Ban"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_ability_ban_Description"  			"Mana Void now increases the main target enemy's ability with longest cd remaining by %cd_change%s, with its total damage amplifed by %cd_damage_amp%% for every second that ability's CD remains"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break"								"Mana Break"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_Description"					"Burns an opponent's mana on each attack. Mana Break deals %percent_damage_per_burn%% of the mana burned as damage to the target. Mana Break has %illusion_percentage%% effect if caused by illusions."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_Note0"						"Deals %percent_damage_per_burn%% of base mana burn as physical damage to non-building units with no mana or with mana lower than base mana burn value"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_mana_per_hit"				"Base Mana Burn:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_mana_per_hit_pct"			"%Max Mana Pct:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_percent_damage_per_burn"		"%Damage Pct:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_illusion_percentage"			"%Illusion Pct:"
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink"	            	                "Blink"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_Description"		                "Short distance teleportation that allows Anti-Mage to move in and out of combat."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_Note0"			                "Blink disjoints projectiles upon cast."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_blink_range"		                "blink distance:"
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell"							"Counterspell"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_Description"				"Passively grants you magic resistance. Can be activated to create an anti-magic shell around you that sends any targeted spells back towards enemies instead of affecting you."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_Note0"				 		"Interrupts Anti-Mage's channeling abilities on cast."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_Note1"				 		"Stacks multiplicatively with other sources of magic resistance."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_magic_resistance"			"magic resistance bonus:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_duration"					"active duration:"
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void"								"Mana Void"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_Description"					"For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The main target is also mini-stunned."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_Note0"						"Has base aoe damage."
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_base_damage"					"Base Damage:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_damage_per_mana"				"Damage Per Mana:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_aoe_radius"					"AOE Radius:"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_ministun"						"Ministun:"
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_fragment"							"Blink Fragment"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_fragment_Description"				"Blinks an uncontrollable illusion at the target enemy or location and attack them. "
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_fragment_Not0"					"Cooldown/manacost and blink distance are bound to Antimage's Blink"
+
+	  //Minor
+		"aghsfort_antimage_mana_break_mana_per_hit"										"+{s:value} {s:ability_name} Mana Per Hit"
+		"aghsfort_antimage_mana_break_mana_per_hit_pct"									"+{s:value}% {s:ability_name} Mana Pct Per Hit"
+		"aghsfort_antimage_mana_break_percent_damage_per_burn"							"+{s:value}% {s:ability_name} Damage Per Mana Burn"
+		"aghsfort_antimage_mana_break_illusion_percentage"								"+{s:value}% {s:ability_name} Illusion Effect"
+
+		"aghsfort_antimage_blink_blink_range"											"+{s:value} {s:ability_name} Max Blink Distance"
+		"aghsfort_antimage_blink_mana_cost_cooldown"									"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+
+		"aghsfort_antimage_counterspell_magic_resistance"								"+{s:value} {s:ability_name} Magic Resistance"
+		"aghsfort_antimage_counterspell_duration"										"+{s:value} {s:ability_name} Active Duration"
+		"aghsfort_antimage_counterspell_mana_cost_cooldown"								"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+
+		"aghsfort_antimage_mana_void_base_damage"										"+{s:value} {s:ability_name} Base Damage"
+		"aghsfort_antimage_mana_void_ministun"											"+{s:value}s {s:ability_name} Ministun"
+		"aghsfort_antimage_mana_void_damage_per_mana"									"+{s:value} {s:ability_name} Damage Per Mana"
+		"aghsfort_antimage_mana_void_aoe_radius"										"+{s:value} {s:ability_name} AOE Radius"
+		"aghsfort_antimage_mana_void_mana_cost_cooldown"								"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_break+mana_per_hit"	    "+{s:value} Mana Break Base Value"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_blink-cd"	                    "-{s:value} Blink CD"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_counterspell+magical_resist"	    "+{s:value} Counterspell Magical Resistance"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_blink+blink_distance"	    "+{s:value} Blink Distance"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_void+base_damage"	    "+{s:value} Mana Void Base Damage"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_void+ministun"	    "+{s:value}s Mana Void Ministun"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_void-cd"	    "-{s:value} Mana Void CD"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_antimage_counterspell"								"Counterspell"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_counterspell_Description"					"Blocking and reflecting target abilities"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_imagine_breaker"							"Imagine Breaker"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_imagine_breaker_Description"				"Spell damage reduced by %dMODIFIER_PROPERTY_TOOLTIP%%%"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_comprehensive_counter"						"Counterspell Aura"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_comprehensive_counter_Description"			"Granting %MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% magical resistance bonus"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_turstarkuri_guardiance"					"Turstarkuri Guardiance"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_turstarkuri_guardiance_Description"		"Blocks spell damage"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_arcande_discipliner"						"Arcane Discipliner"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_secondary_void"							"Secondary Void"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_secondary_void_Description"				"Secondary Mana Void incoming..."
+
+	// Antimage End
+
+	// Crystal Maiden Begin
+		"#npc_dota_hero_crystal_maiden" "(EXT) Crystal Maiden"
+		"npc_dota_hero_crystal_maiden" "(EXT) Crystal Maiden"
+	  // Legendary
+		// "DOTA_Tooltip_ability_aghsfort_rylai_crystal_nova_stun"   							"Fire the Tail"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_snowman"								"(EXT) Yeti's comming"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_snowman_Description"					"Crystal Nova now summons a controllable yeti to assist you. The yeti's health, damage, AS/MS are gained according to Nova's AOE, damage, AS/MS slow respectively."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_strike"							"(EXT) Nova Strike"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_strike_Description"				"Crystal Nova now lauches attacks to all the enemies who affected by it's initial damage."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_crystal_field"							"(EXT) Crystal Field"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_crystal_field_Description"				"Crystal Nova now leaves a circular field which has the same radius as Nova AOE and lasts as long as its slow duration, dealing %damage_pct%%  of Nova damage every %tick_interval%s and apply Nova slow to enemies standing on them. Reducing affected enemies' magical resistance by %magic_resist_pct%%  of Nova's MS slow."
+
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_chain"							"(EXT) Chain Frost"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_chain_Description"				"Frosbite now pass through to enemies touching a Frosbitten one."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_touch"							"(EXT) Frost Touch"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_touch_Description"				"Rylai's attacks now have %chance_pct%%  to proc Frosbite."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_split"							"(EXT) Frozen Shards"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_split_Description"				"When Frostbite debuff ends, it launches splinters to up to %split_count% other enemies in %radius% range. Each splinter dealing %damage_pct%%  damage of that bite has dealt to the initial target, and create a Nova with %nova_pct%%  power."
+
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_field"							"(EXT) Arctic Field"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_field_Description"				"Heroes under Arctic Fenzy now have a %chance%%  chance to trigger freezing field attached to them that lasts for %duration_per_stack%s per stack every time they cast a spell."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_enhance"							"(EXT) Arcane Boost"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_enhance_Description"				"Arcane Aura and its Fenzy effect now also provide %value%% Spell Amp for every 1 mana regen provided."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_cool_mind"								"(EXT) Cool Mind"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_cool_mind_Description"					"Arcane Fenzy now grants %value%%  stackable, spell-only CD reduction for every 1 mana regen provided."
+
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_letgo"									"(EXT) Let It Go"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_letgo_Description"						"Freezing Field no longer needs to channel, and becomes an ally or self targeted ability attaching Freezing Field to the target lasting as long as original channel time. Toggle autocast will cyclone the target for the whole duration. This cyclone mutes and roots the target, but the target can still move like the Wind Walker and cast spells."
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_storm"								"(EXT) Nova Storm"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_storm_Description"					"Each explosion now has a %chance%%  chance to trigger a random Nova in the Field"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_absolute_zero"							"(EXT) Absolute Zero"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_absolute_zero_Description"				"Enemies inside the field now receives a %delay%s-delayed Frostbite every %interval%s they have stayed in the field"
+		
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova"	                                "Crystal Nova"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_Description"	                    "A burst of damaging frost slows enemy movement and attack rate in the targeted area."
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_radius"		                    "Effect Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_movespeed_slow"		            "%Move Speed Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_attackspeed_slow"		            "Attack Speed Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_duration"		                	"Slow Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_nova_damage"		                "Damage: "
+		
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite"	                               		"Frostbite"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_Description"                    		"Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts 10 seconds on non-captains."
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_Note0"	                            "Deals damage every %tick_interval% secs"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_damage_per_second"              		"DPS: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_duration"                       		"Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_creep_duration"                 		"Creep Duration: "
+
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura"                         		"Arcane Aura"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_Description"                   "Gives additional mana regeneration to all friendly units on the map. When Rylai casts an ability, herself, together with all allied heroes, will gain a Arcane Soul stack which increase mana regen and casting speed."
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_mana_regen"               		"Aura Regen per Stack:"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_cast_reduce"              		"%Cast Time Reduction per Stack: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_max_stacks"              		"Max Stacks: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_stack_duration"              	"Stack Duration: "
+
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field"                           		"Freezing Field"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_Description"               		"Surrounds Crystal Maiden with random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts up to %channel_time% seconds."
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_radius"                    		"Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_explosion_radius"          		"Explosion Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_damage"	 		         		"Explosion Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_movespeed_slow"          		"%MS Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_attack_slow"	          		"AS Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_channel_time"	          		"Max Duration: "
+	  //Minor
+		"aghsfort_rylai_crystal_nova_mana_cost_cooldown"			                        "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_rylai_crystal_nova_damage"												"+{s:value} {s:ability_name} Damage"		
+		"aghsfort_rylai_crystal_nova_radius"												"+{s:value} {s:ability_name} Radius"
+		"aghsfort_rylai_crystal_nova_slow"							                        "{s:value1}% / {s:value2} {s:ability_name} MS/AS slow"
+		"aghsfort_rylai_crystal_nova_duration"							                    "{s:value1}s {s:ability_name} Vison And Debuff Duration"
+
+		"aghsfort_rylai_frostbite_mana_cost_cooldown"			                            "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_rylai_frostbite_dps"							                            "+{s:value1} {s:ability_name} DPS"
+		"aghsfort_rylai_frostbite_duration"							                        "+{s:value1}s {s:ability_name} Duration"
+
+		"aghsfort_rylai_brilliance_aura_mana_regen"											"+{s:value} {s:ability_name} Mana Regen Per Stack"
+		"aghsfort_rylai_brilliance_aura_max_stacks"											"+{s:value} {s:ability_name} Max Stacks"
+
+		"aghsfort_rylai_freezing_field_mana_cost_cooldown"			                        "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_rylai_freezing_field_damage"						                        "+{s:value} {s:ability_name} Explosion Damage"
+		"aghsfort_rylai_freezing_field_duration"					                        "+{s:value}s {s:ability_name} Max Channel Time"
+
+
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_crystal_nova+radius"	                    "+{s:value} Crystal Nova Radius"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_crystal_nova+damage"	                    "+{s:value} Crystal Nova Damage"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_crystal_nova-cd"		                    "-{s:value} Crystal Nova CD"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_frostbite+duration"	                    "+{s:value} Frostbite Duration"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_brilliance_aura+mr"	                    "+{s:value}% Arcane Aura Magical Resistance"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_freezing_field+damage"                    "+{s:value} Freezing Field Damage"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_rylai_crystal_nova_debuff"                                                 "Crystal Nova"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_crystal_nova_debuff_Description"                                     "Movement slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and Attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_frostbite"                                                 "Frostbite"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_frostbite_Description"                                     "Here's ice in your eyes!"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_buff"                                      "Arcane Aura"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_buff_Description"                          "Mana Regen gained by %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_fenzy"                                      "Arcane Fenzy"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_fenzy_Description"                          "Mana Regen from Arcane Aura Multiplied and casting speed increased!"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field"                                      "Freezing Field Activating"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field_Description"                          "Winter is coming"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field_debuff"                                      "Freezing Field"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field_debuff_Description"                          "Movement slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and Attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%"
+		"DOTA_Tooltip_modifier_rylai_crystal_field_debuff"                                      "Crystal Field"
+		"DOTA_Tooltip_modifier_rylai_crystal_field_debuff_Description"                          "Magical Resistance reduced by %MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%"
+		"npc_dota_rylai_ice_golem"															"Yeti"
+	 // Crystal Maiden End
+
+	 // Nevermore Begin
+		"#npc_dota_hero_nevermore" "(EXT) Shadow Fiend"
+		"npc_dota_hero_nevermore" "(EXT) Shadow Fiend"
+	  // Legendary
+		// "DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"Fire the Tail"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_waltz"    						"(EXT) Shadow Waltz"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_waltz_Description"    			"Casting Shadowrazes now launches a ring of razes, the number of which is related to Nevermore's current souls."
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_overlay"  						"(EXT) Shadow Overlay"
@@ -1757,7 +2092,332 @@
 		// "DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form_Description"                                     "Look at me I'm a big strong lizard, rawr!"
 	 // Nevermore End
 
+	 // SB Begin
+		"#npc_dota_hero_spirit_breaker" "(EXT) Spirit Breaker"
+		"npc_dota_hero_spirit_breaker" "(EXT) Spirit Breaker"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_orienteering"             				"(EXT) Orienteering"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_orienteering_Description"             	"Charge can now target ground position, searching main target within radius equals to Charge's bash radius + %bonus_radius%. If the main target is valid, Charge will set all enemies that radius around as targets, and let the charger(s) to charge them in turn."
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_drift"             					"(EXT) Drainage Drifting"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_drift_Description"            	 		"When charging, charger(s) can change current target by issuing a moveto/attack order to another legal target. If the new target is not in charge list, the old target will not get charged on hit."
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_unstoppable"             				"(EXT) Nether Form"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_unstoppable_Description"             	"Charge will no longer be interrupted by others. When Charging, charge(s) gain physical immunity."
+
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_sparking"             					"(EXT) Sparking Trail"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_sparking_Description"             		"Bulldozing heroes will leave a burning trail lasting up to %duration%s, damaging and slowing enemies stepping on it. The damage interval is %tick_rate%s, with amount equals to SB's movespeed x Bulldoze SR bonus. The slow effect is equal to Bulldoze MS bonus."
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_niubility"             				"(EXT) Niubility"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_niubility_Description"             	"Bulldozing heroes now has no movespeed limit. SB also gets Greater Bash CD removed and a fixed %attack_time%s attack time during Bulldoze. "
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rampage"             					"(EXT) Rampage"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rampage_Description"             		"Bulldoze is now applied all allies. Charge can now toggle autocast. When autocast, Charge sends all Bulldozing heroes charging at the target."
+
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_serial"             					"(EXT) Serial Accident"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_serial_Description"             		"Each enemy bashed produces an impact on landing, dealing %secondary_pct%% Grater Bash damage and knockback effect to other enemies within distance equal to knockback distance."
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rush"             						"(EXT) Rush Hour"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rush_Description"             			"Greater Bash now temporarily increase SB's movespeed on trigger. This bonus is stackable, making SB pass through any terrain and can exceed speed limit. "
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_schizophrenia"             			"(EXT) Schizophrenia"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_schizophrenia_Description"             "Greater Bash breaks enemies' mind, making them randomly attack nearby allies for %duration_pct%x of the stun duration."
+
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rise"             						"(EXT) Nether One Rises"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rise_Description"             			"SB become Bulldozed on arrival. Also gain spell immunity, which has duration equals to %base_duration% x Nether Strike Bash multiplier."
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_crash"             					"(EXT) Super Smash"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_crash_Description"             		"Nether Strike now apply impact to all targets in an AOE radius of the main target. The AOE radius equals to %base_radius% x Nether Strike Bash multiplier"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_runup"									"(EXT) Run-up"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_runup_Description"						"Nether Strike has infinite cast range and no cast point while charging. If casted during charging, the Charge gets refreshed on arrival."
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness"	                                "Charge of Darkness"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_Description"	                    "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects. All enemy units passed through and the targeted unit will be hit by a Greater Bash. If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location."
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_movement_speed"                    "Charge Speed Bonus:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_stun_duration"                     "Stun Duration:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_bash_radius"                       "Greater Bash Radius:"
+
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze"	                                "Bulldoze"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_Description"                     "Spirit Breaker gains movement speed and status resistance to ram through enemies. Can be used while charging."
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_movement_speed"                  "%Move Speed Bonus:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_status_resistance"               "%Status Resistance Bonus:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_duration"                     	"Duration:"
+
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash"	                                "Greater Bash"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_Description"                     "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement speed as damage. Deals 1.5x damage to creeps."
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_chance_pct"                      "%Proc Chance:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_damage"		                    "%Move Speed as Damage:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_duration"			            "Duration:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_knockback_duration"              "Knockback Duration:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_knockback_distance"              "Knockback Distance:"
+
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike"	                                "Nether Strike"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_Description"                        "Spirit Breaker slips into the nether realm, reappearing next to his hapless victim. Upon reappearing, a Greater Bash of the current level occurs and deals bonus damage. This Greater Bash instance's power is multiplied."
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_damage"                              "Damage:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_fade_time"                           "Fade Time:"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_bash_pct"                           "Strike Bash Multiplier:"
+		
+	  //Minor
+	  	"aghsfort_spirit_breaker_charge_of_darkness_mana_cost_cooldown"						"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+	  	"aghsfort_spirit_breaker_bulldoze_mana_cost_cooldown"								"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+	  	"aghsfort_spirit_breaker_nether_strike_cost_cooldown"								"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_spirit_breaker_charge_of_darkness_speed"									"+{s:value} {s:ability_name} Speed Bonus"
+		"aghsfort_spirit_breaker_charge_of_darkness_stun"									"+{s:value}s {s:ability_name} Stun Duration"
+		"aghsfort_spirit_breaker_charge_of_darkness_radius"									"+{s:value} {s:ability_name} Bash Radius"
+		"aghsfort_spirit_breaker_bulldoze_amp"												"+{s:value1}%/+{s:value2}% {s:ability_name} MS/RS bonus"
+		"aghsfort_spirit_breaker_bulldoze_duration"											"+{s:value}s {s:ability_name} Duration"
+		"aghsfort_spirit_breaker_greater_bash_damage"										"+{s:value}% {s:ability_name} Damage"
+		"aghsfort_spirit_breaker_greater_bash_stun"											"+{s:value}s {s:ability_name} Stun Duration"
+		"aghsfort_spirit_breaker_greater_bash_chance"										"+{s:value1}%/{s:value2}% {s:ability_name} Chance/CD Reduction"
+		"aghsfort_spirit_breaker_greater_bash_knockback"									"+{s:value} {s:ability_name} Knockback Distance"
+		"aghsfort_spirit_breaker_nether_strike_damage"										"+{s:value} {s:ability_name} Damage"
+		"aghsfort_spirit_breaker_nether_strike_bash"										"+{s:value}x {s:ability_name} Bash Impact"
+			
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_spirit_breaker_greater_bash+damage"	                    "+{s:value}% Greater Bash Damage"
+		"DOTA_Tooltip_Ability_special_bonus_unique_spirit_breaker_greater_bash+chance"	    				"+{s:value}% Greater Bash Chance"
+		"DOTA_Tooltip_Ability_special_bonus_unique_spirit_breaker_bulldoze-cd"	                            "-{s:value}s Bulldoze CD"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness"                                        "Charging!"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness_Description"                            "Charging!"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness_target"                                 "Charged Target"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness_target_Description"                     "Charged Target"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_bulldoze"				                                  "Bulldoze"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_bulldoze_Description"	                                  "Face me!"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_spark_debuff"				                              "Burning"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_spark_debuff_Description"	                              "Slowed and get burned"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_rush_hour"					                              "Rush!"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_rush_hour_Description"		                              "RUAAAAA!"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_schizophrenia"					                          "Schizophrenia"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_schizophrenia_Description"		                          "Randomly attacks allies"
+
+	 // SB End
+
+	 // Bounty Hunter Begin
+		"#npc_dota_hero_bounty_hunter" "(EXT) Bounty Hunter"
+		"npc_dota_hero_bounty_hunter" "(EXT) Bounty Hunter"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_track"  									"(EXT) Shuriken Mark"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_track_Description"  						"Shuriken now cast Track on hit if the target is not currently Tracked."
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_jinada" 									"(EXT) Rasen Shuriken"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_jinada_Description" 						"Shuriken now applies Jinada's bonus physical damage and money steal to the target. Also increase Shuriken tracked target bounce limit to %bounce_times%."
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_jinada_Note0" 								"Jinada not triggered by attack is not treated as attack, and it also doesn't steal money on unit who has gold stolen."
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_tripple"									"(EXT) Shuriken Kage Bunshin" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_tripple_Description"						"Shuriken Toss now throws up to %max_toss% pieces towards different enemies within %search_radius% radius." 
+
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_konyiji"									"(EXT) Kong Yi Ji" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_konyiji_Description"						"Bounty Hunter now steals books from captians and bosses died under Jinada's debuff. The amount of books per steal gets increased as ACT increases. " 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_loan"   									"(EXT) Loan"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_loan_Description"   						"New Ability: Loan. Bounty Hunter can loan money for himself or loan to allied hero. When loaning to ally, Bounty Hunter will earn interest after a period of time. "
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder" 									"(EXT) Money or Life"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder_Description" 						"Bounty Hunter's attack and Jinada not triggered by attack deals extra 100% Jinada bonus damage to enemies with money stolen. "
+
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy" 										"(EXT) Wind Walk"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy_Description" 							"Bounty Hunter gain %damage_reduction%%% totoal incoming damage reduction during Shadow Walk. On breaking invisibility, he receives a evasion and attackspeed percentage bonus buff lasting as long as Shadow Walk's debuff duration. "
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy_Note0"									"The evasion is %evasion_mul%x of slow, and the attackspeed percentage bonus is %as_mul%x of slow. The buff also make him dodge all projectiles."
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup"										"(EXT) Pickpocket" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup_Description"							"During Shadow Walking, BountyHunter applies Jinada to enemies pass by. Every single enemy can only be affected ONCE during each walk." 
+		// "DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup_Description"							"During Shadow Walking, BountyHunter applies Jinada to enemies pass by. Has cooldown on same target as long as Jinada." 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup_Note0"									"Jinada not triggered by attack is not treated as attack, and it also doesn't steal money on unit who has gold stolen."
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_track"										"(EXT) Case the Joint"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_track_Description"							"During Shadow Walking, Bounty Hunter automatically track enemies in range, with interval %interval_pct%x as Track CD. " 
+
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_invis"										"(EXT) Hunter Sneak" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_invis_Description"							"Units under Track buff gain invisibility under Shadow Walk with a %delay%s delay." 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_ally" 										"(EXT) Gang"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_ally_Description" 							"Track's Crit now also buffs allies with %effect_mul%x effect."
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_pass" 										"(EXT) Hunt List"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_pass_Description" 							"Track will pass to a nearby enemy on removed."
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss"	                                "Shuriken Toss"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_Description"                     "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce to any Tracked units who are within a %bounce_aoe% radius of each other."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_bonus_damage"	                "Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_ministun"		                "Ministun Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_range"			                "Cast Range: "
+		
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada"	                                "Jinada"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_Description"                        "Bounty Hunter plans his next hit, dealing bonus damage. The first Jinada applied on each enemy steals some unreliable gold."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_Note0"		                        "Earn only %creep_multiplier%x money from Non captain or boss"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_bonus_damage"                       "Bonus Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_gold_steal"                       	"Gold Steal: "
+
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk"	                                "Shadow Walk"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_Description"                     "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability EXCEPT Track. If he breaks the invisibility with an attack, that attack will slow the target's movement speed and cause armor reduction."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_duration"                         "Invisibility Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_fade_time"                        "Fade Time: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_slow"		                     "%Move Speed Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_slow_duration"                    "Debuff Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_armor_reduction"                  "Armor Reduction: "
+
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track"	                                "Track"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_Description"                     "Tracks an enemy, granting True Sight of the target, and information on how much gold it is carrying. Bounty Hunter moves fast when near the tracked unit and deals critical strikes when attacking it. If a tracked hero dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_Note0"                     		"Only Captains and Bosses offer track gold."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_gold_radius"               "Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_gold_self"               	"Self Bonus Gold: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_gold"               		"Ally Bonus Gold: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_duration" 	              		"Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_move_speed_pct"       		"%Self Move Speed Bonus: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_target_crit_multiplier"     		"%Self Critical Damage Against Target: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_toss_crit_multiplier"     		"%Shuriken Toss Damage Multiplier: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_boss_mul"     					"Boss Bounty Multiplier: "
+
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan"	                                "Loan"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_Description"                      "Loan some gold. If cast on self, get the loan for your self. If cast on ally, you loan that amount to your ally and earn the interest. The amount is based on Jinada's money stolen."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_Note0"                      "If the Debtor died or cannot afford, the payment will get delayed."
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_mul"                              "Jinada Gold Multiplier:"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_interest"                         "%Interest: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_interval"                         "Interval: "
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_instances"                        "Total Instances: "
+		
+
+	  //Minor
+	  	"aghsfort_bounty_hunter_shuriken_toss_mana_cost_cooldown"						"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_bounty_hunter_shuriken_toss_damage"			                        "+{s:value} {s:ability_name} Damage"
+		"aghsfort_bounty_hunter_shuriken_toss_range"			                        "+{s:value1}/{s:value3}s {s:ability_name} Range/Ministun"
+		"aghsfort_bounty_hunter_jinada_cooldown"			                            "+{s:value}% {s:ability_name} Cooldown Reduction"
+		"aghsfort_bounty_hunter_jinada_damage"			                                "+{s:value} {s:ability_name} Damage"
+		"aghsfort_bounty_hunter_jinada_gold"			                                "+{s:value} {s:ability_name} Gold Steal"
+	  	"aghsfort_bounty_hunter_wind_walk_mana_cost_cooldown"							"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+	  	"aghsfort_bounty_hunter_wind_walk_armor"										"+{s:value} {s:ability_name} Armor Reduction"
+	  	"aghsfort_bounty_hunter_wind_walk_slow"											"+{s:value}s {s:ability_name} Debuff Duration"
+	  	"aghsfort_bounty_hunter_track_mana_cost_cooldown"								"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+	  	"aghsfort_bounty_hunter_track_crit"												"+{s:value1}% {s:ability_name} Track Crit"
+	  	"aghsfort_bounty_hunter_track_ms"												"+{s:value1}%/{s:value2}s {s:ability_name} Track MS/Duration"
+	  	"aghsfort_bounty_hunter_track_gold"												"+{s:value1}/{s:value2} {s:ability_name} Track Gold"
+			
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+charge"	                    "{s:value} Shuriken Toss Charges"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+damage"	                    "+{s:value} Shuriken Toss Damage"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_jinada+gold"			                    "+{s:value} Jinada Gold Steal"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_jinada+damage"	                    	"+{s:value} Jinada Bonus Damage"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_wind_walk+slow"	                    	"+{s:value}s Wind Walk Slow"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_track+ally"	                    	"Track {s:value}x MS bonus for Allies"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_track+vison"	                    	"Track Provides {s:value} Ground Vision"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_track+gold"	                    	"+{s:value} Track Gold"
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_jinada_debuff"                                             "No Money!"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_wind_walk_invis"                                           "Shadow Walking"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_wind_walk_break"                                           "Shadow Strike!"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_wind_walk_break_Description"                               "Move slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and armor reduced by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_track"	                                             	 "Track Target"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_track_buff"	                                             "Tracking!"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_loan_debt"	                                             "In Debt"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_loan_debt_Description"	                                             "%dMODIFIER_PROPERTY_TOOLTIP% gold to pay, %dMODIFIER_PROPERTY_TOOLTIP2% gold per payment."
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_legend_walk_windy_buff"	                                             "Swift Walk"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_legend_walk_windy_buff_Description"	                                             "Dodging projectiles. Gain %dMODIFIER_PROPERTY_EVASION_CONSTANT%%% evasion and %dMODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE%%% attack speed. "
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_legend_track_invis_buff"	                                             "Sneaking"
+
+	 // Bounty Hunter End
+
+	 // Storm Spirit Begin
+		"#npc_dota_hero_lion" "(EXT) Storm Spirit"
+		"npc_dota_hero_lion" "(EXT) Storm Spirit"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_vortex"					"(EXT) Storm Omen"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_vortex_Description"		"On explosion, the remnant will cast a Vortex."
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_giant"					"(EXT) Uncle Giant"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_giant_Description"		"Every %counter%th(st,nd,rd) remnant now gets %scale%x as large, which also has %scale%x stats as normal remnant"
+		// "DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_power"					""
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_taunt"					"(EXT) All Eyes On Me"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_taunt_Description"		"Remnant can now toggle autocast. Autocasted  Remnants taunt enmies in their radius every %interval%s, with explosion delayed by extra %finale_delay%s."
+		
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_attack"					"(EXT) Cyber Stream"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_attack_Description"		"Vortex now attacks tethered enemies."
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_aoe"						"(EXT) Vortex Field"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_aoe_Description"			"Vortex now needs no target, pulling all enemies in its range. "
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_overload"					"(EXT) Ultra High Voltage"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_overload_Description"		"Vortex now fires an overload from its center every %interval%s. "
+
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_ally"					"(EXT) Parallel Charge"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_ally_Description"		"Overload now charges all allied heroes in %radius% radius."
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_mana"					"(EXT) Enegy Recycle"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_mana_Description"		"Overload now restore caster's mana with the same amount as it's mana pool damage on blast. "
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_remnant"				"(EXT) Power Excess"	
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_remnant_Description"	"Overload attacks each now generates a remnant on hit."	
+
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_ally"						"(EXT) Accel Synchron"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_ally_Description"			"Ball Lightning can now toggle autocast. When autocasted, Storm Spirit can let the first allied hero hit travel with him. "
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_fenzy"						"(EXT) The Flash"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_fenzy_Description"			"Ball Lightning grants the traveler bonus attack range equal to its AOE, and offers attack speed equal to %effect_mul% of its damage per increasement every 100 unit traveled. This buff lingers %linger%s after arrival. "
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_overload"					"(EXT) Chodendo-ha Thunder Force"	
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_overload_Description"		"Ball Lightning fires an overload at a nearby enemy every 100 unit traveled. "	
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant"	                        "Static Remnant"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_Lore"	                "Raijin Thunderkeg's duality allowed him to admire himself in shocking fashion."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_Description"             "Creates an explosively charged image of Storm Spirit that lasts %duration% seconds and will detonate and deal damage if an enemy unit comes near it."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_radius"				"Trigger Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_damage_radius"		"Damage Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_delay"				"Activiation Delay: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_damage"				"Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_duration"							"duration: "
+
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex"						"Electric Vortex"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_Description"			"A vortex that pulls an enemy unit to Storm Spirit's location."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_Lore"					"Raijin's thunderous, boisterous energy often draws others into an electrifying situation."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_cast_range"						"Cast Range: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_lectric_vortex_pull_distance"	"Pull Distance: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_duration"						"Pull Duration: "
+
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload"						"Overload"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_Description"			"Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_Lore"					"Pow! Zip! Zap!"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_aoe"					"Damage Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_move_slow"			"%Move Speed Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_attack_slow"			"Attack Speed Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_duration"						"Slow Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_mana_damage"					"%Max Mana Pool Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_damage"					"Base Damage: "
+
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning"							"Ball Lightning"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_Description"				"Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost and the cost per 100 units traveled are based on his total mana pool. Damage is expressed in damage per 100 units traveled."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_Lore"					"The Storm is coming in."
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_initial_mana_percentage"			"%Initial Manacost Pct: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_travel_cost_percent"				"%Max Mana as Cost per 100 Distance: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_initial_mana_base"				"Initial Manacost: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_travel_cost_base"					"Base Mana Cost per 100 Distance: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_aoe"								"Damage Radius: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_damage"											"Damage per 100 Units: "
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_move_speed"						"Travel Speed: "
+		
+	  //Minor
+		"aghsfort_storm_spirit_static_remnant_cost_cooldown"			                    "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_storm_spirit_electric_vortex_mana_cost_cooldown"			                "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_storm_spirit_ball_lightning_mana_cost"			                		"+{s:value1}% {s:ability_name} Manacost Reduction"
+		"aghsfort_storm_spirit_static_remnant_damage"			                            "+{s:value} {s:ability_name} Damage"
+		"aghsfort_storm_spirit_static_remnant_radius"			                            "+{s:value2} {s:ability_name} Radius"
+		"aghsfort_storm_spirit_electric_vortex_range"			                            "+{s:value1} {s:ability_name} Distance and Range"
+		"aghsfort_storm_spirit_electric_vortex_duration"                                    "+{s:value}s {s:ability_name} Duration"
+		"aghsfort_storm_spirit_overload_aoe"				                                "+{s:value} {s:ability_name} AOE"
+		"aghsfort_storm_spirit_overload_damage"				                                "+{s:value} {s:ability_name} Damage"
+		"aghsfort_storm_spirit_overload_mana"				                                "+{s:value}% {s:ability_name} Mana Pool Damage"
+		"aghsfort_storm_spirit_overload_slow"				                                "{s:value1}/+{s:value2}s {s:ability_name} Attack Slow and Duration"
+		"aghsfort_storm_spirit_ball_lightning_damage"				                        "+{s:value} {s:ability_name} Damage"
+		"aghsfort_storm_spirit_ball_lightning_aoe"		                                	"+{s:value1} {s:ability_name} AOE"
+			
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_static_remnant+dmg"					"+{s:value} Remnant Damage"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_static_remnant-cd"					"-{s:value} Remnant CD"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_electric_vortex+duration"			"+{s:value}s Vortex Duration"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_overload+bounce"					"+{s:value} Overload Bounce"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_ball_lightning+remnant"				"Ball Lightning Autocast Remnant every {s:value} Distance"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_electric_vortex_pull"						"Electrical Vortex"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_electric_vortex_pull_description"			"Tethered."
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_buff"								"Charged Ready!"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_buff_description"					"Ready for overload attack."
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_debuff"							"Overload"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_debuff_description"				"attack slowed by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, move slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_lightning_travel"						"Ball Lightning"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_lightning_travel_description"			"Global strike!"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_fenzy"								"The Flash"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_fenzy_description"					"Attack range increased by %dMODIFIER_PROPERTY_ATTACK_RANGE_BONUS%, attack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_legend_remnant_giant"						"Uncle Giant Counter"
+
+	 // Storm Spirit End
+
 	 // Ogre Magi Begin
+		"#npc_dota_hero_lion" "(EXT) Ogre Magi"
+		"npc_dota_hero_lion" "(EXT) Ogre Magi"
 	  // Legendary
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_fireblast_unref"									"(EXT) Unrefined Blast"
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_fireblast_unref_Description"						"New Ability: Unrefined Blast. Keeps same level as Fireblast, with manacost equal to %mana%%% of current mana and dealing extra damage per mana cost."
@@ -1784,7 +2444,7 @@
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_multicast_midas_Description"							"Have fun you two with Hand of Midas in Aghanim's Labyrinth!"
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_multicast_five"										"(EXT) Quintet Magi"
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_multicast_five_Description"							"Multicast now has its next level's effect. If of max level, it has 5x multicast. "
-		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_multicast_stupid"									"(EXT) Guess We Better~"
+		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_multicast_stupid"									"Guess We Better~"
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_legend_multicast_stupid_Description"						"Orge Magi becomes a universal hero, while providing a strength bonus of 80% to Agility values."
 
 	  //Ability
@@ -1830,7 +2490,6 @@
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_multicast_multicast_3_times"			"%3x Multicast Chance:"
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_multicast_multicast_4_times"			"%4x Multicast Chance:"
 		"DOTA_Tooltip_Ability_aghsfort_ogre_magi_multicast_multicast_5_times"			"%(Legendary)5x Multicast Chance:"
-
 		
 	  //Minor
 		"aghsfort_ogre_magi_fireblast_mana_cost_cooldown"			                    "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
@@ -1870,6 +2529,243 @@
 		"DOTA_Tooltip_modifier_aghsfort_ogre_magi_legend_multicast_stupid"			"Guess We Better~"
 		"DOTA_Tooltip_modifier_aghsfort_ogre_magi_legend_multicast_stupid_Description"			"Lose %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS% intelligence, gain %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% strength. "
 	 // Ogre Magi End
+
+	 // Lion Begin
+		"#npc_dota_hero_lion" "(EXT) Lion"
+		"npc_dota_hero_lion" "(EXT) Lion"
+	  // Legendary
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_split"				"(EXT) Chuan Chuan Xiang"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_split_Description"	"Each spike now split into %pieces% secondary spikes of %length_pct%x length on hitting the first enemy or reaching its end. Secondary spikes do not split or hit enemies already hit by its parent. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_shred"				"(EXT) Crack to Hell"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_shred_Description"	"During Spike airtime, Finger of Death deals %damage_mul%x as usual damage in PURE type. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_tripple"				"(EXT) Spikerock"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_tripple_Description"	"Lion launches 3 spikes on cast. "
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_gold"					"(EXT) Money Changes Hands"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_gold_Description"		"Hexed enemies drop gold bags on taking damage. The small bag contains %gold% gold, with a damage threshold of %thres%. When the damage goes beyond %mul_thres%, the bag dropped will be %mul%x as large. Bags last %life_time% seconds. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_aoe"					"(EXT) Lots of Fish"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_aoe_Description"		"Hex is now a %aoe% AOE point-target ability."
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_death"				"(EXT) Instant Barbecue"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_death_Description"	"Lion's other sepcial unit-target abilities also cast Hex on target. Finger of Death will also target hexed enemies within %range% range on casting."
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_ally"					"(EXT) Essence Injection"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_ally_Description"		"Essence Drain can target on allied heroes. When ally-casting, it cost Lion's mana and heal the target instead. Reduce Drain's base cooldown to %cd%s."
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_tripple"				"(EXT) Demon's Meal"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_tripple_Description"	"Essence Drain now has up to %extra_targets% extra targets with a %search_range% search radius around the original target. Lion gains spell immunity when channeling. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_amp"					"(EXT) Dementor"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_amp_Description"		"Essence Drain now amplifies Lion's spell during channeling. The bonus spell amp per tick equals to %amp_slow%x Drain's slow, and the buff lingers for %linger%s after channel finished."
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_charge"				"(EXT) Two-Finger Zen"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_charge_Description"	"Finger of Death now has %charges% charges. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_aoe"					"(EXT) They're All Dead!"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_aoe_Description"		"Finger of Death now also affects enemies in %aoe% AOE radius. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_doom"					"(EXT) Death Bringer"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_doom_Description"		"Finger of Death's debuff now lasts %duration_mul%x as long, and dooms the victim for the duration. The debuff also deals damage equal to %damage_pct%%% of that Finger's every second. "
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale"											"Earth Spike"
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_description"								"Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall."
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_Lore"									"The Demon Witch exercises his demonic covenant, opening a fissure from hell."
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_width"									"Spike Width: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_duration"								"Stun Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_cast_range"								"Cast Range: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_length_buffer"							"Spikes Range Buffer: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_damage"									"Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_air_time"								"Air Time: "
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo"											"Hex"
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_description"								"Transforms an enemy unit into a harmless beast, with all special abilities disabled. Hex lasts shorter on captains and bosses. Dealing Magical damage every second based on Lion's Intelligence. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_Note0"								"Has instant damage on hit. Doesn't reduce damge for reduced duration. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_lore"									"Lion is compelled to share his transfiguration, twisting the essence of those who oppose him."
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_duration"								"Duration: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_movespeed"								"Fixed Movespeed: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_int_damage_tooltip"						"%Int Damage per Second: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_captain_factor"							"Captain Factor: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_boss_factor"								"Boss Factor: "
+		
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain"										"Essence Drain"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_description"							"Absorbs the life energies of a target enemy unit and transfer them to his mana every second. Dealing pure damange and gain mana equal to damage multiples a factor."
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_note0"								"The damage per second equals to mana drain divides health mana factor, and is marked as health removal."
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_note1"								"Drain breaks if the distance between the caster and the target runs %buff_distance% longer than its cast range. "
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_note2"								"Drain ticks every %tick_interval% second."
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_lore"								"Lesser creatures are nothing more than a source of magical restoration for the Demon Witch."
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_duration"							"Max Channel Time: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_drain_per_second"					"Mana Drain per Second: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_damage_mana"							"Health Mana Factor: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_movespeed"							"%Move Speed Slow: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_buff_distance"						"Slow: "
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death"								"Finger of Death"
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_description"					"Rips at an enemy unit, trying to turn it inside-out. Deals massive damage and grows stronger with each life it consumes. If an enemy dies during its effect, he gains power layers that increases the ripping power. Gets 1, %captain_layer%, and %boss_layer% from every creep, captain and boss, respectively."
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_lore"							"Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force."
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_Note0"							"Damage has a %damage_delay% second's delay."
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_damage"							"Base Damage: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_damage_per_layer"				"Damage per Layer: "
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_grace_period"					"Effect Duration: "
+
+
+	  //Minor
+		"aghsfort_lion_impale_mana_cost_cooldown"			                    		"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_lion_impale_range"						                            "+{s:value1}/{s:value2} {s:ability_name} Distance/Speed"
+		"aghsfort_lion_impale_damage"						                            "+{s:value} {s:ability_name} Damage"
+		"aghsfort_lion_impale_stun"						                            	"+{s:value}s {s:ability_name} Stun"
+
+		"aghsfort_lion_voodoo_mana_cost_cooldown"					                    "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_lion_voodoo_duration"								                    "+{s:value}s {s:ability_name} Duration"
+		"aghsfort_lion_voodoo_dmg"									                    "+{s:value2}% {s:ability_name} int damage per second"
+
+		"aghsfort_lion_mana_drain_mana_cost_cooldown"				                    "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_lion_mana_drain_drain"							                    "+{s:value} {s:ability_name} Mana Drain per Second"
+		"aghsfort_lion_mana_drain_duration"							                    "+{s:value} {s:ability_name} Duration"
+		"aghsfort_lion_mana_drain_slow"						                    		"+{s:value}% {s:ability_name} Slow"
+			
+		"aghsfort_lion_finger_of_death_mana_cost_cooldown"				                "+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort_lion_finger_of_death_damage"				                			"+{s:value} {s:ability_name} Base Damage"
+		"aghsfort_lion_finger_of_death_layer"				                			"+{s:value} {s:ability_name} Damage per Layer"
+
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_impale+range"					"+{s:value} Earth Spike Distance"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_impale-cd"						"-{s:value} Earth Spike CD"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_voodoo+duration"				"+{s:value} Hex Duration"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_mana_drain+drain"				"+{s:value} Essence Drain Per Sec"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_finger_of_death+layer_dmg"			"+{s:value} Finger of Death Damage Per Layer"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_finger_of_death+layer_hp"			"+{s:value} Finger of Death HP Per Layer"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death"							"Finger of Death Stack"
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death_Description"				"Finger of Death's damage increased by %dMODIFIER_PROPERTY_TOOLTIP%, HP increased by %dMODIFIER_PROPERTY_HEALTH_BONUS%"
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death_debuff"					"Finger of Death Curse"
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death_debuff_Description"		"If died under curse, Lion will gain Finger of Death Stacks. "
+		"DOTA_Tooltip_modifier_aghsfort_lion_mana_drain"								"Essence Drain"
+		"DOTA_Tooltip_modifier_aghsfort_lion_drain_amp"									"Dementor"
+		"DOTA_Tooltip_modifier_aghsfort_lion_drain_amp_Description"						"Spell Amp increased by %dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%."
+
+	 // Lion End
+
+	 // Venomancer Begin
+		"#npc_dota_hero_venomancer" "(EXT) Venomancer"
+		"npc_dota_hero_venomancer" "(EXT) Venomancer"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ward"						"(EXT) Parastic Toxin"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ward_description"			"Venomous Gale now spawn Wards around enemies on hit. For creeps the spawn chance is %creep_pct%%%. Spawn %wards_cap% and %wards_boss% Wards near captains and bosses, respectively. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ring"						"(EXT) Gale Ring"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ring_description"			"Venomous Gale now shoots in %count% directions. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_atk"						"(EXT) Venom Strike"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_atk_description"			"Venomous Gale now triggers attack on hit."
+
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_boom"					"(EXT) Black Death"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_boom_description"		"Poison Sting now accumulate damage for explosion on expiration or victim's death. Dealing %damage_pct%%% of damage it has already done to the victim in %radius% radius. The explosion damage is reduced to %no_death_pct%%% if not triggered on death. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_side"					"(EXT) Side Effect"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_side_description"		"Poison Sting is now undispellable, and reduces victim's regen by %regen_pct%%%. Whenever a poisoned enemy attempts to heal, it receives damage of the same amount instead of healing. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash"					"(EXT) Emerald Splash"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash_description"		"Venomancer and his Wards attacks upon poisoned enemies splashes to pieces firing at other nearby enemies, and the pieces will continue to splash upon poisoned enemies. The splash damage is %pct_base%%% + Poison Sting's slow percentage. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash_Note0"			"The splash count decreases by 1 after every splash, and the number of pieces equals to the splash count left. Venomancer's attack has %bounce% initial splash count, while Wards' have %bounce_ward%. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash_Note1"			"Splash piece carries Poison Sting, but the splash will NOT take place if the target has not been poisoned before."
+
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_nova"						"(EXT) Dehiscence"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_nova_description"			"Wards release Poison Nova on death. The duration and radius of that nova is %duration_mul%x and %radius_mul%x of the original. Chimera's Nova has %chimera_mul%x radius and duration of normal Wards. An additional nova is triggerd after the first %attacks% normal attacks. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_yugo"						"(EXT) Chimera Botany • Toxin Fusion"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_yugo_description"			"New Ability: Venom Fusion. Sacrifice all Wards in an area as Fusion Materials, then Fusion Summon the Chimera Bontany • Plague Dragon. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_move"						"(EXT) Pull Roots And Run"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_move_description"			"Wards now can move. Also inherits %atk_pct%%% of Venomancer's attack damage. "
+
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_heal"						"(EXT) Targeted Drugs"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_heal_description"			"Poison Nova now affects allies. Heal allies with the amount equal to damage. "
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_worse"					"(EXT) Fast Exacerbation"	
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_worse_description"		"Poison Nova's damage now gets amplified according to victim's health percentage, dealing %damage_pct%%% × HP Percentage extra damge. "	
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_all"						"(EXT) COVID-22"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_all_description"			"Casting Poison Nova now releases Nova from all allied heroes. Also make Nova debuff stackable, with damage increased by %stack_pct%%% for each stack. "
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale"							"Venomous Gale"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_description"				"Launches a ball of venom in a line, poisoning enemy units so that they take both initial damage and damage over time, as well as suffering slowed movement. Venomous Gale deals damage every %tick_interval% seconds over its duration."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_lore"						"A concoction of various stings, poisons, and toxins gathered from the jungles of Jidi Isle, victims surviving it are rare."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_distance"					"Cast Range: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_radius"					"Gale Radius: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_duration"					"Duration: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_strike_damage"				"Initial Damage: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_tick_damage"				"Tick Damage: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_movement_slow"				"%Move Speed Slow:"
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting"							"Poison Sting"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_description"				"Adds poison damage to Venomancer's normal attacks and slowing movement speed."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_lore"						"The paralytic sting of the creature which caused his transformation now belongs to the Venomancer."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_duration"					"Duration: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_damage"						"Damage per Second: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_movement_speed"				"%Move Speed Slow: "
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward"								"Plague Ward"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_description"					"Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Wards gain the Poison Sting level from Venomancer, dealing 50% of the full damage."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_lore"						"A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_duration"					"Ward Duration: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_ward_hp"						"Ward HP: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_ward_damage"					"Ward Damage: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_ward_as"						"Ward Attack Speed: "
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany"							"Venom Fusion"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_description"				"Sacrifice ALL Plague Wards in the radius as fusion materials, then Fusion Summon the Chimera Bontany • Plague Dragon.\n The monster's ATK/HP equals to the number of Fusion Materials used for its Fusion Summon x Plague Ward's ATK/HP x %power_mul%.<br> The monster gains multishot with the number of shots equal to the number of Fusion Materials. Can multishoot at the same target."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_lore"						"Don't blink, this is the last monster you see! "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_duration"					"Ward Duration: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_ward_as"					"Ward Attack Speed: "
+
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova"								"Poison Nova"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_description"					"A spreading ring of poison that does damage over time to enemy units around Venomancer. "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_lore"						"In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle."
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_duration"					"Duration: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_damage"						"Damage Per Second: "
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_radius"						"Radius: "
+
+
+	  //Minor
+		"aghsfort2_venomancer_venomous_gale_mana_cost_cooldown"		                   		"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort2_venomancer_venomous_gale_strike_damage"			                   		"+{s:value} {s:ability_name} Strike Damage"
+		"aghsfort2_venomancer_venomous_gale_distance"				                   		"+{s:value} {s:ability_name} Distance"
+		"aghsfort2_venomancer_venomous_gale_tick_damage"			                   		"+{s:value} {s:ability_name} Tick Damage"
+
+		"aghsfort2_venomancer_poison_sting_damage"					                   		"+{s:value} {s:ability_name} Damage"
+		"aghsfort2_venomancer_poison_sting_duration"				                   		"+{s:value}s {s:ability_name} Duration"
+		"aghsfort2_venomancer_poison_sting_slow"					                   		"{s:value}% {s:ability_name} Slow"
+			
+		"aghsfort2_venomancer_plague_ward_mana_cost_cooldown"		                   		"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort2_venomancer_plague_ward_duration"					                   		"+{s:value}s {s:ability_name} Duration"
+		"aghsfort2_venomancer_plague_ward_hp"						                   		"+{s:value} {s:ability_name} HP"
+		"aghsfort2_venomancer_plague_ward_damage"					                   		"+{s:value} {s:ability_name} Damage"
+		"aghsfort2_venomancer_plague_ward_attack_speed"				                   		"+{s:value} {s:ability_name} Attack Speed"
+
+		"aghsfort2_venomancer_poison_nova_mana_cost_cooldown"		                   		"+{s:value1}% {s:ability_name} Manacost/Cooldown Reduction"
+		"aghsfort2_venomancer_poison_nova_duration"					                   		"+{s:value}s {s:ability_name} Duration"
+		"aghsfort2_venomancer_poison_nova_damage"					                   		"+{s:value} {s:ability_name} Damage"
+		"aghsfort2_venomancer_poison_nova_radius"					                   		"+{s:value1} {s:ability_name} Radius"
+
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_venomous_gale-cd"				"-{s:value}s Venomous Gale CD"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_poison_sting-ms"				"+{s:value}% Poison Sting MS"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_poison_nova+dur"				"+{s:value}s Poison Nova Duration"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_poison_nova+radius"			"+{s:value} Poison Nova Radius"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_plague_wardxstats"			"{s:value}x Plague Ward Stats"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_plague_ward-cd"				"-{s:value}s Plague Ward CD"
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_venomous_gale"							"Venomous Gale"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_venomous_gale_Description"				"Takes damage over time, movespeed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_nova"							"Poison Nova"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting"							"Poison Sting"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting_Description"				"Takes damage over time, movespeed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting_ward"						"Poison Sting (Ward)"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting_ward_Description"			"Takes damage over time, movespeed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_chimera_botany"							"Fusion Materials Count"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_sting_boom"								"Black Death"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_sting_side"								"Side Effect"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_ward_nova"								"Dehiscence"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_ward_move"								"Pull Roots and Run"
+
+		"npc_dota_venomancer_plague_ward_1_aghs2"															"Plague Ward"
+		"npc_aghs2_venomancer_chimera_ward"															"Chimera Botany • Plague Dragon"
+
+	 // Venomancer End
 
 	 // Item Begin
 	  // Double Daedalous

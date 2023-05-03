@@ -1,0 +1,642 @@
+"DOTAAbilities"
+{
+	"aghsfort_dk_breathe_fire"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/dragon_knight/breathe_fire"
+		"AbilityTextureName"			"dragon_knight_breathe_fire"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"				   
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	   
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+
+		"AbilityCooldown"				"14 13 12 11"
+		"AbilityManaCost"				"105 115 125 135"
+
+        "precache"
+		{
+			"particle" 					"particles/items4_fx/bull_whip_enemy_debuff.vpcf"
+		}
+
+        
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"start_radius"			"150 150 150 150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"end_radius"			"250 250 250 250"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"					"750"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed"					"1050"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"reduction"				"25"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10"
+			}
+            "07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage"				"90 170 240 300"
+			}
+		}
+	}
+
+    "special_bonus_unique_aghsfort_dk_breathe_fire"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			
+        }            
+    }
+
+    "aghsfort_dk_dragon_blood"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/dragon_knight/dragon_blood"
+		"AbilityTextureName"			"dragon_knight_dragon_blood"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"18"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_health_regen"			"4 8 12 16"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_armor"					"3 6 9 12"
+			}
+		}
+	}
+    "aghsfort_dk_dragon_tail"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/dragon_knight/dragon_tail"
+		"AbilityTextureName"			"dragon_knight_dragon_tail"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		"AbilityCastRange"				"150"
+		"AbilityCastPoint"				"0.20"
+
+		"AbilityCooldown"				"13 12 11 10"
+		"AbilityManaCost"				"100 110 120 130"
+
+        "precache"
+		{
+			"particle" 					"particles/creatures/ogre/ogre_melee_smash.vpcf"
+		}
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"2 2.25 2.50 2.75"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dragon_cast_range"			"600"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"			"1600"
+			}
+            "04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_damage"			"60 70 80 90"
+			}
+            "05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"			    "150"
+                "LinkedSpecialBonus"    "special_bonus_aghsfort_dk_dragon_tail+radius"
+			}
+            "06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dragon_radius_mult"    "50"
+			}
+		}
+	}
+
+    "special_bonus_aghsfort_dk_dragon_tail+radius"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"60"
+                "ad_linked_ability"	    "aghsfort_dk_dragon_tail"
+			}
+        }            
+    }
+
+    "aghsfort_dk_elder_dragon_form"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/dragon_knight/elder_dragon_form"
+		"AbilityTextureName"			"dragon_knight_elder_dragon_form"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"3"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		"AbilityCooldown"				"55"
+		"AbilityManaCost"				"55 65 75"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"15"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"35"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_range"		"350"
+                "LinkedSpecialBonus"        "special_bonus_aghsfort_dk_elder_dragon_form+bonus_attack_range"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_damage"		"10 15 20"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"corrosive_breath_damage"	"20"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"corrosive_breath_duration"	"5.0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"300"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"0 75 75"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"frost_bonus_movement_speed"	"-40"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"frost_bonus_attack_speed"		"-40"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"frost_duration"				"3.0"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"frost_aoe"					"300"
+			}
+		}
+	}
+
+    "special_bonus_aghsfort_dk_elder_dragon_form+bonus_attack_range"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"	"250"
+                "ad_linked_ability"	    "aghsfort_dk_elder_dragon_form"
+			}
+        }            
+    }
+
+    "aghsfort_dk_breathe_fire_stun"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "dragon_knight_breathe_fire"
+        "AbilityParentName"             "aghsfort_dk_breathe_fire"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        // "precache"
+		// {
+		// 	"particle" 					"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_fireblast_streak.vpcf"
+		// }
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"chance"			        "50.0"
+			}
+		}   
+	}
+
+    "aghsfort_dk_breathe_fire_macropyre"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_breathe_fire"
+        "AbilityTextureName"            "dragon_knight_breathe_fire"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle" 					"particles/econ/items/jakiro/jakiro_ti10_immortal/jakiro_ti10_macropyre_leading_after_burn.vpcf"
+            "particle" 					"particles/econ/items/jakiro/jakiro_ti10_immortal/jakiro_ti10_macropyre_ground_shockwave.vpcf"
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"width"			            "250"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_percent"			"20"
+			}
+            "03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"interval"			        "0.5"
+			}
+            "04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"			        "5.0"
+			}
+		}   
+	}
+
+    "aghsfort_dk_breathe_fire_crit_lifesteal"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_breathe_fire"
+        "AbilityTextureName"            "dragon_knight_breathe_fire"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle"	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+            "particle"	"particles/items3_fx/fish_bones_active.vpcf"
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"chance"			        "25.0"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"crit_mult"			        "180.0"
+			}
+            "03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"lifesteal"			        "100.0"
+			}
+		}   
+	}
+
+    "aghsfort_dk_dragon_tail_passive"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_dragon_tail"
+        "AbilityTextureName"            "dragon_knight_dragon_tail"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"chance"			        "15.0"
+			}
+		}   
+	}
+
+    "aghsfort_dk_dragon_tail_bounce"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_dragon_tail"
+        "AbilityTextureName"            "dragon_knight_dragon_tail"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bonus_range"			    "900"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bounces"			    "2"
+			}
+		}   
+	}
+
+    "aghsfort_dk_dragon_tail_chain"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_dragon_tail"
+        "AbilityTextureName"            "dragon_knight_dragon_tail"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_soulchain.vpcf"
+            "particle"	"particles/units/heroes/hero_grimstroke/grimstroke_cast_soulchain_arc.vpcf"
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"max_distance"			    "1000"
+			}
+            // "02"
+			// {
+			// 	"var_type"					"FIELD_FLOAT"
+			// 	"hp_drain"			        "2.5"
+			// }
+            "03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"reflect_percentage"       "50"
+			}
+            "04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"                  "4.0"
+			}
+		}   
+	}
+
+    "aghsfort_dk_dragon_blood_damage"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_dragon_blood"
+        "AbilityTextureName"            "dragon_knight_dragon_blood"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle"	"particles/units/heroes/hero_invoker_kid/invoker_kid_exort_orb_fire.vpcf"            
+            "particle"	"particles/items3_fx/fish_bones_active.vpcf"     
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"max_stack"			        "4"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"heal"			            "100"
+            }
+		}   
+	}
+
+    "aghsfort_dk_dragon_blood_gold"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_dragon_blood"
+        "AbilityTextureName"            "dragon_knight_dragon_blood"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"gold_per_armor"			"300"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"gold_per_magic_resist"     "350"
+            }
+		}   
+	}
+
+    "aghsfort_dk_dragon_blood_active"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_dragon_blood"
+        "AbilityTextureName"            "dragon_knight_dragon_blood"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle"	"particles/units/heroes/hero_huskar/huskar_inner_fire.vpcf"            
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration" 			        "3"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"regen_damage_mult"         "200"
+            }
+            "03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"             "1.25"
+            }
+            "04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"radius"                    "500"
+            }
+		}   
+	}
+
+    "aghsfort_dk_elder_dragon_form_attack"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_elder_dragon_form"
+        "AbilityTextureName"            "dragon_knight_elder_dragon_form"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle"	"particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_death_esl_explode.vpcf"            
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"radius" 			        "800"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"attack"                    "3"
+            }
+		}   
+	}
+
+    "aghsfort_dk_elder_dragon_form_fear"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_elder_dragon_form"
+        "AbilityTextureName"            "dragon_knight_elder_dragon_form"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration" 			        "1.75"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"breaths"                   "6"
+            }
+            "03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"radius" 			        "500"
+			}
+		}   
+	}
+
+    "aghsfort_dk_elder_dragon_form_cdr"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityParentName"             "aghsfort_dk_elder_dragon_form"
+        "AbilityTextureName"            "dragon_knight_elder_dragon_form"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+
+        "precache"
+		{
+			"particle"	"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_fireblast.vpcf"            
+		}
+
+        "AbilitySpecial"
+		{	
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cdr" 			            "0.5"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"heal" 			            "20"
+			}
+		}   
+	}
+}

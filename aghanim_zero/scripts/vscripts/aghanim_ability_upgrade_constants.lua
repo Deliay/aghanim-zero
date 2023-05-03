@@ -38,8 +38,16 @@ _G.MINOR_ABILITY_UPGRADES =
    npc_dota_hero_sand_king = require( "minor_ability_upgrades/minor_ability_upgrades_sand_king" ),
    npc_dota_hero_clinkz = require( "minor_ability_upgrades/minor_ability_upgrades_clinkz" ),
    -- copy from EXT
+   npc_dota_hero_antimage = require( "minor_ability_upgrades/minor_ability_upgrades_antimage" ),
+   npc_dota_hero_dragon_knight = require( "minor_ability_upgrades/minor_ability_upgrades_dragon_knight" ),
+   npc_dota_hero_crystal_maiden = require( "minor_ability_upgrades/minor_ability_upgrades_crystal_maiden" ),
    npc_dota_hero_nevermore = require( "minor_ability_upgrades/minor_ability_upgrades_nevermore" ),
+   npc_dota_hero_spirit_breaker = require( "minor_ability_upgrades/minor_ability_upgrades_spirit_breaker" ),
+   npc_dota_hero_bounty_hunter = require( "minor_ability_upgrades/minor_ability_upgrades_bounty_hunter" ),
+   npc_dota_hero_storm_spirit = require( "minor_ability_upgrades/minor_ability_upgrades_storm_spirit" ),
    npc_dota_hero_ogre_magi = require( "minor_ability_upgrades/minor_ability_upgrades_ogre_magi" ),
+   npc_dota_hero_lion = require( "minor_ability_upgrades/minor_ability_upgrades_lion" ),
+   npc_dota_hero_venomancer = require( "minor_ability_upgrades/minor_ability_upgrades_venomancer" ),
    --non hero specific upgrades (bonus HP/mana/damage/etc.)
    base_stats_upgrades = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
 }
@@ -173,11 +181,50 @@ _G.STAT_UPGRADE_EXCLUDES =
    {
    },
    -- copy from ext
+
+   npc_dota_hero_antimage =
+   {
+   },
+
+   npc_dota_hero_dragon_knight =
+   {      
+      "aghsfort_minor_stat_upgrade_bonus_evasion",
+	   "aghsfort_minor_stat_upgrade_bonus_armor",
+   },
+
+   npc_dota_hero_crystal_maiden =
+   {
+
+   },
+
    npc_dota_hero_nevermore =
    {
 
    },
+
+   npc_dota_hero_spirit_breaker =
+   {
+
+   },
+
+   npc_dota_hero_bounty_hunter =
+   {
+
+   },
+
+   npc_dota_hero_storm_spirit =
+   {
+
+   },
    npc_dota_hero_ogre_magi =
+   {
+
+   },
+   npc_dota_hero_lion =
+   {
+
+   },
+   npc_dota_hero_venomancer =
    {
 
    },
@@ -218,8 +265,16 @@ _G.ULTIMATE_ABILITY_NAMES =
    npc_dota_hero_clinkz = "clinkz_burning_army",
 
    -- copy from ext
+   npc_dota_hero_antimage = "antimage_mana_void",
+   npc_dota_hero_dragon_knight = "dragon_knight_elder_dragon_form",
+   npc_dota_hero_crystal_maiden = "crystal_maiden_freezing_field",
    npc_dota_hero_nevermore = "nevermore_requiem",
+   npc_dota_hero_spirit_breaker = "spirit_breaker_nether_strike",
+   npc_dota_hero_bounty_hunter = "bounty_hunter_track",
+   npc_dota_hero_storm_spirit = "storm_spirit_ball_lightning",
    npc_dota_hero_ogre_magi = "ogre_magi_multicast",
+   npc_dota_hero_lion = "lion_finger_of_death",
+   npc_dota_hero_venomancer = "venomancer_poison_nova"
 }
 
 -- Lists for ability upgrades go here
@@ -904,6 +959,63 @@ SPECIAL_ABILITY_UPGRADES[ "npc_dota_hero_clinkz" ] =
    "aghsfort_special_clinkz_burning_army_stunning_skeletons",
 }
 -- copy from ext
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_antimage"] =
+{
+   "aghsfort_antimage_legend_mana_transfer",
+   "aghsfort_antimage_legend_mana_explosion",
+   "aghsfort_antimage_legend_imagine_breaker",
+
+   "aghsfort_antimage_legend_blink_illusion",
+   "aghsfort_antimage_legend_blink_counter",
+   "aghsfort_antimage_legend_blink_fragment",
+   
+   "aghsfort_antimage_legend_comprehensive_counter",
+   "aghsfort_antimage_legend_turstarkuri_guardiance",
+   "aghsfort_antimage_legend_arcande_discipliner",
+   
+   "aghsfort_antimage_legend_secondary_void",
+   "aghsfort_antimage_legend_mana_release",
+   "aghsfort_antimage_legend_ability_ban",
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_dragon_knight"] =
+{         
+   "aghsfort_dk_breathe_fire_stun",
+   "aghsfort_dk_breathe_fire_macropyre",
+   "aghsfort_dk_breathe_fire_crit_lifesteal",
+
+   "aghsfort_dk_dragon_tail_passive",
+   "aghsfort_dk_dragon_tail_bounce",
+   "aghsfort_dk_dragon_tail_chain",
+
+   "aghsfort_dk_dragon_blood_damage",
+   "aghsfort_dk_dragon_blood_gold",
+   "aghsfort_dk_dragon_blood_active",
+
+   "aghsfort_dk_elder_dragon_form_attack",
+   "aghsfort_dk_elder_dragon_form_fear",   
+   "aghsfort_dk_elder_dragon_form_cdr",
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_crystal_maiden"] = 
+{
+   "aghsfort_rylai_legend_snowman",
+   "aghsfort_rylai_legend_nova_strike",
+   "aghsfort_rylai_legend_crystal_field",
+
+   "aghsfort_rylai_legend_frost_chain",
+   "aghsfort_rylai_legend_frost_touch",
+   "aghsfort_rylai_legend_frost_split",
+
+   "aghsfort_rylai_legend_arcane_field",
+   "aghsfort_rylai_legend_arcane_enhance",
+   "aghsfort_rylai_legend_cool_mind",
+
+   "aghsfort_rylai_legend_letgo",
+   "aghsfort_rylai_legend_nova_storm",
+   "aghsfort_rylai_legend_absolute_zero",
+}
+
 SPECIAL_ABILITY_UPGRADES["npc_dota_hero_nevermore"] = 
 {
    "aghsfort_nevermore_legend_shadow_waltz",
@@ -921,6 +1033,64 @@ SPECIAL_ABILITY_UPGRADES["npc_dota_hero_nevermore"] =
    "aghsfort_nevermore_legend_reiatsu",
    "aghsfort_nevermore_legend_soul_callback",
    "aghsfort_nevermore_legend_made_in_hell",
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_spirit_breaker"] = 
+{
+   "aghsfort_spirit_breaker_legend_orienteering",
+   "aghsfort_spirit_breaker_legend_drift",
+   "aghsfort_spirit_breaker_legend_unstoppable",
+
+   "aghsfort_spirit_breaker_legend_sparking",
+   "aghsfort_spirit_breaker_legend_niubility",
+   "aghsfort_spirit_breaker_legend_rampage",
+
+   "aghsfort_spirit_breaker_legend_serial",
+   "aghsfort_spirit_breaker_legend_rush",
+   "aghsfort_spirit_breaker_legend_schizophrenia",
+
+   "aghsfort_spirit_breaker_legend_rise",
+   "aghsfort_spirit_breaker_legend_crash",
+   "aghsfort_spirit_breaker_legend_runup"
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_bounty_hunter"] = 
+{
+   "aghsfort_bounty_hunter_legend_toss_track",
+   "aghsfort_bounty_hunter_legend_toss_jinada",
+   "aghsfort_bounty_hunter_legend_toss_tripple",
+
+   "aghsfort_bounty_hunter_legend_jinada_konyiji",
+   "aghsfort_bounty_hunter_legend_jinada_loan",
+   "aghsfort_bounty_hunter_legend_jinada_murder",
+
+   "aghsfort_bounty_hunter_legend_walk_windy",
+   "aghsfort_bounty_hunter_legend_walk_pickup",
+   "aghsfort_bounty_hunter_legend_walk_track",
+
+   "aghsfort_bounty_hunter_legend_track_invis",
+   "aghsfort_bounty_hunter_legend_track_ally",
+   "aghsfort_bounty_hunter_legend_track_pass",
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_storm_spirit"] = 
+{
+   "aghsfort_storm_spirit_legend_remnant_vortex",
+   "aghsfort_storm_spirit_legend_remnant_giant",
+   -- "aghsfort_storm_spirit_legend_remnant_power",
+   "aghsfort_storm_spirit_legend_remnant_taunt",
+   
+   "aghsfort_storm_spirit_legend_vortex_attack",
+   "aghsfort_storm_spirit_legend_vortex_aoe",
+   "aghsfort_storm_spirit_legend_vortex_overload",
+
+   "aghsfort_storm_spirit_legend_overload_ally",
+   "aghsfort_storm_spirit_legend_overload_mana",
+   "aghsfort_storm_spirit_legend_overload_remnant",
+
+   "aghsfort_storm_spirit_legend_ball_ally",
+   "aghsfort_storm_spirit_legend_ball_fenzy",
+   "aghsfort_storm_spirit_legend_ball_overload",
 }
 
 SPECIAL_ABILITY_UPGRADES["npc_dota_hero_ogre_magi"] = 
@@ -942,6 +1112,45 @@ SPECIAL_ABILITY_UPGRADES["npc_dota_hero_ogre_magi"] =
    "aghsfort_ogre_magi_legend_multicast_stupid",
 
 }
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_lion"] = 
+{
+   "aghsfort_lion_legend_impale_split",
+   "aghsfort_lion_legend_impale_shred",
+   "aghsfort_lion_legend_impale_tripple",
+
+   "aghsfort_lion_legend_voodoo_gold",
+   "aghsfort_lion_legend_voodoo_aoe",
+   "aghsfort_lion_legend_voodoo_death",
+
+   "aghsfort_lion_legend_drain_ally",
+   "aghsfort_lion_legend_drain_tripple",
+   "aghsfort_lion_legend_drain_amp",
+
+   "aghsfort_lion_legend_finger_charge",
+   "aghsfort_lion_legend_finger_aoe",
+   "aghsfort_lion_legend_finger_doom",
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_venomancer"] = 
+{
+   "aghsfort_venomancer_legend_gale_ward",
+   "aghsfort_venomancer_legend_gale_ring",
+   "aghsfort_venomancer_legend_gale_atk",
+
+   "aghsfort_venomancer_legend_sting_boom",
+   "aghsfort_venomancer_legend_sting_side",
+   "aghsfort_venomancer_legend_sting_splash",
+
+   "aghsfort_venomancer_legend_ward_nova",
+   "aghsfort_venomancer_legend_ward_yugo",
+   "aghsfort_venomancer_legend_ward_move",
+
+   "aghsfort_venomancer_legend_nova_heal",
+   "aghsfort_venomancer_legend_nova_worse",
+   "aghsfort_venomancer_legend_nova_all",
+}
+
 
 require( "items/item_small_scepter_fragment" )
 
@@ -1306,3 +1515,48 @@ PURCHASABLE_SHARDS[ "npc_dota_hero_void_spirit" ] =
    "item_aghsfort_void_spirit_astral_step_charge_restore_time",
 }
 
+
+-- Dragon Knight
+item_aghsfort_dk_breathe_fire_range = item_small_scepter_fragment
+item_aghsfort_dk_breathe_fire_reduction = item_small_scepter_fragment
+item_aghsfort_dk_breathe_fire_duration = item_small_scepter_fragment
+item_aghsfort_dk_breathe_fire_damage = item_small_scepter_fragment
+item_aghsfort_dk_breathe_fire_pct_cooldown = item_small_scepter_fragment
+
+item_aghsfort_dk_dragon_tail_stun_duration = item_small_scepter_fragment
+item_aghsfort_dk_dragon_tail_attack_damage = item_small_scepter_fragment
+item_aghsfort_dk_dragon_tail_radius = item_small_scepter_fragment
+item_aghsfort_dk_dragon_tail_pct_cooldown = item_small_scepter_fragment
+
+item_aghsfort_dk_dragon_blood_bonus_health_regen = item_small_scepter_fragment
+item_aghsfort_dk_dragon_blood_bonus_armor = item_small_scepter_fragment
+
+item_aghsfort_dk_elder_dragon_form_duration = item_small_scepter_fragment
+item_aghsfort_dk_elder_dragon_form_bonus_movement_speed = item_small_scepter_fragment
+item_aghsfort_dk_elder_dragon_form_bonus_attack_range = item_small_scepter_fragment
+item_aghsfort_dk_elder_dragon_form_bonus_attack_damage = item_small_scepter_fragment
+item_aghsfort_dk_elder_dragon_form_pct_cooldown = item_small_scepter_fragment
+
+PURCHASABLE_SHARDS[ "npc_dota_hero_dragon_knight" ] =
+{
+   "item_aghsfort_dk_breathe_fire_range",
+   "item_aghsfort_dk_breathe_fire_reduction",
+   "item_aghsfort_dk_breathe_fire_duration",
+   "item_aghsfort_dk_breathe_fire_damage",
+   "item_aghsfort_dk_breathe_fire_pct_cooldown",
+
+   "item_aghsfort_dk_dragon_tail_stun_duration",
+   "item_aghsfort_dk_dragon_tail_attack_damage",
+   "item_aghsfort_dk_dragon_tail_radius",
+   "item_aghsfort_dk_dragon_tail_pct_cooldown",
+
+   "item_aghsfort_dk_dragon_blood_bonus_health_regen",
+   "item_aghsfort_dk_dragon_blood_bonus_armor",
+
+   "item_aghsfort_dk_elder_dragon_form_duration",
+   "item_aghsfort_dk_elder_dragon_form_bonus_movement_speed",
+   "item_aghsfort_dk_elder_dragon_form_bonus_attack_range",
+   "item_aghsfort_dk_elder_dragon_form_bonus_attack_damage",
+   "item_aghsfort_dk_elder_dragon_form_pct_cooldown",
+   
+}

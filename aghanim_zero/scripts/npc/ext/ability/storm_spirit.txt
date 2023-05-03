@@ -1,0 +1,664 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Ability: Static Remnant
+	//=================================================================================================================
+	"aghsfort_storm_spirit_static_remnant"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/static_remnant"
+		"AbilityTextureName"			"storm_spirit_static_remnant"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_StormSpirit.StaticRemnantPlant"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 80 90 100"
+
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_ss/stormspirit_static_remnant.vpcf"
+		}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"static_remnant_radius"		"235"		
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"static_remnant_damage_radius"	"260"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"static_remnant_delay"		"1.0"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"static_remnant_damage"			"120 180 240 300"
+				"LinkedSpecialBonus"	"special_bonus_unique_storm_spirit_static_remnant+dmg"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"12.0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_range"		"500"	
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"special_bonus_unique_storm_spirit_static_remnant+dmg"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"					"40"
+                "ad_linked_ability"	   "aghsfort_storm_spirit_static_remnant"
+			}
+        }   
+	}
+
+	"special_bonus_unique_storm_spirit_static_remnant-cd"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"					"1.25"
+                "ad_linked_ability"	   "aghsfort_storm_spirit_static_remnant"
+			}
+        }   
+	}
+
+	//=================================================================================================================
+	// Ability: Electric Vortex
+	//=================================================================================================================
+	"aghsfort_storm_spirit_electric_vortex"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/electric_vortex"
+		"AbilityTextureName"			"storm_spirit_electric_vortex"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+
+		"AbilitySound"					"Hero_StormSpirit.ElectricVortex"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityCastRange"				"300"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"60 70 80 90"
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_ss/stormspirit_vortex_aproset.vpcf"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"electric_vortex_pull_distance"		"180 220 260 300"		
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"electric_vortex_pull_tether_range"			"1200"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"  	"1.4 1.8 2.2 2.6"
+				"LinkedSpecialBonus"	"special_bonus_unique_storm_spirit_electric_vortex+duration"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"cast_range"     	"300"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	"special_bonus_unique_storm_spirit_electric_vortex+duration"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"					"0.4"
+                "ad_linked_ability"	   "aghsfort_storm_spirit_electric_vortex"
+			}
+        }   
+	}
+
+	//=================================================================================================================
+	// Ability: Storm Spirit Overload
+	//=================================================================================================================
+	"aghsfort_storm_spirit_overload"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/overload"
+		"AbilityTextureName"			"storm_spirit_overload"
+		"MaxLevel"						"4"
+        
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_StormSpirit.Overload"
+
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"40"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"overload_aoe"					"300"
+			}			
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"overload_move_slow"			"-80"
+			}			
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"overload_attack_slow"			"-80"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"overload_damage"			"35 50 65 80"
+				"LinkedSpecialBonus"	"special_bonus_unique_storm_spirit_6"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"  		"0.6 0.6 0.6 0.6"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"mana_damage"  		"0.5 1 1.5 2"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bounce_radius"					"700"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	"special_bonus_unique_storm_spirit_overload+bounce"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"					"1"
+                "ad_linked_ability"	   "aghsfort_storm_spirit_overload"
+			}
+        }   
+	}
+
+	
+	//=================================================================================================================
+	// Ability: Storm Spirit Ball Lightning
+	//=================================================================================================================
+	"aghsfort_storm_spirit_ball_lightning"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/ball_lightning"
+		"AbilityTextureName"			"storm_spirit_ball_lightning"
+		"MaxLevel"						"3"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_StormSpirit.BallLightning"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"30"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		// "AbilityDamage"					"8 12 16"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"										"FIELD_FLOAT"
+				"ball_lightning_initial_mana_percentage"		"7.5"		
+			}
+			"02"
+			{
+				"var_type"										"FIELD_INTEGER"
+				"ball_lightning_initial_mana_base"				"25"		
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"ball_lightning_move_speed"			"1400 1850 2300"		
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"ball_lightning_aoe"				"200"		
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"ball_lightning_travel_cost_base"	"10"		
+			}
+			"06"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"ball_lightning_travel_cost_percent"	"0.65"		
+			}
+			"07"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"ball_lightning_vision_radius"			"400"		
+			}
+			"08"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"blocker_duration"			"5"		
+			}
+			"09"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"damage"			"12 22 32"		
+			}
+		}
+	}
+
+	"special_bonus_unique_storm_spirit_ball_lightning+remnant"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"					"600"
+                "ad_linked_ability"	   "aghsfort_storm_spirit_ball_lightning"
+			}
+        }   
+	}
+	//=================================================================================================================
+	// Legends
+	//=================================================================================================================
+	"aghsfort_storm_spirit_legend_remnant_vortex"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_static_remnant"
+        "AbilityParentName"             "aghsfort_storm_spirit_static_remnant"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+    "aghsfort_storm_spirit_legend_remnant_giant"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_static_remnant"
+        "AbilityParentName"             "aghsfort_storm_spirit_static_remnant"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"scale"			    "2"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"counter"			    "3"
+			}	
+        }
+	}
+    "aghsfort_storm_spirit_legend_remnant_power"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_static_remnant"
+        "AbilityParentName"             "aghsfort_storm_spirit_static_remnant"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+   
+    "aghsfort_storm_spirit_legend_remnant_taunt"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_static_remnant"
+        "AbilityParentName"             "aghsfort_storm_spirit_static_remnant"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+			"particle"		"particles/units/heroes/hero_ss/stormspirit_remnant_taunt.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"interval"			    "1.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			    "2.0"
+			}			
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"finale_delay"			    	"1.0"
+			}	
+        }
+	}
+
+    "aghsfort_storm_spirit_legend_vortex_attack"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_electric_vortex"
+        "AbilityParentName"             "aghsfort_storm_spirit_electric_vortex"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+    "aghsfort_storm_spirit_legend_vortex_aoe"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_electric_vortex"
+        "AbilityParentName"             "aghsfort_storm_spirit_electric_vortex"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+    "aghsfort_storm_spirit_legend_vortex_overload"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_electric_vortex"
+        "AbilityParentName"             "aghsfort_storm_spirit_electric_vortex"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"interval"			    "0.7"
+			}	
+        }
+	}
+
+    "aghsfort_storm_spirit_legend_overload_ally"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_overload"
+        "AbilityParentName"             "aghsfort_storm_spirit_overload"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			    "1200"
+			}	
+        }
+	}
+    "aghsfort_storm_spirit_legend_overload_mana"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_overload"
+        "AbilityParentName"             "aghsfort_storm_spirit_overload"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"effect_mul"			    "1.0"
+			}	
+        }
+	}
+    "aghsfort_storm_spirit_legend_overload_remnant"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_overload"
+        "AbilityParentName"             "aghsfort_storm_spirit_overload"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"effect_mul"			    "0.7"
+			}	
+        }
+	}
+
+    "aghsfort_storm_spirit_legend_ball_ally"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_ball_lightning"
+        "AbilityParentName"             "aghsfort_storm_spirit_ball_lightning"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+    "aghsfort_storm_spirit_legend_ball_fenzy"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_ball_lightning"
+        "AbilityParentName"             "aghsfort_storm_spirit_ball_lightning"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"linger"			    "3.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"effect_mul"			    "0.5"
+			}	
+        }
+	}
+    "aghsfort_storm_spirit_legend_ball_overload"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/storm_spirit/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "storm_spirit_ball_lightning"
+        "AbilityParentName"             "aghsfort_storm_spirit_ball_lightning"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+        }
+	}
+}

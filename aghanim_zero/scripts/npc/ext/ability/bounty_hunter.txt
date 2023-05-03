@@ -1,0 +1,757 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Bounty Hunter: Shuriken Toss
+	//=================================================================================================================
+	"aghsfort_bounty_hunter_shuriken_toss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/shuriken_toss"
+		"AbilityTextureName"			"bounty_hunter_shuriken_toss"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_BountyHunter.Shuriken"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"375 425 475 525"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityCooldown"				"5"
+		"AbilityManaCost"				"50 60 70 80"
+
+        // "AbilityCharges"                "1"
+        // "AbilityChargeRestoreTime"      "5"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		// "AbilityModifierSupportValue"	"0.1"	// just a mini stun
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"80 120 160 200"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+damage"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed"					"1000 1000 1000 1000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_aoe"			"1200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"ministun"			"0.1"
+			}
+			"05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "range"  			"375 425 475 525"
+            }
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+damage"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"50"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_shuriken_toss"
+			}
+        } 
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+charge"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"2"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_shuriken_toss"
+			}
+        } 
+	}
+
+	//=================================================================================================================
+	// Bounty Hunter: Jinada
+	//=================================================================================================================
+	"aghsfort_bounty_hunter_jinada"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/jinada"
+		"AbilityTextureName"			"bounty_hunter_jinada"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"									// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"		
+		"AbilitySound"					"Hero_BountyHunter.Jinada"
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+		"AbilityCastRange"				"150"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"		
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12 9 6 3"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"60 100 140 180"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_bounty_hunter_jinada+damage"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_steal"			"12 20 28 36"
+				"LinkedSpecialBonus"		"special_bonus_unique_aghsfort_bounty_hunter_jinada+gold"
+			}
+            "03"
+            {
+				"var_type"				"FIELD_FLOAT"
+				"creep_multiplier"			"0.2"
+            }
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+
+	"special_bonus_unique_aghsfort_bounty_hunter_jinada+damage"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"40"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_jinada"
+			}
+        } 
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_jinada+gold"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"36"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_jinada"
+			}
+        } 
+	}
+
+	//=================================================================================================================
+	// Bounty Hunter: Wind Walk
+	//=================================================================================================================
+	"aghsfort_bounty_hunter_wind_walk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/wind_walk"
+		"AbilityTextureName"			"bounty_hunter_wind_walk"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		//"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilitySound"					"Hero_BountyHunter.WindWalk"
+
+        "HasShardUpgrade"               "1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15.0 15.0 15.0 15.0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"15.0 20.0 25.0 30.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"					"1.0 0.75 0.5 0.25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow"				"16 24 32 40"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_duration"				"4"
+				"LinkedSpecialBonus"		"special_bonus_unique_aghsfort_bounty_hunter_wind_walk+slow"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"armor_reduction"			"4 5 6 7"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_wind_walk+slow"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"				"2.0"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_wind_walk"
+			}
+        } 
+	}
+
+	//=================================================================================================================
+	// Bounty Hunter: Track
+	//=================================================================================================================
+	"aghsfort_bounty_hunter_track"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/track"
+		"AbilityTextureName"			"bounty_hunter_track"
+		"MaxLevel"						"3"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_BountyHunter.Target"
+
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"5"
+		"AbilityManaCost"				"50"
+			
+
+        "precache" 
+        {
+            // "particle"  "particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_haste.vpcf"
+        }
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"target_crit_multiplier"	"140 170 200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold_radius"		"1200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold_self"		"100 150 200"
+				// "bonus_gold_self"		"130 225 320"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_bounty_hunter_track+gold"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				// "bonus_gold"			"40 80 120"
+				"bonus_gold"			"30 60 90"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_bounty_hunter_track+gold"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"30.0 30.0 30.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"boss_mul"				"3.0"
+			}			
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed_pct"	"16 20 24"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"toss_crit_multiplier"	"140 170 200"
+			}
+		}
+	}
+
+	"aghsfort_bounty_hunter_loan"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/loan"
+		"AbilityTextureName"			"buyback"
+		"MaxLevel"						"1"
+								
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlag"			"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"DOTA_Item.Hand_Of_Midas"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastRange"				"600"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"180"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mul"					"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"interest"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"interval"				"15"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"instances"				"12"
+			}
+		}
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_track+ally"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"				"0.5"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_track"
+			}
+        } 
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_track+vison"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"600"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_track"
+			}
+        } 
+	}
+
+	"special_bonus_unique_aghsfort_bounty_hunter_track+gold"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"150"
+                "ad_linked_ability"	    "aghsfort_bounty_hunter_track"
+			}
+        } 
+	}
+
+	"aghsfort_bounty_hunter_legend_toss_track" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_shuriken_toss"
+        "AbilityParentName"             "aghsfort_bounty_hunter_shuriken_toss"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+
+        }
+    }
+	"aghsfort_bounty_hunter_legend_toss_jinada" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_shuriken_toss"
+        "AbilityParentName"             "aghsfort_bounty_hunter_shuriken_toss"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bounce_times"			    "2"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_toss_tripple" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_shuriken_toss"
+        "AbilityParentName"             "aghsfort_bounty_hunter_shuriken_toss"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_toss"			    "3"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"search_radius"			    "600"
+			}	
+        }
+    }
+
+	"aghsfort_bounty_hunter_legend_jinada_konyiji" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_jinada"
+        "AbilityParentName"             "aghsfort_bounty_hunter_jinada"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+			"particle"		"particles/units/heroes/hero_bh/kongyiji.vpcf"
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_jinada_loan" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_jinada"
+        "AbilityParentName"             "aghsfort_bounty_hunter_jinada"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_jinada_murder" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_jinada"
+        "AbilityParentName"             "aghsfort_bounty_hunter_jinada"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_walk_windy" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_wind_walk"
+        "AbilityParentName"             "aghsfort_bounty_hunter_wind_walk"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_reduction"			    "35"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"evasion_mul"			    "2.0"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"as_mul"			    	"1.0"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_walk_pickup" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_wind_walk"
+        "AbilityParentName"             "aghsfort_bounty_hunter_wind_walk"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			    "250"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_walk_track" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_wind_walk"
+        "AbilityParentName"             "aghsfort_bounty_hunter_wind_walk"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"interval_pct"		    "0.5"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_track_invis" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_track"
+        "AbilityParentName"             "aghsfort_bounty_hunter_track"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"delay"			    "3.0"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_track_ally" 
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_track"
+        "AbilityParentName"             "aghsfort_bounty_hunter_track"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"effect_mul"			    "0.7"
+			}	
+        }
+    }
+	"aghsfort_bounty_hunter_legend_track_pass" 
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/bounty_hunter/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "bounty_hunter_track"
+        "AbilityParentName"             "aghsfort_bounty_hunter_track"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+}

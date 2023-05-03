@@ -1,0 +1,582 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Venomancer: Venomous Gale
+	//=================================================================================================================
+	"aghsfort2_venomancer_venomous_gale"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/venomous_gale"
+		"AbilityTextureName"			"venomancer_venomous_gale"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Venomancer.VenomousGale"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		// "AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"21 20 19 18"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "duration"				"15.0 15.0 15.0 15.0"
+            "strike_damage"			"50 75 100 125"
+            "tick_damage"			"15 45 75 105"
+            "tick_interval"			"3.0 3.0 3.0 3.0"
+            "movement_slow"			"-50.0 -50.0 -50.0 -50.0"
+			"distance"				"800"
+            "radius"				"125"
+            "speed"					"1200 1200 1200 1200"
+		}
+	}
+
+	"special_bonus_unique_venomancer_venomous_gale-cd"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort2_venomancer_venomous_gale"
+
+		"AbilityValues"
+		{
+				"value"				"6"
+		}
+	}
+
+	//=================================================================================================================
+	// Venomancer: Poison Sting
+	//=================================================================================================================
+	"aghsfort2_venomancer_poison_sting"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/poison_sting"
+		"AbilityTextureName"			"venomancer_poison_sting"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "duration"				"6.0 9.0 12.0 15.0"
+            "damage"					"6 14 22 30"
+            "movement_speed"
+            {
+                "value"		"-8 -10 -12 -14"
+                "LinkedSpecialBonus"		"special_bonus_unique_venomancer_poison_sting-ms"
+            }
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	"special_bonus_unique_venomancer_poison_sting-ms"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort2_venomancer_poison_sting"
+
+		"AbilityValues"
+		{
+				"value"				"-8"
+		}
+	}
+
+	//=================================================================================================================
+	// Venomancer: Plague Ward
+	//=================================================================================================================
+	"aghsfort2_venomancer_plague_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/plague_ward"
+		"AbilityTextureName"			"venomancer_plague_ward"
+		"MaxLevel"						"4"
+        "LinkedAbility"					"aghsfort2_venomancer_chimera_botany"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Venomancer.Plague_Ward"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 22 24 26"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "duration"
+            {
+                "value"		"40.0"
+                "LinkedSpecialBonus"		"special_bonus_unique_venomancer_7"
+            }
+			"ward_hp"
+			{
+				"value"		"120 230 340 450"
+				"LinkedSpecialBonus"	"special_bonus_unique_venomancer_plague_wardxstats"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"ward_damage"
+			{
+				"value"	"13 22 31 40"
+				"LinkedSpecialBonus"	"special_bonus_unique_venomancer_plague_wardxstats"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"ward_as" 	"100"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	"special_bonus_unique_venomancer_plague_ward-cd"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort2_venomancer_plague_ward"
+
+		"AbilityValues"
+		{
+				"value"				"1.5"
+		}
+	}
+
+	"special_bonus_unique_venomancer_plague_wardxstats"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort2_venomancer_plague_ward"
+
+		"AbilityValues"
+		{
+				"value"				"2.0"
+		}
+	}
+
+    //=================================================================================================================
+	// Venomancer: Plague Ward
+	//=================================================================================================================
+	"aghsfort2_venomancer_chimera_botany"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/chimera_botany"
+		"AbilityTextureName"			"venomancer/chimera_botany"
+		"MaxLevel"						"4"
+        "LinkedAbility"					"aghsfort2_venomancer_plague_ward"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+		"AbilitySound"					"Hero_Venomancer.Plague_Ward"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+		}
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "aoe"           "550"
+			"power_mul"		"0.6"
+			"duration"
+            {
+                "value"		"40.0"
+                "LinkedSpecialBonus"		"special_bonus_unique_venomancer_7"
+            }
+			"ward_as" 	"100"
+			"spawn_delay"	"0.5"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Venomancer: Poison Nova
+	//=================================================================================================================
+	"aghsfort2_venomancer_poison_nova"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/poison_nova"
+		"AbilityTextureName"			"venomancer_poison_nova"
+		"MaxLevel"						"3"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Venomancer.PoisonNova"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"100.0 80.0 60.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 300 400"		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// just does damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"					"885"
+				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_poison_nova+radius"
+			}
+			"start_radius"				"255 255 255"
+			"duration"
+			{
+				"value"					"20"
+				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_poison_nova+dur"
+			}
+			"damage"					"40 65 90"
+			// "damage"					"2 2.75 3.5"
+			"speed"						"500"
+		}
+	}
+
+	"special_bonus_unique_venomancer_poison_nova+dur"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort2_venomancer_poison_nova"
+
+		"AbilityValues"
+		{
+				"value"				"5.0"
+		}
+	}
+		
+	"special_bonus_unique_venomancer_poison_nova+radius"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort2_venomancer_poison_nova"
+
+		"AbilityValues"
+		{
+				"value"				"640"
+		}
+	}
+
+	"aghsfort_venomancer_legend_gale_ward"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_venomous_gale"
+        "AbilityParentName"             "aghsfort2_venomancer_venomous_gale"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"wards_cap"				"2"
+			"wards_boss"			"5"
+			"creep_pct"			"25"
+			"offset"			"80"
+		}
+    }
+
+   	"aghsfort_venomancer_legend_gale_ring"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_venomous_gale"
+        "AbilityParentName"             "aghsfort2_venomancer_venomous_gale"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"count"				"8"
+		}
+    }
+
+   	"aghsfort_venomancer_legend_gale_atk"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_venomous_gale"
+        "AbilityParentName"             "aghsfort2_venomancer_venomous_gale"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+		}
+    }
+
+   	"aghsfort_venomancer_legend_sting_boom"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_poison_sting"
+        "AbilityParentName"             "aghsfort2_venomancer_poison_sting"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+			"particle"			"particles/econ/items/sand_king/sandking_ti7_arms/sandking_ti7_caustic_finale_explode.vpcf"
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+        }
+
+        "AbilityValues"
+		{
+			"radius"				"500"
+			"damage_mul"			"1.0"
+			"damage_pct"			"100"
+			"no_death_mul"				"0.5"
+			"no_death_pct"				"50"
+		}
+    }
+	
+   	"aghsfort_venomancer_legend_sting_side"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_poison_sting"
+        "AbilityParentName"             "aghsfort2_venomancer_poison_sting"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"regen_pct"				"100"
+		}
+    }
+   	"aghsfort_venomancer_legend_sting_splash"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_poison_sting"
+        "AbilityParentName"             "aghsfort2_venomancer_poison_sting"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"bounce"				"3"
+			"bounce_ward"			"1"
+			"pct_base"				"25"
+			"pct_mul"				"1.0"
+			"radius"				"600"
+		}
+    }
+
+   	"aghsfort_venomancer_legend_ward_nova"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_plague_ward"
+        "AbilityParentName"             "aghsfort2_venomancer_plague_ward"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"duration_mul"			"0.3"
+			"radius_mul"			"0.4"
+			"chimera_mul"			"2.0"
+			"attacks"				"5"
+		}
+    }
+   	"aghsfort_venomancer_legend_ward_yugo"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_plague_ward"
+        "AbilityParentName"             "aghsfort2_venomancer_plague_ward"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+		}
+    }
+   	"aghsfort_venomancer_legend_ward_move"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_plague_ward"
+        "AbilityParentName"             "aghsfort2_venomancer_plague_ward"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"speed_bonus"			"350"
+			"atk_mul"				"0.2"
+			"atk_pct"				"20"
+		}
+    }
+
+   	"aghsfort_venomancer_legend_nova_heal"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_poison_nova"
+        "AbilityParentName"             "aghsfort2_venomancer_poison_nova"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+		}
+    }
+   	"aghsfort_venomancer_legend_nova_worse"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_poison_nova"
+        "AbilityParentName"             "aghsfort2_venomancer_poison_nova"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"damage_mul"			"1.0"
+			"damage_pct"			"100"
+		}
+    }
+
+   	"aghsfort_venomancer_legend_nova_all"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/venomancer/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "venomancer_poison_nova"
+        "AbilityParentName"             "aghsfort2_venomancer_poison_nova"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			// "cdr"				"20"
+			"stack_mul"				"0.15"
+			"stack_pct"				"15"
+		}
+    }
+}

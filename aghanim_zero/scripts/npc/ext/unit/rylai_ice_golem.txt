@@ -1,0 +1,99 @@
+"DOTAUnits"
+{
+	"Version"	"1"
+
+    //=================================================================================
+	// Creature: Rylai's Golem
+	//=================================================================================
+	"npc_dota_rylai_ice_golem"
+	{
+		// Script
+		// "vscripts"					"ai/ai_large_relict.lua"
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creep_neutral"
+		"Model"						"models/creeps/ice_biome/relict/relict.vmdl"
+		"SoundSet"					"DireHound"
+		"ModelScale"				"1.5"
+		"Level"						"1"
+		"IsSummoned"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"
+		"MagicalResistance"			"25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"30"
+		"AttackDamageMax"			"45"
+		"AttackRate"				"1.2"
+		"AttackAnimationPoint"		"0.33"
+		"AttackAcquisitionRange"	"1000"
+		"AttackRange"				"200"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"150"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0.0"
+		"StatusMana"				"200"
+		"StatusManaRegen"			"6"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"PathfindingSearchDepthScale"		"0.1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			// "AggroOnOwnerWhenDamaged"	"1"
+            "AttachWearables"
+			{
+
+                "Wearable1"
+				{
+
+					"ItemDef"			"5009" // Tusk's hat
+				}
+            }
+		}
+	}
+}

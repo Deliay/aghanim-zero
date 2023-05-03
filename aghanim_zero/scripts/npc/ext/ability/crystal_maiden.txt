@@ -1,0 +1,773 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Ability: Crystal Maiden's Crystal Nova
+	//=================================================================================================================
+	"aghsfort_rylai_crystal_nova"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/crystal_maiden/crystal_nova"
+		"AbilityTextureName"			"crystal_maiden_crystal_nova"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Crystal.CrystalNova"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11 10 9 8"
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"130 145 160 175"
+		
+        "Precache"
+        {
+            "particle"                  "particles/generic_gameplay/generic_slowed_cold.vpcf"
+        }
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"425"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_rylai_crystal_nova+radius"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"movespeed_slow"	"-20 -30 -40 -50"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attackspeed_slow"	"-20 -30 -40 -50"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"4.5"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_duration"	"6.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"nova_damage"			"130 170 210 260"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_rylai_crystal_nova+damage"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+
+
+    "special_bonus_unique_aghsfort_rylai_crystal_nova+radius"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"125"
+                "ad_linked_ability"	    "aghsfort_rylai_crystal_nova"
+			}
+        }   
+    }
+
+    "special_bonus_unique_aghsfort_rylai_crystal_nova+damage"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"260"
+                "ad_linked_ability"	    "aghsfort_rylai_crystal_nova"
+			}
+        }   
+    }
+
+
+    "special_bonus_unique_aghsfort_rylai_crystal_nova-cd"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"3"
+                "ad_linked_ability"	    "aghsfort_rylai_crystal_nova"
+			}
+        }   
+    }
+
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Frostbite
+	//=================================================================================================================
+	"aghsfort_rylai_frostbite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/crystal_maiden/frostbite"
+		"AbilityTextureName"			"crystal_maiden_frostbite"
+		"MaxLevel"						"4"
+
+        "AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"hero_Crystal.frostbite"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9 8 7 6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"140 145 150 155"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		
+        "Precache"
+        {
+            "particle"             "particles/units/heroes/hero_crystalmaiden/maiden_frostbite_buff.vpcf"
+        }
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_per_second"	"100"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"creep_damage_per_second"			"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"1.5 2.0 2.5 3.0"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_rylai_frostbite+duration"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"creep_duration"	"10.0"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_rylai_frostbite+duration"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tick_interval"		"0.25"
+			}
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+	
+    "special_bonus_unique_aghsfort_rylai_frostbite+duration"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"				"1.5"
+                "ad_linked_ability"	    "aghsfort_rylai_frostbite"
+			}
+        }   
+    }
+
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Arcane Aura
+	//=================================================================================================================
+	"aghsfort_rylai_brilliance_aura"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/crystal_maiden/brilliance_aura"
+		"AbilityTextureName"			"crystal_maiden_brilliance_aura"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		
+        "Precache"
+        {
+            "particle"              "particles/units/heroes/hero_rylai/rylai_cold_soul.vpcf"
+        }
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"mana_regen"		"1 1.5 2 2.5"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"cast_reduce"   	"5 10 15 20"
+				// "cast_reduce"   	"1 2 3 4"
+			}
+            "03"
+            {
+				"var_type"			"FIELD_INTEGER"
+				"max_stacks"       	"3"
+            }
+            "04"
+            {
+                "var_type"			"FIELD_FLOAT"
+				"stack_duration"    "12"
+            }
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+    "special_bonus_unique_aghsfort_rylai_brilliance_aura+mr"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"6"
+                "ad_linked_ability"	    "aghsfort_rylai_brilliance_aura"
+			}
+        }   
+    }
+
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Freezing Field
+	//=================================================================================================================
+	"aghsfort_rylai_freezing_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/crystal_maiden/freezing_field"
+		"AbilityTextureName"			"crystal_maiden_freezing_field"
+		"MaxLevel"						"3"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"hero_Crystal.freezingField.wind"
+
+		"HasScepterUpgrade"			"1"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"10"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"110 100 90"
+		"AbilityDuration"				"10.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 400 600"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.35"	// Primarily about the damage
+
+        "Precache"
+        {
+            "particle"       "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_snow.vpcf"
+            "particle"       "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_explosion.vpcf"
+        }
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"810"
+			}		
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"explosion_radius"	"300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"explosion_interval"	"0.1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"movespeed_slow"	"-30"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attack_slow"	"-60"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration"		"1.0"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"explosion_min_dist"	"195"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"explosion_max_dist"	"785"
+			}
+			"10"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"105 170 250"
+				"LinkedSpecialBonus"	"special_bonus_unique_aghsfort_rylai_freezing_field+damage"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+                "channel_time"          "10"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Crystal Maiden: Freezing Field Stop
+	//=================================================================================================================
+	"aghsfort_rylai_freezing_field_stop"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8032"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"
+	}
+
+    "special_bonus_unique_aghsfort_rylai_freezing_field+damage"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"50"
+                "ad_linked_ability"	    "aghsfort_rylai_freezing_field"
+			}
+        }   
+    }
+
+    "aghsfort_rylai_legend_snowman"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_crystal_nova"
+        "AbilityParentName"             "aghsfort_rylai_crystal_nova"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"health_factor"     "2.0"
+			}		
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"as_factor"          "-1.0"
+			}		
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"ms_factor"         "-1.0"
+			}
+            "04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"atk_factor"         "0.2"
+			}			
+            "05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"extra_duration"         "3.0"
+			}			
+        }
+    }
+
+    "aghsfort_rylai_legend_nova_strike"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_crystal_nova"
+        "AbilityParentName"             "aghsfort_rylai_crystal_nova"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+
+        }
+    }
+
+    "aghsfort_rylai_legend_crystal_field"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_crystal_nova"
+        "AbilityParentName"             "aghsfort_rylai_crystal_nova"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_rylai/rylai_nova_vortex.vpcf"
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_pct"	    "20"
+			}	
+            "02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tick_interval"     "0.5"
+			}
+            "01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"magic_resist_pct"     "40"
+			}		
+        }
+    }
+
+    "aghsfort_rylai_legend_frost_chain"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_frostbite"
+        "AbilityParentName"             "aghsfort_rylai_frostbite"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+
+    "aghsfort_rylai_legend_frost_touch"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_frostbite"
+        "AbilityParentName"             "aghsfort_rylai_frostbite"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance_pct"			    "40"
+			}	
+        }
+    }
+
+    "aghsfort_rylai_legend_frost_split"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_frostbite"
+        "AbilityParentName"             "aghsfort_rylai_frostbite"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"split_count"			    "3"
+			}
+            "02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_pct"			    "100"
+			}
+            "03"
+            {
+				"var_type"			"FIELD_INTEGER"
+				"radius"			    "600"
+            }
+            "04"
+            {
+				"var_type"			"FIELD_INTEGER"
+				"nova_pct"			    "35"
+            }
+        }
+    }
+
+    "aghsfort_rylai_legend_arcane_field"
+    {
+        // "BaseClass"						"ability_lua"
+		// "ScriptFile"					"abilities/heroes/crystal_maiden/legends"
+        "BaseClass"                     "ability_datadriven"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_brilliance_aura"
+        "AbilityParentName"             "aghsfort_rylai_brilliance_aura"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"	         "18"
+			}
+            "02"
+            {
+				"var_type"			"FIELD_FLOAT"
+				"duration_per_stack"	    "1.0"
+            }
+        }
+    }
+
+    "aghsfort_rylai_legend_arcane_enhance"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_brilliance_aura"
+        "AbilityParentName"             "aghsfort_rylai_brilliance_aura"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1.5"
+			}	
+        }
+    }
+
+    "aghsfort_rylai_legend_cool_mind"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_brilliance_aura"
+        "AbilityParentName"             "aghsfort_rylai_brilliance_aura"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+
+    "aghsfort_rylai_legend_letgo"
+    {
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/crystal_maiden/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_freezing_field"
+        "AbilityParentName"             "aghsfort_rylai_freezing_field"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_rylai/rylai_let_it_go_cyclone.vpcf"
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"			    "1"
+			}	
+        }
+    }
+
+    "aghsfort_rylai_legend_nova_storm"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_freezing_field"
+        "AbilityParentName"             "aghsfort_rylai_freezing_field"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"			    "20"
+			}	
+        }
+    }
+
+    "aghsfort_rylai_legend_absolute_zero"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "crystal_maiden_freezing_field"
+        "AbilityParentName"             "aghsfort_rylai_freezing_field"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"delay"			    "2.5"
+			}
+            "01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"interval"		    "8.0"
+			}	
+        }
+    }
+}

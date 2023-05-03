@@ -1,0 +1,107 @@
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Venomancer
+	//=================================================================================================================
+	"npc_dota_hero_venomancer_aghsfort"
+	{
+		"override_hero"		"npc_dota_hero_venomancer"
+		"Ability1"		"aghsfort2_venomancer_venomous_gale"
+		"Ability2"		"aghsfort2_venomancer_poison_sting"
+		"Ability3"		"aghsfort2_venomancer_plague_ward"
+		"Ability4"		"aghsfort2_venomancer_chimera_botany"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"aghsfort2_venomancer_poison_nova"
+		"Ability10"		"special_bonus_unique_venomancer_venomous_gale-cd"
+		"Ability11"		"special_bonus_hp_175"
+		"Ability12"		"special_bonus_spell_lifesteal_12"
+		"Ability13"		"special_bonus_unique_venomancer_poison_sting-ms"
+		"Ability14"		"special_bonus_unique_venomancer_poison_nova+dur"
+		"Ability15"		"special_bonus_unique_venomancer_plague_ward-cd"
+		"Ability16"		"special_bonus_unique_venomancer_poison_nova+radius"
+		"Ability17"		"special_bonus_unique_venomancer_plague_wardxstats"
+
+        "ArmorPhysical"		"0"
+		"MovementSpeed"     "290"
+
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1400"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"tail"
+				"SlotText"		"#LoadoutSlot_Tail"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Venomancer_StingerLimbs"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"misc"
+				"SlotText"		"#LoadoutSlot_Misc"
+				"DisplayInLoadout" "0"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"ability3"
+				"SlotText"		"#LoadoutSlot_Venomancer_PlagueWard"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+				"no_import"		"1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_venomancer_plagueward_aghs2"
+					"1" "npc_dota_venomancer_plague_ward"
+				}
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"ambient_effects"
+				"SlotText"		"#LoadoutSlot_Ambient_Effects"
+				"DisplayInLoadout"		"0"
+			}
+		}
+	}
+}

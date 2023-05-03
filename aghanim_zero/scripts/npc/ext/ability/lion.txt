@@ -1,0 +1,553 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Lion: Impale
+	//=================================================================================================================
+	"aghsfort_lion_impale"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/impale"
+		"AbilityTextureName"			"lion_impale"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lion.Impale"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"575"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0 12.0 12.0 12.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85 110 135 160"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		// "AbilityDamage"					"80 140 200 260"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"width"		"125 125 125 125"
+			"duration"	"1.4 1.8 2.2 2.6"
+			"air_time"	"0.5"
+			"cast_range"
+			{
+				"value"		"575"
+				"LinkedSpecialBonus"		"special_bonus_unique_lion_impale+range"
+			}
+			"speed"				"1600 1600 1600 1600"
+			"length_buffer"		"275"
+			// damage词条必须写成value才能在面板显示技能增强
+			"damage"
+			{
+				"value"		"80 140 200 260"
+			}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	"special_bonus_unique_lion_impale+range"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort_lion_impale"
+
+		"AbilityValues"
+		{
+				"value"				"400"
+		}
+	}
+	"special_bonus_unique_lion_impale-cd"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort_lion_impale"
+
+		"AbilityValues"
+		{
+				"value"				"2"
+		}
+	}
+	//=================================================================================================================
+	// Lion: Voodoo
+	//=================================================================================================================
+	"aghsfort_lion_voodoo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/voodoo"
+		"AbilityTextureName"			"lion_voodoo"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lion.Voodoo"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0 24.0 18.0 12.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175 200"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"
+			{
+				"value"			"2.5 3 3.5 4"
+				"LinkedSpecialBonus"		"special_bonus_unique_lion_voodoo+duration"
+			}				
+			"movespeed"					"120"
+			"int_damage"				"0.8"
+			"int_damage_tooltip"		"80"
+			"captain_factor"			"0.7"
+			"boss_factor"				"0.4"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	"special_bonus_unique_lion_voodoo+duration"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort_lion_voodoo"
+
+		"AbilityValues"
+		{
+				"value"				"2.66"
+		}
+	}
+
+	//=================================================================================================================
+	// Lion: Mana Drain
+	//=================================================================================================================
+	"aghsfort_lion_mana_drain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/mana_drain"
+		"AbilityTextureName"			"lion_mana_drain"
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		// "AbilityChannelTime"				"5.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9 8 7 6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"10 10 10 10"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"5.0"	// better then the mana cost implies
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"5.0"
+			"drain_per_second"
+			{
+				"value"		"30 60 90 120"
+				"LinkedSpecialBonus"			"special_bonus_unique_lion_mana_drain+drain"
+			}
+			"damage_mana"			"0.8"
+
+			"buff_distance"			"250"
+			"tick_interval"				"0.1"
+			"movespeed"
+			{
+				"value"			"20 25 30 35"
+				"LinkedSpecialBonus"			"special_bonus_unique_lion_6"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	"special_bonus_unique_lion_mana_drain+drain"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort_lion_mana_drain"
+
+		"AbilityValues"
+		{
+				"value"				"50"
+		}
+	}
+
+	//=================================================================================================================
+	// Lion: Finger of Death
+	//=================================================================================================================
+	"aghsfort_lion_finger_of_death"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/finger_of_death"
+		"AbilityTextureName"			"lion_finger_of_death"
+		"MaxLevel"						"3"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Lion.FingerOfDeath"
+
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60.0 50.0 40.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 400 600"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"		"600 725 850"
+			}
+			"damage_per_layer"
+			{
+				"value"			"20"
+				"LinkedSpecialBonus"			"special_bonus_unique_lion_8"
+			}
+			"grace_period"				"3"
+			"damage_delay"				"0.25"
+			"captain_layer"				"4"
+			"boss_layer"				"12"
+		}
+	}
+
+	"special_bonus_unique_lion_finger_of_death+layer_dmg"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort_lion_finger_of_death"
+
+		"AbilityValues"
+		{
+				"value"				"10"
+		}
+	}
+
+	"special_bonus_unique_lion_finger_of_death+layer_hp"
+	{
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE" 
+		"ad_linked_abilities"	   		"aghsfort_lion_finger_of_death"
+		
+		"AbilityValues"
+		{
+				"value"				"30"
+		}
+	}
+
+	"aghsfort_lion_legend_impale_split"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_impale"
+        "AbilityParentName"             "aghsfort_lion_impale"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"length_pct"	"0.6"
+			"pieces"	"5"
+		}
+    }
+
+	"aghsfort_lion_legend_impale_shred"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_impale"
+        "AbilityParentName"             "aghsfort_lion_impale"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"duration"		"0.5"
+			"damage_mul"	"2.0"
+		}
+    }
+
+	"aghsfort_lion_legend_impale_tripple"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_impale"
+        "AbilityParentName"             "aghsfort_lion_impale"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"angle"			"36"
+		}
+    }
+
+	"aghsfort_lion_legend_voodoo_gold"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_voodoo"
+        "AbilityParentName"             "aghsfort_lion_voodoo"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"gold"		"12"
+			"thres"		"10"
+			"mul_thres"		"300"
+			"mul"			"10"
+			"life_time"		"12.0"
+		}
+    }
+
+	"aghsfort_lion_legend_voodoo_aoe"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_voodoo"
+        "AbilityParentName"             "aghsfort_lion_voodoo"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"aoe"		"300"
+		}
+    }
+
+	"aghsfort_lion_legend_voodoo_death"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_voodoo"
+        "AbilityParentName"             "aghsfort_lion_voodoo"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"range"				"1500"
+		}
+    }
+
+	"aghsfort_lion_legend_drain_ally"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_mana_drain"
+        "AbilityParentName"             "aghsfort_lion_mana_drain"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"cd"			"1.0"
+		}
+    }
+
+	"aghsfort_lion_legend_drain_tripple"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_mana_drain"
+        "AbilityParentName"             "aghsfort_lion_mana_drain"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"search_range"		"900"
+			"extra_targets"		"2"
+		}
+    }
+
+	"aghsfort_lion_legend_drain_amp"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_mana_drain"
+        "AbilityParentName"             "aghsfort_lion_mana_drain"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"amp_slow"			"0.33"
+			"linger"			"3"
+		}
+    }
+
+	"aghsfort_lion_legend_finger_charge"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_finger_of_death"
+        "AbilityParentName"             "aghsfort_lion_finger_of_death"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"charges"				"2"
+		}
+    }
+	"aghsfort_lion_legend_finger_aoe"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_finger_of_death"
+        "AbilityParentName"             "aghsfort_lion_finger_of_death"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"aoe"				"300"
+		}
+    }
+	"aghsfort_lion_legend_finger_doom"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/lion/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lion_finger_of_death"
+        "AbilityParentName"             "aghsfort_lion_finger_of_death"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+		{
+			"duration_mul"		 "2.5"
+			"damage_mul"		 "0.0666"
+			"damage_pct"		 "6.66"
+		}
+    }
+}

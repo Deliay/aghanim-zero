@@ -1,0 +1,773 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Ability: Antimage Mana Break
+	//=================================================================================================================
+	"aghsfort_antimage_mana_break"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"					"5003"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		// "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+		// "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		// "AbilitySound"					"Hero_Antimage.ManaBreak"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/mana_break"
+		"AbilityTextureName"			"antimage_mana_break"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"				   
+		// "AbilityUnitTargetType"	        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		// "AbilityUnitTargetTeam"	        "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+        "precache"
+		{
+			// "particle" 					"particles/items4_fx/bull_whip_enemy_debuff.vpcf"
+            "particle"	"particles/generic_gameplay/generic_manaburn.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+        }
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"percent_damage_per_burn"		"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_hit"			"28 40 52 64"
+                "LinkedSpecialBonus"    "special_bonus_unique_aghsfort_antimage_mana_break+mana_per_hit"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_per_hit_pct"		"1 2 3 4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"silence_chance"		"15"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"silence_duration"		"3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"illusion_percentage"		"50"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+    "special_bonus_unique_aghsfort_antimage_mana_break+mana_per_hit"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"36"
+                "ad_linked_ability"	    "aghsfort_antimage_mana_break"
+			}
+        }   
+    }
+	
+	//=================================================================================================================
+	// Ability: Antimage Blink
+	//=================================================================================================================
+	"aghsfort_antimage_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"					"5004"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+        // "HasScepterUpgrade"             "0"
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/blink"
+		"AbilityTextureName"			"antimage_blink"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+        // "AbilityCastRange"				"1200"
+        "AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15 12 9 6"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40"
+		
+		"AbilitySound"					"Hero_Antimage.Blink_out"
+
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_antimage/antimage_blink_start.vpcf"
+			"particle"	"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}	
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_range"			"1200"
+				"LinkedSpecialBonus"		"special_bonus_unique_aghsfort_antimage_blink+blink_distance"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_blink_range"		"200"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+    "special_bonus_unique_aghsfort_antimage_blink-cd"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"				"1.0"
+                "ad_linked_ability"	    "aghsfort_antimage_blink"
+			}
+        }   
+    }
+
+    "special_bonus_unique_aghsfort_antimage_blink+blink_distance"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"250"
+                "ad_linked_ability"	    "aghsfort_antimage_blink"
+			}
+        }   
+    }
+
+
+	//=================================================================================================================
+	// Ability: Antimage Counterspell
+	//=================================================================================================================
+	"aghsfort_antimage_counterspell"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"					"7314"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		// "SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		// "FightRecapLevel"				"1"
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/counterspell"
+		"AbilityTextureName"			"antimage_counterspell"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11 9 6 3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"		
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_antimage/antimage_counter.vpcf"
+			"particle"  "particles/units/heroes/hero_antimage/antimage_spellshield.vpcf"
+			"particle"  "particles/units/heroes/hero_antimage/antimage_spellshield_reflect.vpcf"
+            "soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}	
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magic_resistance"			"15 25 35 45"
+				"LinkedSpecialBonus"		"special_bonus_unique_aghsfort_antimage_counterspell+magical_resist"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"1.3"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		
+	}
+	
+    "special_bonus_unique_aghsfort_antimage_counterspell+magical_resist"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"20"
+                "ad_linked_ability"	    "aghsfort_antimage_counterspell"
+			}
+        }   
+    }
+
+	//=================================================================================================================
+	// Ability: Antimage Mana Void
+	//=================================================================================================================
+	"aghsfort_antimage_mana_void"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"					"5006"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		// "AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		// "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		// "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		// "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		// "AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"		
+		// "FightRecapLevel"				"2"
+		// "AbilitySound"					"Hero_Antimage.ManaVoid"
+		// "HasScepterUpgrade"			"1"
+		// "AbilityDraftUltScepterAbility"		"antimage_mana_overload"
+
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/mana_void"
+		"AbilityTextureName"			"antimage_mana_void"
+		"FightRecapLevel"				"2"
+		// "MaxLevel"						"3s"
+
+        "AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"	    "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"		
+		"AbilitySound"					"Hero_Antimage.ManaVoid"
+		"AbilityDraftUltScepterAbility"		"antimage_mana_overload"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70.0 60.0 50.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 200 300"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// damage only
+
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_antimage/antimage_manavoid.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"damage_per_mana"		"0.8 0.95 1.1"
+			}			
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"ministun"			"0.3"
+				"LinkedSpecialBonus"		"special_bonus_unique_aghsfort_antimage_mana_void+ministun"
+			}			
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"aoe_radius"			"500"
+			}
+            "04"
+            {
+				"var_type"						"FIELD_INTEGER"
+				"base_damage"       			"100 200 300"
+                "LinkedSpecialBonus"		"special_bonus_unique_aghsfort_antimage_mana_void+base_damage"
+            }
+		}
+	}
+
+    "special_bonus_unique_aghsfort_antimage_mana_void+ministun"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"value"				"0.7"
+                "ad_linked_ability"	    "aghsfort_antimage_mana_void"
+			}
+        }   
+    }
+
+    "special_bonus_unique_aghsfort_antimage_mana_void+base_damage"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"200"
+                "ad_linked_ability"	    "aghsfort_antimage_mana_void"
+			}
+        }   
+    }
+
+    "special_bonus_unique_aghsfort_antimage_mana_void-cd"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"				"20"
+                "ad_linked_ability"	    "aghsfort_antimage_mana_void"
+			}
+        }   
+    }
+    // Legendary Shards
+    "aghsfort_antimage_legend_mana_transfer"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_mana_break"
+        "MaxLevel"                      "1"
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+
+        "precache"
+        {
+            "particle"  "particles/generic_gameplay/generic_lifesteal_blue.vpcf"
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"transfer_pct"		        "100"
+			}
+        }
+    }
+
+    "aghsfort_antimage_legend_mana_explosion"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_mana_break"
+        "MaxLevel"                      "1"
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"effect_pct"		        "50"
+			}
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "chance"            "25"
+            }
+        }
+
+    }
+
+    "aghsfort_antimage_legend_imagine_breaker"
+    {
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_mana_break"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+			"particle"			"particles/units/heroes/hero_antimage/antimage_imagine_breaker_debuff.vpcf"
+			// "particle"			"particles/units/heroes/hero_antimage/antimage_imagine_breaker_debuff.vpcf"
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"                  "4.0"
+			}
+        }
+    }
+
+
+    "aghsfort_antimage_legend_blink_illusion"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_blink"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"7"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"outgoing_damage"			"-25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"incoming_damage"			"100"
+			}
+        }
+    }
+
+
+    "aghsfort_antimage_legend_blink_fragment"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_blink"
+        "MaxLevel"                      "1"
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+
+        }
+    }
+
+
+    "aghsfort_antimage_legend_blink_counter"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_blink"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+
+        }
+    }
+
+    "aghsfort_antimage_legend_comprehensive_counter"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_counterspell"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_pct"                  "50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"                  "900"
+			}
+        }
+    }
+
+    "aghsfort_antimage_legend_turstarkuri_guardiance"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_counterspell"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+			"particle"					"particles/units/heroes/hero_templar_assassin/templar_assassin_refract_hit.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_turstarkuri_guardiance.vpcf"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts"
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration_multipiler"       "3.0"
+			}
+        }
+    }
+
+    "aghsfort_antimage_legend_arcande_discipliner"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_counterspell"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"                  "900"
+			}
+        }
+    }
+
+    "aghsfort_antimage_legend_secondary_void"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_mana_void"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"effect_pct"       			"50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"delay"       				"3.0"
+			}
+        }
+    }
+
+    "aghsfort_antimage_legend_mana_release"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_mana_void"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            
+        }
+    }
+
+    "aghsfort_antimage_legend_ability_ban"
+    {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/legends"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "antimage_mana_void"
+        "MaxLevel"                      "1"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cd_change"       			"10.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cd_damage_amp"   			"1"
+			}
+        }
+    }
+
+    //=================================================================================================================
+	// Anti-Mage: Blink Fragment (scepter ability)
+	//=================================================================================================================
+	"aghsfort_antimage_blink_fragment"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/antimage/blink_fragment"
+        "AbilityTextureName"            "antimage_mana_overload"     
+        "MaxLevel"						"1"
+
+        "AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+		}
+	}
+
+    "aghsfort_antimage_illusion"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+        "AbilityTextureName"            "antimage_blink"
+        "MaxLevel"                      "1"
+        "BaseClass"						"ability_lua"
+        "ScriptFile"					"abilities/heroes/antimage/illusion"
+
+        "precache"
+        {
+        }
+
+        "AbilitySpecial"
+        {
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"7"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"outgoing_damage"			"-25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"incoming_damage"			"100"
+			}
+            "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_illusions"		"8"
+			}
+        }
+    }
+
+}

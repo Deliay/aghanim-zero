@@ -1,7 +1,15 @@
 // code: language=vdf
 // Dota Heroes File
+#base ext/ability/antimage.txt
+#base ext/ability/crystal_maiden.txt
+#base ext/ability/dragon_knight.txt
 #base ext/ability/nevermore.txt
+#base ext/ability/spirit_breaker.txt
+#base ext/ability/bounty_hunter.txt
+#base ext/ability/storm_spirit.txt
 #base ext/ability/ogre_magi.txt
+#base ext/ability/lion.txt
+#base ext/ability/venomancer.txt
 "DOTAAbilities"
 {
 	"Version"		"1"

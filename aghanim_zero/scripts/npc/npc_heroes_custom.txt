@@ -1,8 +1,16 @@
 // Dota Heroes File
 // NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+#base ext/hero/antimage.txt
+#base ext/hero/dragon_knight.txt
+#base ext/hero/crystal_maiden.txt
 #base ext/hero/nevermore.txt
+#base ext/hero/spirit_breaker.txt
+#base ext/hero/bounty_hunter.txt
+#base ext/hero/storm_spirit.txt
 #base ext/hero/ogre_magi.txt
+#base ext/hero/lion.txt
+#base ext/hero/venomancer.txt
 "DOTAHeroes"
 {
 	//=================================================================================================================

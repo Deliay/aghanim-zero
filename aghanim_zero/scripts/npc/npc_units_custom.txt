@@ -1,4 +1,6 @@
 // Units File
+#base ext/unit/rylai_ice_golem.txt
+#base ext/unit/venomancer_wards.txt
 "DOTAUnits"
 {
 	"Version"	"1"

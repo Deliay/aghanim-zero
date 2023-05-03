@@ -1,0 +1,26 @@
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: 
+	//=================================================================================================================
+	"npc_dota_hero_storm_spirit_aghsfort"
+	{
+		"override_hero"		"npc_dota_hero_storm_spirit"
+		"Ability1"		"aghsfort_storm_spirit_static_remnant"
+		"Ability2"		"aghsfort_storm_spirit_electric_vortex"
+		"Ability3"		"aghsfort_storm_spirit_overload"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"aghsfort_storm_spirit_ball_lightning"
+		"Ability10"		"special_bonus_unique_storm_spirit_static_remnant+dmg"
+		"Ability11"		"special_bonus_mp_regen_250"
+		"Ability12"		"special_bonus_hp_250"
+		"Ability13"		"special_bonus_attack_speed_25"
+		"Ability14"		"special_bonus_unique_storm_spirit_electric_vortex+duration"
+		"Ability15"		"special_bonus_unique_storm_spirit_static_remnant-cd"
+		"Ability16"		"special_bonus_unique_storm_spirit_overload+bounce"
+		"Ability17"		"special_bonus_unique_storm_spirit_ball_lightning+remnant"
+		"ArmorPhysical"		"3"
+		"MovementSpeed"		"285"
+	}
+}

@@ -1611,40 +1611,378 @@
 		"DOTA_Tooltip_modifier_aghsfort_special_void_spirit_astral_step_breach_burn"				"突破口"
 		"DOTA_Tooltip_modifier_aghsfort_special_void_spirit_astral_step_breach_burn_Description"	"持续受到伤害。"
 
+	 // Dragon Knight Begin
+	  // Legendary
+		"#npc_dota_hero_dragon_knight" "(EXT) 龙骑士"
+		"npc_dota_hero_dragon_knight" "(EXT) 龙骑士"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"(EXT) 日之呼吸"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun_Description"   				"被火焰气息命中的单位有%chance%%%概率遭受一次当前等级的神龙摆尾并被眩晕。"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_macropyre"   					"(EXT) 龙炎"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_macropyre_Description"   		"火焰气息留下一道燃烧的尾迹。每%interval%秒造成当前等级火焰气息%damage_percent%%%的伤害，持续%duration%秒"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_crit_lifesteal"   				"(EXT) 撕裂吐息"
+		"DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_crit_lifesteal_Description"  	"攻击被火焰气息负面效果影响的单位时, 龙骑士有%chance%%%几率造成伤害为%crit_mult%%%的致命一击。这些致命一击会为龙骑士回复所造成伤害的%lifesteal%%%作为生命。"
+
+
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_passive"   						"(EXT) 万鳞甲"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_passive_Description"   			"受到攻击时，龙骑士有%chance%%%的概率向攻击者释放当前等级的神龙摆尾。"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_bounce"   						"(EXT) 迅龙队长"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_bounce_Description"   			"神龙摆尾获得%bonus_range%额外施法距离，且飞出的盾牌可以在敌人之间弹射%bounces%次，之后盾牌会返回龙骑士手中并眩晕周围的敌人。"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_chain"   							"(EXT) 灵魂盛宴"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_tail_chain_Description"   				"神龙摆尾将龙骑士和主目标连接，被连接的目标将无法杀死龙骑士，龙骑士所承受伤害的%reflect_percentage%%%将会折射给被连接的目标。连接距离超过%max_distance%时会断开，最多持续%duration%秒。 "
+
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_damage"	                   	 	"(EXT) 龙血沸腾"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_damage_Description"	        	"龙族血统在%max_stack%秒时间内被动充能，并根据充能点数在下次攻击造成额外的魔法伤害。每秒的伤害加成等于龙骑士的总生命恢复量。如果在最大伤害时触发，则下次攻击会额外回复其所造成伤害的%heal%%%的生命"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_gold"	                        "(EXT) 巴比伦的珍藏"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_gold_Description"	            "未使用的金币中，每%gold_per_armor%金币获得1护甲加成。每%gold_per_magic_resist%金币获得1%魔法抗性"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_active"	                    	"(EXT) 大灾变"
+		"DOTA_Tooltip_ability_aghsfort_dk_dragon_blood_active_Description"	        	"可以主动激活龙族血统，激活时获得%duration%秒魔法免疫。激活时候释放火焰爆轰，击退%radius%范围内的敌人。受影响的单位还将眩晕%stun_duration% 秒，承受龙骑士%regen_damage_mult%%%总生命回复的伤害。"
+		
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_attack"	                	"(EXT) 迦拉克隆之牙"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_attack_Description"	    	"龙骑士人形态攻击%attack%次后，下次攻击获得当前等级古龙形态的攻击效果。古龙形态下的攻击投掷物会额外弹射一次，造成满额伤害并施加古龙形态负面效果"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_fear"	                    "(EXT) 死亡之翼"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_fear_Description"	        "变身古龙形态时朝所有方向释放火焰气息，使%radius%范围内的敌人恐惧%%duration%秒"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_cdr"	                    "(EXT) 安卡拉刚的祝福"
+		"DOTA_Tooltip_ability_aghsfort_dk_elder_dragon_form_cdr_Description"	        "龙骑士每次受到伤害时会降低%cdr%秒的古龙形态冷却时间。龙骑士受到致死伤害时若古龙形态已完成冷却，则龙骑士能立刻变身古龙形态并回复%heal%%%的最大生命值"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire"	                                "火焰气息"
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_Description"	                    "向龙骑士的前方喷射出一团火焰，烧灼碰到的敌人，并使其攻击力降低。"
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_range"		                    "距离： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_reduction"		                "%攻击伤害降低： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_duration"		                "负面效果持续时间： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_breathe_fire_damage"		                    "伤害： "
+		
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail"	                                "神龙摆尾"
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_Description"	                    "龙骑士用盾对身边的一个敌方单位进行打击，造成眩晕并冲击其周围的敌人。在古龙形态下施法距离提高。由神龙摆尾进行的冲击可触发击中效果。"
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_stun_duration"	                "眩晕持续时间： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_dragon_cast_range"	            "古龙形态施法距离加成： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_attack_damage"	                "%冲击伤害： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_radius"	                        "范围： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_tail_dragon_radius_mult"	            "%古龙形态范围加成： "
+		
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood"	                                "龙族血统"
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood_Description"                     "龙族的鲜血能提高龙骑士的生命恢复速度以及护甲。"
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood_bonus_health_regen"	            "生命回复加成： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_dragon_blood_bonus_armor"	                    "护甲加成： "
+		
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form"	             		    "古龙形态"
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_Description"	 		    "龙骑士能够变身成为三种古龙形态之一，同时提升移动速度以及神龙摆尾的施法距离，并且获得新的能力。\n<font color=\"#9acd32\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal poison damage over time.\n<font color=\"#ff0000\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks affect all enemies near the primary target.\n<font color=\"#34a8eb\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed and attack speed of affected units."
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_duration"	                "持续时间： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_bonus_movement_speed"	    "移动速度加成： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_bonus_attack_range"	        "攻击范围加成： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_bonus_attack_damage"	    "攻击伤害加成： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_corrosive_breath_damage"	"腐蚀吐息每秒伤害： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_corrosive_breath_duration"	"腐蚀吐息负面效果持续时间： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_splash_radius"	            "溅射范围： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_splash_damage_percent"	    "%溅射伤害： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_frost_bonus_movement_speed"	"冰霜吐息移动速度减缓： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_frost_bonus_attack_speed"	"冰霜吐息攻击速度降低： "
+		"DOTA_Tooltip_Ability_aghsfort_dk_elder_dragon_form_frost_duration"	            "冰霜吐息负面效果持续时间： "
+		
+		
+	  //Minor
+		"aghsfort_dk_breathe_fire_range"			                                    "+{s:value} {s:ability_name} 距离"
+		"aghsfort_dk_breathe_fire_reduction"			                                "+{s:value}% {s:ability_name} 攻击伤害降低"
+		"aghsfort_dk_breathe_fire_duration"			                                    "+{s:value}s {s:ability_name} 效果持续时间"
+		"aghsfort_dk_breathe_fire_damage"			                                    "+{s:value} {s:ability_name} 伤害"
+		"aghsfort_dk_breathe_fire_pct_cooldown"			                                "-{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		
+		"aghsfort_dk_dragon_tail_stun_duration"			                                "+{s:value}s {s:ability_name} 眩晕时间"
+		"aghsfort_dk_dragon_tail_attack_damage"			                                "+{s:value}% {s:ability_name} 冲击伤害"
+		"aghsfort_dk_dragon_tail_radius"			                                    "+{s:value} {s:ability_name} 作用范围"
+		"aghsfort_dk_dragon_tail_pct_cooldown"			                                "-{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		
+		"aghsfort_dk_dragon_blood_bonus_health_regen"			                        "+{s:value} {s:ability_name} 生命恢复加成"
+		"aghsfort_dk_dragon_blood_bonus_armor"			                                "+{s:value} {s:ability_name} 护甲加成"
+		
+		"aghsfort_dk_elder_dragon_form_duration"			                            "+{s:value}s {s:ability_name} 持续时间"
+		"aghsfort_dk_elder_dragon_form_bonus_movement_speed"			                "+{s:value} {s:ability_name} 移动速度加成"
+		"aghsfort_dk_elder_dragon_form_bonus_attack_range"			                    "+{s:value} {s:ability_name} 攻击范围加成"
+		"aghsfort_dk_elder_dragon_form_bonus_attack_damage"			                    "+{s:value} {s:ability_name} 攻击伤害加成"
+		"aghsfort_dk_elder_dragon_form_pct_cooldown"			                        "-{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+	
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_aghsfort_dk_dragon_tail+radius"	                    "+{s:value} 神龙摆尾作用范围"
+		"DOTA_Tooltip_Ability_special_bonus_aghsfort_dk_elder_dragon_form+bonus_attack_range"	    "+{s:value} 古龙形态攻击距离"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_dk_breathe_fire"	                                "火焰吐息减少所有伤害"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form"                                                 "恐怖巨龙"
+		"DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form_Description"                                     "看看，没见过我这样的大蜥蜴吧，啊！"
+		
+		"DOTA_Tooltip_modifier_aghsfort_dk_breathe_fire"                                                      "火焰气息"
+		"DOTA_Tooltip_modifier_aghsfort_dk_breathe_fire_Description"                                          "攻击力降低。"
+		
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_tail_chain"                                                 "血盟"
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_tail_chain_Description"                                     "生命值流失，同时接受部分龙骑士所承受的伤害。"
+		
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_blood_damage"                                               "蓄积怒火"
+		"DOTA_Tooltip_modifier_aghsfort_dk_dragon_blood_damage_Description"                                   "龙骑士的下次攻击额外造成与怒火层数相当的魔法伤害。若蓄积至最大层数，则下次攻击还会额外回复等同于所造成伤害的生命值。"
+		
+	 // Dragon Knight End
+	 // Antimage Begin
+		"#npc_dota_hero_antimage" "(EXT) 敌法师"
+		"npc_dota_hero_antimage" "(EXT) 敌法师"
+	  // Legendary
+		// "DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"Fire the Tail"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_transfer"     					"(EXT) 魔力转化"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_transfer_Description"     		"造成法力损毁时，敌法师们将损毁量的%transfer_pct%% 转化为自身生命回复。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_explosion"    					"(EXT) 法力爆裂" 
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_explosion_Description"    		"造成法力损毁时，敌法师们有%chance%% 的几率对目标施放%effect_pct%% 效果的法力虚空，幻象造成的效果还会受到当前幻象继承百分比影响。" 
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_imagine_breaker"   					"(EXT) 幻想杀手"  
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_imagine_breaker_Description"			"造成法力损毁时，敌法师们对目标施加一个持续%duration%秒的技能伤害减少效果, 此效果可以加法叠加并独立计算叠加持续时间，每层的叠加值为法力损毁当前的最大魔法值百分比。"  
+
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_illusion"     					"(EXT) 移形换影"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_illusion_Description"   		"闪烁在原点留下不可控幻象。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_illusion_Note0"				"敌法师本体施放法术反制时，此幻象也会同步施放。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_counter"     					"(EXT) 英雄闪光"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_counter_Description"   		"施放闪烁或闪烁碎片时会额外施放一次法术反制。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_fragment"				   		"(EXT) 闪烁碎片"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_fragment_Description"   		"新技能：闪烁碎片，使一个不可控幻象闪烁至地方目标或地点，对其发动攻击。新技能的冷却、蓝耗、距离与闪烁同步。敌法师本体施放法术反制时，此幻象也会同步施放。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_blink_fragment_Note0"		   		"敌法师本体施放法术反制时，此幻象也会同步施放。"
+		
+		
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_comprehensive_counter"     			"(EXT) 全面反制"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_comprehensive_counter_Description" 	"法术反制现在具有%aura_radius%码范围、效果为自身%aura_pct%% 的友军魔抗光环，并且施放时也为光环范围内的友军施加主动效果。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_turstarkuri_guardiance"     			"(EXT) 星隐加护"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_turstarkuri_guardiance_Description" 	"法术反制的主动效果现在额外添加一层抵挡技能伤害的叠加护盾，每层能完全抵挡一次技能伤害，并且抵挡时附带弱驱散。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_arcande_discipliner"     			"(EXT) 灭魔律者"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_arcande_discipliner_Description"  	"敌人在敌法师们%aura_radius%码范围内施放技能时有几率立即受到反击。本体触发的反击还会在施法者身边产生一个幻象"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_arcande_discipliner_Note0"  			"敌法师本体施放法术反制时，此幻象也会同步施放。"
+		
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_secondary_void"   					"(EXT) 再度虚空"  
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_secondary_void_Description"  		"受到首次法力虚空范围效果影响的单位会会在%delay%秒后受到次级的法力虚空作用，次级的效果为首次的%effect_pct%% 。"  
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_release"     					"(EXT) 魔力释放"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_mana_release_Description"    		"法力虚空现在可对友军施放，对其造成伤害等量的治疗而不是伤害和眩晕，并且回复全额魔法。当存在其他法力虚空传奇天赋时，对友军施放将施加与其主目标效果相反的正面效果。"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_ability_ban"     					"(EXT) 技能封禁"
+		"DOTA_Tooltip_ability_aghsfort_antimage_legend_ability_ban_Description"  			"法力虚空现在将延长目标当前最长冷却剩余技能的剩余冷却时间%cd_change%秒，该技能每剩余1秒冷却时间还会增加%cd_damage_amp%% 该次法力虚空的伤害。"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break"								"法力损毁"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_Description"					"每次攻击损毁目标一定量的魔法值，并额外造成相当于损毁魔法值%percent_damage_per_burn%% 的伤害。幻象继承的法力损毁效果为正常的 %illusion_percentage%% 。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_Note0"						"对没有魔法和魔法过低的普通单位造成最低伤害(基础削蓝x转化比)。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_mana_per_hit"				"每次攻击损毁魔法："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_mana_per_hit_pct"			"%最大魔法值百分比："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_percent_damage_per_burn"		"%燃烧魔法伤害："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_break_illusion_percentage"			"%幻象百分比："
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink"	            	                "闪烁"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_Description"		                "让敌法师自由出入战场的短距离传送。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_Note0"			                "施法时躲避弹道。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_blink_range"		                "最大闪烁距离："
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell"							"法术反制"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_Description"				"被动提升魔法抗性。可以主动开启，创造一个围绕自身的反魔法外壳，将所有指向性技能反弹给敌人，自己则不受任何影响。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_Note0"				 		"施法时打断敌法师的持续施法技能。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_Note1"				 		"与其他魔法抗性来源乘法叠加。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_magic_resistance"			"魔法抗性加成："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_counterspell_duration"					"护盾持续时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void"								"法力虚空"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_Description"					"根据目标损失的魔法值，对目标和其周围的敌人造成伤害。主要目标受到短暂眩晕。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_Note0"						"具有基础伤害。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_base_damage"					"基础伤害："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_damage_per_mana"				"每点损失魔法量伤害："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_aoe_radius"					"范围："
+		"DOTA_Tooltip_Ability_aghsfort_antimage_mana_void_ministun"						"眩晕时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_fragment"							"闪烁碎片"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_fragment_Description"				"使一个不可控幻象闪烁至地方目标或地点，对其发动攻击。"
+		"DOTA_Tooltip_Ability_aghsfort_antimage_blink_fragment_Not0"					"此技能的冷却、蓝耗、距离与闪烁同步。"
+
+	  //Minor
+		"aghsfort_antimage_mana_break_mana_per_hit"										"+{s:value} {s:ability_name} 每次攻击损毁魔法"
+		"aghsfort_antimage_mana_break_mana_per_hit_pct"									"+{s:value}% {s:ability_name} 最大魔法值百分比"
+		"aghsfort_antimage_mana_break_percent_damage_per_burn"							"+{s:value}% {s:ability_name} 燃烧魔法伤害"
+		"aghsfort_antimage_mana_break_illusion_percentage"								"+{s:value}% {s:ability_name} 幻象百分比"
+
+		"aghsfort_antimage_blink_blink_range"											"+{s:value} {s:ability_name} 最大闪烁距离"
+		"aghsfort_antimage_blink_mana_cost_cooldown"									"-{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+
+		"aghsfort_antimage_counterspell_magic_resistance"								"+{s:value} {s:ability_name} 魔法抗性加成"
+		"aghsfort_antimage_counterspell_duration"										"+{s:value} {s:ability_name} 护盾持续时间"
+		"aghsfort_antimage_counterspell_mana_cost_cooldown"								"-{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+
+		"aghsfort_antimage_mana_void_base_damage"										"+{s:value} {s:ability_name} 基础伤害"
+		"aghsfort_antimage_mana_void_ministun"											"+{s:value}s {s:ability_name} 眩晕时间"
+		"aghsfort_antimage_mana_void_damage_per_mana"									"+{s:value} {s:ability_name} 每点损失魔法量伤害"
+		"aghsfort_antimage_mana_void_aoe_radius"										"+{s:value} {s:ability_name} 伤害范围"
+		"aghsfort_antimage_mana_void_mana_cost_cooldown"								"-{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_break+mana_per_hit"	    "+{s:value} 法力损毁魔法"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_blink-cd"	                    "-{s:value} 闪烁冷却"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_counterspell+magical_resist"	    "+{s:value} 法术反制魔抗"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_blink+blink_distance"	    "+{s:value} 闪烁距离"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_void+base_damage"	    "+{s:value} 法力虚空基础伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_void+ministun"	    "+{s:value}s 法力虚空眩晕"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_antimage_mana_void-cd"	    "-{s:value} 法力虚空冷却"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_antimage_counterspell"								"法术反制"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_counterspell_Description"					"抵挡并反弹指向技能"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_imagine_breaker"							"幻想杀手"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_imagine_breaker_Description"				"技能伤害降低 %dMODIFIER_PROPERTY_TOOLTIP%%%"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_comprehensive_counter"						"法术反制光环"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_comprehensive_counter_Description"			"提供 %MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 魔抗加成"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_turstarkuri_guardiance"					"星隐加护"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_turstarkuri_guardiance_Description"		"抵挡技能伤害"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_secondary_void"							"二次虚空"
+		"DOTA_Tooltip_modifier_aghsfort_antimage_secondary_void_Description"				"大的要来了！"
+		// "DOTA_Tooltip_modifier_aghsfort_antimage_legend_mana_transfer"						"Mana Transfer"
+		// "DOTA_Tooltip_modifier_aghsfort_antimage_legend_mana_explosion"						"Mana Explosion"
+		// "DOTA_Tooltip_modifier_aghsfort_antimage_legend_imagine_breaker"					"Imagine Breaker"
+		
+		// "DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form"                                                 "Big Scary Dragon"
+		// "DOTA_Tooltip_modifier_aghsfort_dk_elder_dragon_form_Description"                                     "Look at me I'm a big strong lizard, rawr!"
+
+	 // Antimage End
+
+	// Crystal Maiden Begin
+		"#npc_dota_hero_crystal_maiden" "(EXT) 水晶室女"
+		"npc_dota_hero_crystal_maiden" "(EXT) 水晶室女"
+	  // Legendary
+		// "DOTA_Tooltip_ability_aghsfort_rylai_crystal_nova_stun"   							"Fire the Tail"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_snowman"								"(EXT) 雪人来袭！"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_snowman_Description"					"冰霜新星现在在落点召唤雪人，其血量、攻击、移速/攻速分别与新星的范围、伤害和减速效果挂钩。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_strike"							"(EXT) 新星出击"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_strike_Description"				"水晶室女施放冰霜新星时，对击中的所有敌人发动一次攻击。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_crystal_field"							"(EXT) 冰霜领域"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_crystal_field_Description"				"新星留下一个相同范围、每%tick_interval%秒造成%damage_pct%% 新星伤害并附加减速效果的冰霜领域。领域同时还给予%magic_resist_pct%% 减速值的魔抗降低。"
+
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_chain"							"(EXT) 连锁霜冻"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_chain_Description"				"冰封禁制现在会传播给接触的敌人。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_touch"							"(EXT) 冰狼撕咬"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_touch_Description"				"水晶室女的攻击有%chance_pct%% 概率触发冰封禁制"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_split"							"(EXT) 寒霜碎片"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_frost_split_Description"				"冰封禁制在结束时会向%radius%范围内最多%split_count%个其他敌人发射碎片。碎片造成%damage_pct%% 对原单位造成的总伤害并且附带一个%nova_pct%% 效果的冰霜新星。"
+
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_field"							"(EXT) 蓝心冰域"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_field_Description"				"奥术光环狂热作用下的单位在施放主动技能时有%chance%% 几率触发跟随自身的极寒领域，每层狂热提供%duration_per_stack%秒领域持续时间。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_enhance"							"(EXT) 奥术炼成"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_arcane_enhance_Description"				"奥术光环和其狂热效果每提供一点魔法回复也提供%value%% 技能增强。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_cool_mind"								"(EXT) 明镜之心"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_cool_mind_Description"					"奥术光环的其狂热效果每提供一点魔法回复也提供%value%% 仅限技能的冷却缩减，与其他同类效果叠加。"
+
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_letgo"									"(EXT) 随-它-去-吧"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_letgo_Description"						"极寒领域现在不再需要持续施法，并可以对友军施放，跟随施法目标。当开启自动施法时，极寒领域还会吹起目标，目标在空中仍然可以施放技能和移动。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_storm"								"(EXT) 新星风暴"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_nova_storm_Description"					"极寒领域内的每次爆轰都有%chance%% 几率触发一次以领域内随机点为中心的冰霜新星。"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_absolute_zero"							"(EXT) 绝对零度"
+		"DOTA_Tooltip_ability_aghsfort_rylai_legend_absolute_zero_Description"				"敌人在领域内每%interval%秒都会受到一次冰封禁制，首次作用的延迟为%delay%秒"
+		
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova"	                                "冰霜新星"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_Description"	                    "召唤具有破坏性的冰爆，降低目标区域内的敌人的移动和攻击速度。"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_radius"		                    "效果范围："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_movespeed_slow"		            "%移动速度减缓："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_attackspeed_slow"		            "攻击速度降低："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_duration"		                	"减速时间："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_crystal_nova_nova_damage"		                "伤害："
+		
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite"	                               		"冰封禁制"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_Description"                    		"操控冰霜包围一个敌方单位，禁止移动和攻击，并持续造成伤害。非首领普通单位施放将产生%creep_duration%秒的持续时间。"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_Note0"	                            "伤害间隔为%tick_interval%秒"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_damage_per_second"              		"每秒伤害："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_duration"                       		"对英雄持续时间："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_frostbite_creep_duration"                 		"对小兵持续时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura"                         		"奥术光环"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_Description"                   "被动为所有友军提供魔法回复。当水晶室女施放技能时，所有友方英雄都会获得一层奥术狂热，提供额外魔法回复和施放速度增加。"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_mana_regen"               		"被动/每层魔法回复："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_cast_reduce"              		"%每层施法速度加成："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_max_stacks"              		"最大层数："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_brilliance_aura_stack_duration"              	"持续时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field"                           		"极寒领域"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_Description"               		"以水晶室女为中心召唤冰晶轰炸敌人，将其减速并造成大量伤害。持续施法期间提供护甲加成。持续%channel_time%秒。"
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_radius"                    		"减速范围："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_explosion_radius"          		"轰炸伤害范围："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_damage"	 		         		"伤害："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_movespeed_slow"          		"%移动速度减缓："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_attack_slow"	          		"攻击速度降低："
+		"DOTA_Tooltip_Ability_aghsfort_rylai_freezing_field_channel_time"	          		"最长吟唱时间："
+	  //Minor
+		"aghsfort_rylai_crystal_nova_mana_cost_cooldown"			                        "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_rylai_crystal_nova_damage"												"+{s:value} {s:ability_name} 伤害"		
+		"aghsfort_rylai_crystal_nova_radius"												"+{s:value} {s:ability_name} 范围"
+		"aghsfort_rylai_crystal_nova_slow"							                        "{s:value1}% / {s:value2} {s:ability_name} 移速/攻速减少"
+		"aghsfort_rylai_crystal_nova_duration"							                    "{s:value1}s {s:ability_name} 视野和减速持续时间"
+
+		"aghsfort_rylai_frostbite_mana_cost_cooldown"			                            "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_rylai_frostbite_dps"							                            "+{s:value1} {s:ability_name} 每秒伤害"
+		"aghsfort_rylai_frostbite_duration"							                        "+{s:value1}s {s:ability_name} 持续时间"
+
+		"aghsfort_rylai_brilliance_aura_mana_regen"											"+{s:value} {s:ability_name} 光环和狂热魔法回复"
+		"aghsfort_rylai_brilliance_aura_max_stacks"											"+{s:value} {s:ability_name} 最大叠加层数"
+
+		"aghsfort_rylai_freezing_field_mana_cost_cooldown"			                        "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_rylai_freezing_field_damage"						                        "+{s:value} {s:ability_name} 爆轰伤害"
+		"aghsfort_rylai_freezing_field_duration"					                        "+{s:value}s {s:ability_name} 最大持续施法时间"
+
+
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_crystal_nova+radius"	                    "+{s:value} 冰霜新星范围"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_crystal_nova+damage"	                    "+{s:value} 冰霜新星伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_crystal_nova-cd"		                    "-{s:value} 冰霜新星冷却时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_frostbite+duration"	                    "+{s:value} 冰封禁制持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_brilliance_aura+mr"	                    "+{s:value}% 奥术光环魔抗"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_rylai_freezing_field+damage"                    "+{s:value} 极寒领域爆轰伤害"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_rylai_crystal_nova_debuff"                                                 "冰霜新星"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_crystal_nova_debuff_Description"                                     "移速减少%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% ，攻速降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_frostbite"                                                 "冰封禁制"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_frostbite_Description"                                     "你眼睛进冰渣子了！"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_buff"                                      "奥术光环"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_buff_Description"                          "魔法回复提升 %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_fenzy"                                      "奥术狂热"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_brilliance_aura_fenzy_Description"                          "魔法回复增强，并且施法更快"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field"                                      "极寒领域"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field_Description"                          "寒冬降临！"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field_debuff"                                      "极寒领域"
+		"DOTA_Tooltip_modifier_aghsfort_rylai_freezing_field_debuff_Description"                          "移速减少 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% ，攻速降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%"
+		"DOTA_Tooltip_modifier_rylai_crystal_field_debuff"                                      "冰霜领域"
+		"DOTA_Tooltip_modifier_rylai_crystal_field_debuff_Description"                          "魔抗降低%MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%"
+		"npc_dota_rylai_ice_golem"															"雪人"
+	 // Crystal Maiden End
+
 	 // Nevermore Begin
 	  // Legendary
 		// "DOTA_Tooltip_ability_aghsfort_dk_breathe_fire_stun"   							"Fire the Tail"
 			"#npc_dota_hero_nevermore" "(EXT) 影魔"
 			"npc_dota_hero_nevermore" "(EXT) 影魔"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_waltz"    						"(EXT)影之圆舞曲"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_waltz"    						"(EXT) 影之圆舞曲"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_waltz_Description"    			"施放毁灭阴影现在会以影魔为中心生成毁灭阴影环，数量取决于灵魂的数量。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_overlay"  						"(EXT)暗影重重"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_overlay"  						"(EXT) 暗影重重"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_overlay_Description"  			"毁灭阴影每击中一个人都会额外提升所有毁灭阴影的伤害, 叠加时间分别计算，为%duration_multiplier%倍连压叠加时间，叠加伤害为连压伤害的%damage_multiplier%倍。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_volley"   						"(EXT)迫击炮"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_volley"   						"(EXT) 迫击炮"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_shadow_volley_Description"   			"每次施放毁灭阴影都会额外施放一次下个距离的毁灭阴影。"
 
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_necro_fusion"     						"(EXT)死魂结合"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_necro_fusion"     						"(EXT) 死魂结合"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_necro_fusion_Description"     			"吸收灵魂现在提供叠加的生命值/魔法回复效果。每次吸收2魂。死亡支付的灵魂数超过一定数值时，影魔不会消耗生命数。"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_necro_fusion_Note0"     				"回复效果分别为 1x/5x 灵魂的攻击力/技能增强数值。"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_necro_fusion_Note1"     				"支付灵魂额度： %return_basic% + %return_level% x 等级数。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_soul_thirst"      						"(EXT)灵魂盛宴"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_soul_thirst"      						"(EXT) 灵魂盛宴"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_soul_thirst_Description"      			"影魔在造成攻击/技能伤害时分别有%attack_chance%% / %spell_chance%% 几率从目标吸魂。同时，影魔可以暂时支配超出魂上限%max_times%倍的灵魂。额外灵魂能保存%duration%秒。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_unstable_spirit"  						"(EXT)不稳定灵体"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_unstable_spirit"  						"(EXT) 不稳定灵体"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_unstable_spirit_Description"  			"吸收的灵魂会在起始处向随机方向发射一道灵魂冲击波。"
 			
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_lord_assault"       					"(EXT)魔王之力"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_lord_assault"       					"(EXT) 魔王之力"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_lord_assault_Description"       		"开启期间，影魔获得多重攻击，同时攻击技能范围内其他最多(技能减甲值÷2)个敌人。次要目标的攻击力减少%reduction%% 。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_advanced_darkness"  					"(EXT)高等暗黑"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_advanced_darkness"  					"(EXT) 高等暗黑"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_advanced_darkness_Description"  		"此技能的负面效果每%tick_interval%秒增加%tick_increase%倍基础数值。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_overlord"           					"(EXT)罪域之王"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_overlord"           					"(EXT) 罪域之王"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_overlord_Description"           		"开启时，影魔获得技能免疫并移除攻速上限，并根据影响到的敌人数量增加攻击速度。"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_overlord_Note0"           				"每个敌人提供的攻速为%amp%倍减甲数值。"
 			
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_reiatsu"        						"(EXT)灵压"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_reiatsu"        						"(EXT) 灵压"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_reiatsu_Description"        			"灵魂冲击波会在击中的第一个敌人身上施放毁灭阴影。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_soul_callback"  						"(EXT)二重唱"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_soul_callback"  						"(EXT) 二重唱"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_soul_callback_Description"  			"灵魂冲击波首次到达终点时会返回，返回的冲击波造成%damage_pct%% 伤害并全额治疗影魔。"
-			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_made_in_hell"   						"(EXT)地狱制造"
+			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_made_in_hell"   						"(EXT) 地狱制造"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_made_in_hell_Description"   			"每释放一道灵魂冲击波暂时增加影魔%atk_increase%% 的攻击力。当此效果叠加超过%fly_thres%层时，影魔原地起飞并获得顺畅视野。"
 			"DOTA_Tooltip_ability_aghsfort_nevermore_legend_made_in_hell_Note0"   					"每层的独立持续时间为%duration_multiplier%倍魂之挽歌最大持续时间。"
 
@@ -1865,6 +2203,563 @@
 		"DOTA_Tooltip_modifier_aghsfort_ogre_magi_legend_multicast_stupid"			"我们还行吧"
 		"DOTA_Tooltip_modifier_aghsfort_ogre_magi_legend_multicast_stupid_Description"			"失去 %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%智力，获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%力量。"
 	 // Ogre Magi End
+
+	 // SB Begin
+		"#npc_dota_hero_spirit_breaker" "(EXT) 裂魂人"
+		"npc_dota_hero_spirit_breaker" "(EXT) 裂魂人"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_orienteering"             				"(EXT) 定向越野"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_orienteering_Description"             	"冲刺现在可以以地点目标施放，自动搜寻一定范围内最近的目标发起冲刺。 同时，以目标为中心、搜索半径为范围内的所有合法目标都会被加入冲刺名单，裂魂人会依次冲向他们。搜寻范围为冲刺重击范围+%bonus_radius%。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_drift"             					"(EXT) 藤原拓海"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_drift_Description"            	 		"冲刺过程中可以通过攻击或移动指令改变冲刺目标。不能将目标转至不可被冲刺单位。若改变的目标不在冲刺名单中，当前的目标会被移除，否则仅改变冲刺顺序。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_unstoppable"             				"(EXT) 幽冥形态"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_unstoppable_Description"             	"裂魂人将以幽冥形态出击，冲刺效果无法被其他人中断，而且提供物理免疫。"
+
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_sparking"             					"(EXT) 电光石火"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_sparking_Description"             		"威吓作用的单位会留下火焰路径，造成伤害和减速。伤害间隔%tick_rate%秒，每秒造成裂魂人移速乘以威吓状态抗性的伤害。减速效果和威吓加速效果一致。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_niubility"             				"(EXT) 种族异变"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_niubility_Description"             	"威吓移除移速上限。作用于裂魂人时，还将缩短基础攻击间隔至%attack_time%秒，并移除巨力重击冷却。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rampage"             					"(EXT) 暴走一族"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rampage_Description"             		"威吓现在作用于所有友方英雄本体。冲刺现在可以开启自动施法，此时施放冲刺会令所有威吓状态下的友军对目标发起冲锋。"
+
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_serial"             					"(EXT) 连环事故"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_serial_Description"             		"受到巨力重击的单位在落地时会释放冲击，对周围等同于击退距离的其他敌人造成该次重击等量的伤害和击退。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rush"             						"(EXT) 相位猛冲"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rush_Description"             			"触发巨力重击现在会暂时提升移动速度，期间提供移除移速上限和无视地形的效果，移速可叠加但时间独立计算。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_schizophrenia"             			"(EXT) 精神分裂"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_schizophrenia_Description"             "巨力重击使敌人陷入混乱，随机攻击其队友，混乱持续%duration_pct%倍重击眩晕时间。"
+
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rise"             						"(EXT) 幽冥飞升"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_rise_Description"             			"裂魂人在到达时额外施加一次威吓。同时，裂魂人自身获得技能免疫，持续时间为%base_duration%倍幽冥一击重击倍率。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_crash"             					"(EXT) 全部干碎"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_crash_Description"             		"幽冥一击现在具有%base_radius%乘以幽冥一击重击倍率的作用范围。"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_runup"									"(EXT) 预先冲刺"
+		"DOTA_Tooltip_ability_aghsfort_spirit_breaker_legend_runup_Description"						"在冲刺过程中，幽冥一击无视施法距离和前摇。在冲刺中施放幽冥一击在命中时会立即刷新冲刺的冷却时间。"
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness"	                                "暗影冲刺"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_Description"	                    "裂魂人盯紧一个敌方单位，开始无视一切物体的冲刺。途中经过的所有敌方单位和目标单位都将受到巨力重击。如果目标单位在到达前死亡了，裂魂人将他的目标改为原路径上最近的一个敌方单位。"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_movement_speed"                    "冲刺移速加成："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_stun_duration"                     "眩晕时间："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_charge_of_darkness_bash_radius"                       "巨力重击范围："
+
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze"	                                "威吓"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_Description"                     "裂魂人获得移动速度和状态抗性加成，在敌人之间横冲直撞。可以在冲刺期间使用。"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_movement_speed"                  "%移动速度提升："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_status_resistance"               "%状态抗性："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_bulldoze_duration"                     	"持续时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash"	                                "巨力重击"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_Description"                     "攻击时有一定概率眩晕并击退敌方单位。重击的伤害值为移动速度的一定百分比。对非英雄单位造成1.5倍伤害。"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_chance_pct"                      "%触发几率："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_damage"		                    "%移动速度转化伤害百分比："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_duration"			            "眩晕时间："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_knockback_duration"              "击退时间："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_greater_bash_knockback_distance"              "击退距离："
+
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike"	                                "幽冥一击"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_Description"                        "裂魂人遁入幽冥领域，从不幸的目标身旁再次出现，发动当前等级的巨力重击并造成额外伤害。该次巨力重击的效果加倍。"
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_damage"                              "额外伤害："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_fade_time"                           "施法延迟："
+		"DOTA_Tooltip_Ability_aghsfort_spirit_breaker_nether_strike_bash_pct"                           "巨力重击倍率："
+		
+	  //Minor
+	  	"aghsfort_spirit_breaker_charge_of_darkness_mana_cost_cooldown"						"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+	  	"aghsfort_spirit_breaker_bulldoze_mana_cost_cooldown"								"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+	  	"aghsfort_spirit_breaker_nether_strike_cost_cooldown"								"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_spirit_breaker_charge_of_darkness_speed"									"+{s:value} {s:ability_name} 移速加成"
+		"aghsfort_spirit_breaker_charge_of_darkness_stun"									"+{s:value}s {s:ability_name} 眩晕时间"
+		"aghsfort_spirit_breaker_charge_of_darkness_radius"									"+{s:value} {s:ability_name} 巨力重击范围"
+		"aghsfort_spirit_breaker_bulldoze_amp"												"+{s:value1}%/+{s:value2}% {s:ability_name} 移速/状态抗性加成"
+		"aghsfort_spirit_breaker_bulldoze_duration"											"+{s:value}s {s:ability_name} 持续时间"
+		"aghsfort_spirit_breaker_greater_bash_damage"										"+{s:value}% {s:ability_name} 伤害"
+		"aghsfort_spirit_breaker_greater_bash_stun"											"+{s:value}s {s:ability_name} 眩晕时间"
+		"aghsfort_spirit_breaker_greater_bash_chance"										"+{s:value1}%/{s:value2}% {s:ability_name} 几率/冷却缩减"
+		"aghsfort_spirit_breaker_greater_bash_knockback"									"+{s:value} {s:ability_name} 击退距离"
+		"aghsfort_spirit_breaker_nether_strike_damage"										"+{s:value} {s:ability_name} 伤害"
+		"aghsfort_spirit_breaker_nether_strike_bash"										"+{s:value}x {s:ability_name} 巨力重击倍率"
+			
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_spirit_breaker_greater_bash+damage"	                    "+{s:value}% 巨力重击伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_spirit_breaker_greater_bash+chance"	    				"+{s:value}% 巨力重击几率"
+		"DOTA_Tooltip_Ability_special_bonus_unique_spirit_breaker_bulldoze-cd"	                            "-{s:value}s 威吓冷却"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness"                                        "冲锋！"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness_Description"                            "冲锋！"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness_target"                                 "冲刺目标"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_charge_of_darkness_target_Description"                     "冲刺目标"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_bulldoze"				                                  "威吓"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_bulldoze_Description"	                                  "直视我！崽种！"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_spark_debuff"				                              "燃烧"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_spark_debuff_Description"	                              "减速并受到持续伤害"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_rush_hour"					                              "冲鸭！"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_rush_hour_Description"		                              "RUAAAAA!"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_schizophrenia"					                          "精神分裂"
+		"DOTA_Tooltip_modifier_aghsfort_spirit_breaker_schizophrenia_Description"		                          "随机攻击队友"
+
+	 // SB End
+
+	 // Bounty Hunter Begin
+		"#npc_dota_hero_bounty_hunter" "(EXT) 赏金猎人"
+		"npc_dota_hero_bounty_hunter" "(EXT) 赏金猎人"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_track"  									"(EXT) 金遁•追踪手里剑"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_track_Description"  						"投掷飞镖对未被追踪的敌人施加追踪术。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_jinada" 									"(EXT) 金遁•螺旋手里剑"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_jinada_Description" 						"投掷飞镖现在施加忍术效果。增加追踪术目标飞镖弹射次数至%bounce_times%。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_jinada_Note0" 								"非攻击施加的忍术不视为攻击，并且同样受到单一目标偷钱次数的限制。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_tripple"									"(EXT) 金遁•影分身手里剑" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_toss_tripple_Description"						"投掷飞镖一次最多向不同敌人投出%max_toss%个，搜寻范围为%search_radius%。" 
+
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_konyiji"									"(EXT) 读书人的事" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_konyiji_Description"						"赏金猎人能够从每个被偷过钱的头目和首领死者身上偷得随机书本。每次偷得的量受到当前进度的影响。" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_loan"   									"(EXT) 撸小贷"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_loan_Description"   						"获得新技能：贷款。赏金可以为自己贷款或贷款给队友。贷款给队友时，赏金猎人收取一定的利息"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder" 									"(EXT) 要钱？要命？我全都要"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder_Description" 						"赏金猎人的攻击和忍术对已经被偷钱的敌人额外造成等同于忍术附加伤害的物理伤害。"
+
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy" 										"(EXT) 疾风步"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy_Description" 							"暗影步提供%damage_reduction%%% 伤害减免。造成破隐一击时，攻击者获得弹道闪避、攻击闪避和百分比攻速加成，与减速持续时间相同。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy_Note0"									"闪避几率是减速的%evasion_mul%倍，攻速加成是减速的%as_mul%倍。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup"										"(EXT) 扒手" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup_Description"							"暗影步对经过的敌人施加忍术。一次隐身中同一个敌人只会被影响一次。" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_pickup_Note0"									"非攻击施加的忍术不视为攻击，并且同样受到单一目标偷钱次数的限制。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_track"										"(EXT) 踩点"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_track_Description"							"赏金在暗影步期间自动标记周围敌人，标记间隔是标记冷却的%interval_pct%倍。" 
+
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_invis"										"(EXT) 潜影猎手" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_invis_Description"							"追踪者在%delay%秒延迟后进入暗影步状态。" 
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_ally" 										"(EXT) 团伙作案"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_ally_Description" 							"追踪术暴击对队友提供%effect_mul%倍效果。"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_pass" 										"(EXT) 赏金名单"
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_track_pass_Description" 							"追踪术在结束时会转移至周围一名敌人。"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss"	                                "投掷飞镖"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_Description"                     "向一名敌方单位掷出一枚致命的飞镖，对目标造成伤害和短暂眩晕。只要作用目标周围1200范围内存在被追踪术标记的单位，飞镖就能向其弹射。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_bonus_damage"	                "伤害："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_ministun"		                "眩晕时间："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_shuriken_toss_range"			                "施法距离："
+		
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada"	                                "忍术"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_Description"                        "赏金猎人准备好他的下次攻击，获得额外攻击力并窃取若干不可靠金钱。偷钱效果对同一个单位只会生效一次，并且对非首领和头目的数额减少。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_Note0"		                        "对非首领和头目单位的金钱系数为%creep_multiplier%。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_bonus_damage"                       "攻击力加成："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_jinada_gold_steal"                       	"金钱窃取："
+
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk"	                                "暗影步"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_Description"                     "赏金猎人进入隐身，并能够穿越其它单位，直到他攻击或使用技能。破隐一击会减缓目标的移动速度并降低护甲。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_duration"                         "隐身持续时间："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_fade_time"                        "隐身持续时间："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_slow"		                     "%移动速度减缓："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_slow_duration"                    "负面状态持续时间："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_wind_walk_armor_reduction"                  "护甲降低："
+
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track"	                                "追踪术"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_Description"                     "追踪一个敌方单位，获得目标的真实视域。自己在被追踪者周围可以获得移动速度提升，对其发动攻击时具有致命一击效果。如果目标为首领或头目且在被追踪期间死亡，赏金猎人和附近友方英雄都将获得一笔赏金。施放追踪术不会脱离隐身。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_Note0"                     		"只有追踪目标为首领和头目时才提供赏金，首领赏金加倍。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_gold_radius"               "赏金范围："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_gold_self"               	"自身赏金："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_gold"               		"队友赏金："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_duration" 	              		"持续时间："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_bonus_move_speed_pct"       		"%自身移速加成："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_target_crit_multiplier"     		"%自身对目标致命一击："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_toss_crit_multiplier"     		"%飞镖对目标暴击伤害："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_track_boss_mul"     					"首领赏金倍率："
+
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan"	                                "贷款"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_Description"                      "赏金猎人为自己或向队友提供贷款，额度基于当前忍术金钱。贷款给队友时，赏金猎人将收取一部分利息。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_Note0"                      		"当债务人死亡或存款不足时，还款会暂停。"
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_mul"                              "额度忍术金钱倍率："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_interest"                         "%利率："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_interval"                         "还款间隔："
+		"DOTA_Tooltip_Ability_aghsfort_bounty_hunter_loan_instances"                        "还款次数："
+		
+
+	  //Minor
+	  	"aghsfort_bounty_hunter_shuriken_toss_mana_cost_cooldown"						"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_bounty_hunter_shuriken_toss_damage"			                        "+{s:value} {s:ability_name} 伤害"
+		"aghsfort_bounty_hunter_shuriken_toss_range"			                        "+{s:value1}/{s:value3}s {s:ability_name} 施法距离/眩晕时间"
+		"aghsfort_bounty_hunter_jinada_cooldown"			                            "+{s:value}% {s:ability_name} 冷却时间减少"
+		"aghsfort_bounty_hunter_jinada_damage"			                                "+{s:value} {s:ability_name} 攻击加成"
+		"aghsfort_bounty_hunter_jinada_gold"			                                "+{s:value} {s:ability_name} 窃取金钱"
+	  	"aghsfort_bounty_hunter_wind_walk_mana_cost_cooldown"							"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+	  	"aghsfort_bounty_hunter_wind_walk_armor"										"+{s:value} {s:ability_name} 减甲"
+	  	"aghsfort_bounty_hunter_wind_walk_slow"											"+{s:value}秒 {s:ability_name} 负面状态持续时间"
+	  	"aghsfort_bounty_hunter_track_mana_cost_cooldown"								"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+	  	"aghsfort_bounty_hunter_track_crit"												"+{s:value1}% {s:ability_name} 暴击"
+	  	"aghsfort_bounty_hunter_track_ms"												"+{s:value1}%/{s:value2}秒 {s:ability_name} 移速/持续时间"
+	  	"aghsfort_bounty_hunter_track_gold"												"+{s:value1}/{s:value2} {s:ability_name} 金钱"
+			
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+charge"	                    "{s:value} 投掷飞镖能量点数"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+damage"	                    "+{s:value} 投掷飞镖伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_jinada+gold"			                    "+{s:value} 忍术窃取金钱"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_jinada+damage"	                    	"+{s:value} 忍术攻击力加成"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_wind_walk+slow"	                    	"+{s:value}秒 暗影步负面状态持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_track+ally"	                    	"追踪术为友军提供{s:value}倍移速"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_track+vison"	                    	"追踪术提供{s:value}范围地面视野"
+		"DOTA_Tooltip_Ability_special_bonus_unique_aghsfort_bounty_hunter_track+gold"	                    	"+{s:value}追踪术金钱"
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_jinada_debuff"                                             "没钱了！"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_wind_walk_invis"                                           "暗影步"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_wind_walk_break"                                           "暗影突袭！"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_wind_walk_break_Description"                               "移速减少%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% ，护甲减少%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_track"	                                             	 "追踪目标"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_track_buff"	                                             "狩猎中！"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_loan_debt"	                                             "负债"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_loan_debt_Description"	                                             "还需还款%dMODIFIER_PROPERTY_TOOLTIP%金币，每次还款%dMODIFIER_PROPERTY_TOOLTIP2%金币"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_legend_walk_windy_buff"	                                             "疾风步"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_legend_walk_windy_buff_Description"	                                             "闪避弹道。提供%dMODIFIER_PROPERTY_EVASION_CONSTANT%%% 闪避和%dMODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE%%% 攻击速度。"
+		"DOTA_Tooltip_modifier_aghsfort_bounty_hunter_legend_track_invis_buff"	                                             "潜行中..."
+
+	 // Bounty Hunter End
+
+	 // Storm Spirit Begin
+		"#npc_dota_hero_storm_spirit" "(EXT) 风暴之灵"
+		"npc_dota_hero_storm_spirit" "(EXT) 风暴之灵"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_vortex"					"(EXT) 风暴预兆"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_vortex_Description"		"残影爆炸施放电子涡流。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_giant"					"(EXT) 巨大的怪蜀黍"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_giant_Description"		"每第%counter%个产生的残影的大小为正常的%scale%倍, 其范围和伤害也为原来的%scale%倍。"
+		// "DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_power"					""
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_taunt"					"(EXT) 全体目光向我看齐"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_remnant_taunt_Description"		"残影现在可以开启自动施法。自动施法时产生的残影每%interval%秒对范围内敌人施放嘲讽，且爆炸延迟增加%finale_delay%秒。"
+		
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_attack"					"(EXT) 电子流派"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_attack_Description"		"涡流现在自动攻击牵引的目标。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_aoe"						"(EXT) 涡流场"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_aoe_Description"			"涡流现在是无目标的范围作用技能。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_overload"					"(EXT) 特高压"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_vortex_overload_Description"		"涡流中心每%interval%秒产生一次超负荷。"
+
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_ally"					"(EXT) 并联充电"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_ally_Description"		"超负荷激发时，%radius%范围内友方英雄也获得超负荷充能。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_mana"					"(EXT) 电能回收"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_mana_Description"		"超负荷引爆时恢复施法者的魔法，与该次超负荷最大魔法伤害值相同。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_remnant"				"(EXT) 电量过剩"	
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_overload_remnant_Description"	"超负荷的攻击在目标位置生成残影。"	
+
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_ally"						"(EXT) 加速同调"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_ally_Description"			"球形闪电现在可以开启自动施法，将第一个碰到的友方英雄卷入风暴，一起飞向目标。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_fenzy"						"(EXT) 闪电快男"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_fenzy_Description"			"球形闪电增加其内英雄与其伤害范围数值相等的射程，并在飞行中累积攻速加成，累积速度等于其伤害累积速度的%effect_mul%倍。到达目标时，此效果粘滞%linger%秒。"
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_overload"					"(EXT) 超电导波雷鸣炮"	
+		"DOTA_Tooltip_ability_aghsfort_storm_spirit_legend_ball_overload_Description"		"球形闪电对碰到的敌人施加超负荷，此效果每100码只会触发一次。"	
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant"	                        "残影"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_Lore"	                "雷神·风暴烈酒的二象性让他可以欣赏自己被电时的百态。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_Description"             "风暴之灵制造一个充满爆炸性能量的自身残影，如果有人接近就会引爆造成伤害，残影持续%duration%秒。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_radius"				"触发范围："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_damage_radius"		"伤害范围："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_delay"				"生效延迟："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_static_remnant_damage"				"伤害："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_static_remnant_duration"							"残影持续时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex"						"电子涡流"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_Description"			"将一个敌人拖到风暴之灵所在位置的涡流。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_Lore"					"雷神狂暴的雷霆力量总是让其他人为之一电。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_cast_range"						"施法距离："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_lectric_vortex_pull_distance"	"牵引距离："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_electric_vortex_duration"						"牵引时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload"						"超负荷"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_Description"			"施法时会产生电荷，在风暴之灵下次攻击时被释放，对附近敌人造成伤害并减速。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_Lore"					"啪！嘶！咝！"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_aoe"					"范围："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_move_slow"			"%移动速度减缓："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_attack_slow"			"攻击速度降低："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_duration"						"减速时间："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_mana_damage"					"%最大魔法值伤害："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_overload_overload_damage"					"基础伤害："
+
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning"							"球状闪电"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_Description"				"风暴之灵变成不稳定的电流在战场上横冲直撞，直到他的魔法耗尽或到达目标才停下。启动蓝耗、每百码飞行蓝耗均为基础数值+最大魔法值百分比，同时伤害也随飞行距离递增。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_Lore"					"风暴来袭。"
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_initial_mana_percentage"			"%初始百分比蓝耗："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_travel_cost_percent"				"%每100码飞行百分比蓝耗："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_initial_mana_base"				"初始基础蓝耗："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_travel_cost_base"					"每100码飞行基础蓝耗："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_aoe"								"伤害范围："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_damage"											"每100码递增伤害："
+		"DOTA_Tooltip_Ability_aghsfort_storm_spirit_ball_lightning_ball_lightning_move_speed"						"飞行速度："
+		
+	  //Minor
+		"aghsfort_storm_spirit_static_remnant_cost_cooldown"			                    "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_storm_spirit_electric_vortex_mana_cost_cooldown"			                "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_storm_spirit_ball_lightning_mana_cost"			                		"+{s:value1}% {s:ability_name} 魔法消耗减少"
+		"aghsfort_storm_spirit_static_remnant_damage"			                            "+{s:value} {s:ability_name} 伤害"
+		"aghsfort_storm_spirit_static_remnant_radius"			                            "+{s:value2} {s:ability_name} 范围"
+		"aghsfort_storm_spirit_electric_vortex_range"			                            "+{s:value1} {s:ability_name} 施法和牵引距离"
+		"aghsfort_storm_spirit_electric_vortex_duration"                                    "+{s:value}秒 {s:ability_name} 牵引时间"
+		"aghsfort_storm_spirit_overload_aoe"				                                "+{s:value} {s:ability_name} 范围"
+		"aghsfort_storm_spirit_overload_damage"				                                "+{s:value} {s:ability_name} 伤害"
+		"aghsfort_storm_spirit_overload_mana"				                                "+{s:value}% {s:ability_name} 最大魔法值伤害"
+		"aghsfort_storm_spirit_overload_slow"				                                "{s:value1}/+{s:value2}秒 {s:ability_name} 攻速减少/持续时间"
+		"aghsfort_storm_spirit_ball_lightning_damage"				                        "+{s:value} {s:ability_name} 累积伤害"
+		"aghsfort_storm_spirit_ball_lightning_aoe"		                                	"+{s:value1} {s:ability_name} 作用范围"
+			
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_static_remnant+dmg"					"+{s:value} 残影伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_static_remnant-cd"					"-{s:value} 残影冷却"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_electric_vortex+duration"			"+{s:value}s 电子涡流持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_overload+bounce"					"+{s:value} 超负荷弹射"
+		"DOTA_Tooltip_Ability_special_bonus_unique_storm_spirit_ball_lightning+remnant"				"球形闪电每{s:value}码自动施放残影"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_electric_vortex_pull"						"电子涡流"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_electric_vortex_pull_description"			"被牵引"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_buff"								"充电完毕！"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_buff_description"					"下次攻击带超负荷"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_debuff"							"超负荷"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_overload_debuff_description"				"攻速减少%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%，移速减少%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 。"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_lightning_travel"						"球形闪电"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_lightning_travel_description"			"全地图打击！"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_fenzy"								"闪电快男"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_ball_fenzy_description"					"攻击范围提升%dMODIFIER_PROPERTY_ATTACK_RANGE_BONUS%， 攻速提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+		"DOTA_Tooltip_modifier_aghsfort_storm_spirit_legend_remnant_giant"						"巨人怪蜀黍的计数器"
+
+	 // Storm Spirit End
+
+	 // Lion Begin
+		"#npc_dota_hero_lion" "(EXT) 莱恩"
+		"npc_dota_hero_lion" "(EXT) 莱恩"
+	  // Legendary
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_split"				"(EXT) 串串香"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_split_Description"	"裂地尖刺在命中首个敌人或到达终点时会分裂出%pieces%条%length_pct%倍长度的次级尖刺。次级尖刺不会影响已经被该系列尖刺影响过的单位。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_shred"				"(EXT) 地狱裂缝"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_shred_Description"	"对穿刺在空中的单位施放死亡一指将造成%damage_mul%倍纯粹伤害。对于无法被击飞的单位，这个时间也按照0.5秒计算。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_tripple"				"(EXT) 地刺王"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_impale_tripple_Description"	"同时发射3条裂地尖刺。"
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_gold"					"(EXT) 金钱已转手"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_gold_Description"		"妖术作用下的敌人在受到伤害时会掉落钱袋。小钱袋价值%gold%金，最低触发伤害为%thres%点。单次伤害超过%mul_thres%点时，掉落钱袋价值为原来的%mul%倍。钱袋%life_time%秒后会消失。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_aoe"					"(EXT) 好多鱼"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_aoe_Description"		"妖术现在是%aoe%范围的点目标技能。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_death"				"(EXT) 速食烤肉"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_voodoo_death_Description"	"莱恩自己的其他指向技能会对目标施放妖术。死亡一指会额外选取%range%范围内被妖术作用的其他单位作为首要目标。"
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_ally"					"(EXT) 注入灵魂"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_ally_Description"		"精华汲取现在可以对友方英雄施放。对友军施放会消耗莱恩的魔法并恢复目标的生命，同时提供相反的正面增益。减少精华汲取的冷却至%cd%秒。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_tripple"				"(EXT) 恶魔的午餐"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_tripple_Description"	"精华汲取额外选择主目标%search_range%范围内最多%extra_targets%个敌人作为额外目标。莱恩在施法期间获得技能免疫。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_amp"					"(EXT) 摄魂怪"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_drain_amp_Description"		"莱恩在汲取精华时累积技能增强。每0.1秒获得%amp_slow%倍汲取减速数值的技能增强，此效果在汲取结束后粘滞%linger%秒。"
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_charge"				"(EXT) 二指禅"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_charge_Description"	"死亡一指现在有%charges%点充能点数。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_aoe"					"(EXT) 你们都得死！"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_aoe_Description"		"死亡一指同时作用于首要目标%aoe%范围内的其他敌人。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_doom"					"(EXT) 死亡使者"
+		"DOTA_Tooltip_Ability_aghsfort_lion_legend_finger_doom_Description"		"延长死亡一指负面状态持续时间为原来的%duration_mul%倍，并在持续时间内对目标施加末日。每秒对目标造成相当于该次死亡一指%damage_pct%%% 的纯粹伤害。"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale"											"裂地尖刺"
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_description"								"岩石尖刺在地上沿一条直线穿刺而出。敌方单位被抛向空中，落地时被眩晕并受到伤害。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_Lore"									"恶魔巫师使用他的恶魔契约，打开一条来自地狱的裂缝。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_width"									"尖刺范围："
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_duration"								"眩晕时间："
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_cast_range"								"施法距离："
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_length_buffer"							"尖刺额外距离："
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_damage"									"伤害："
+		"DOTA_Tooltip_Ability_aghsfort_lion_impale_air_time"								"击飞时间："
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo"											"妖术"
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_description"								"将一个敌方单位变成人畜无害的动物，受害者无法使用所有特殊能力。对首领和BOSS持续时间减少。对目标每秒造成基于莱恩智力值的伤害。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_Note0"									"命中时即造成伤害。持续时间减少不会减少此技能的伤害。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_lore"									"莱恩将他的变形术用在敌人身上，扭曲其生命本质。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_duration"								"持续时间："
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_int_damage_tooltip"						"%每秒智力伤害："
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_movespeed"								"移速限制："
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_captain_factor"							"首领持续时间系数："
+		"DOTA_Tooltip_Ability_aghsfort_lion_voodoo_boss_factor"								"Boss持续时间系数："
+		
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain"										"精华汲取"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_description"							"吸取目标的生命并将其转换为法力。造成纯粹伤害，并且获得伤害乘以转化系数的魔法。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_note0"								"造成的伤害等于吸收魔法除以转化系数，并且为生命移除，从而不会触发吸血和刃甲。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_note1"								"若目标超出连接施法距离和连接起始距离的较大值 %buff_distance%码时，汲取会中止。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_note2"								"汲取每%tick_interval%秒结算一次。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_lore"								"对恶魔巫师来说，较为弱小的法师只不过是他回复魔法的来源。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_duration"							"最长吟唱时间："
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_drain_per_second"					"每秒魔法吸取："
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_damage_mana"							"生命转化率："
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_movespeed"							"%移动速度减缓："
+		"DOTA_Tooltip_Ability_aghsfort_lion_mana_drain_buff_distance"						"断裂额外距离："
+
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death"								"死亡一指"
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_description"					"撕裂一个敌方单位，将其折磨得死去活来，并造成巨大伤害。如果敌人在死亡一指的作用下死亡，莱恩将获得死亡一指伤害叠加层数。分别从每个击杀的普通单位、首领单位和Boss获得1、%captain_layer%、%boss_layer%层。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_lore"							"莱恩丑陋的手正是他最强大力量的来源，能够用恶魔的力量让受害者完全崩溃。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_Note0"							"伤害具有%damage_delay%秒的延时。"
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_damage"							"基础伤害："
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_damage_per_layer"				"每层叠加伤害："
+		"DOTA_Tooltip_Ability_aghsfort_lion_finger_of_death_grace_period"					"影响时间："
+
+
+	  //Minor
+		"aghsfort_lion_impale_mana_cost_cooldown"			                    		"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_lion_impale_range"						                            "+{s:value1}/{s:value2} {s:ability_name} 距离/行进速度"
+		"aghsfort_lion_impale_damage"						                            "+{s:value} {s:ability_name} 伤害"
+		"aghsfort_lion_impale_stun"						                            "+{s:value}秒 {s:ability_name} 眩晕"
+
+		"aghsfort_lion_voodoo_mana_cost_cooldown"					                    "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_lion_voodoo_duration"								                    "+{s:value}s {s:ability_name} 持续时间"
+		"aghsfort_lion_voodoo_dmg"									                    "+{s:value2}% {s:ability_name} 每秒智力伤害"
+
+		"aghsfort_lion_mana_drain_mana_cost_cooldown"				                    "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_lion_mana_drain_drain"							                    "+{s:value} {s:ability_name} 每秒魔法汲取"
+		"aghsfort_lion_mana_drain_duration"							                    "+{s:value} {s:ability_name} 最大吟唱时间"
+		"aghsfort_lion_mana_drain_slow"						                    		"+{s:value}% {s:ability_name} 减速"
+			
+		"aghsfort_lion_finger_of_death_mana_cost_cooldown"				                "+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort_lion_finger_of_death_damage"				                			"+{s:value} {s:ability_name} 基础伤害"
+		"aghsfort_lion_finger_of_death_layer"				                			"+{s:value} {s:ability_name} 每层伤害"
+
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_impale+range"					"+{s:value} 裂地尖刺距离"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_impale-cd"						"-{s:value} 裂地尖刺冷却"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_voodoo+duration"				"+{s:value} 妖术持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_mana_drain+drain"				"+{s:value} 精华汲取每秒吸收魔法"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_finger_of_death+layer_dmg"			"+{s:value} 死亡一指每层伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_lion_finger_of_death+layer_hp"			"+{s:value} 死亡一指每层生命加成"
+	
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death"							"死亡一指叠层"
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death_Description"				"死亡一指伤害增加%dMODIFIER_PROPERTY_TOOLTIP%，生命值增加%dMODIFIER_PROPERTY_HEALTH_BONUS%"
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death_debuff"					"死亡一指诅咒"
+		"DOTA_Tooltip_modifier_aghsfort_lion_finger_of_death_debuff_Description"		"在诅咒下死亡的敌人会增强死亡一指的力量。"
+		"DOTA_Tooltip_modifier_aghsfort_lion_mana_drain"								"精华汲取"
+		"DOTA_Tooltip_modifier_aghsfort_lion_drain_amp"									"摄魂怪"
+		"DOTA_Tooltip_modifier_aghsfort_lion_drain_amp_Description"						"法术增强 %dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%% 。"
+
+	 // Lion End
+
+	 // Venomancer Begin
+		"#npc_dota_hero_venomancer" "(EXT) 剧毒术士"
+		"npc_dota_hero_venomancer" "(EXT) 剧毒术士"
+	  // Legendary
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ward"						"(EXT) 寄生毒素"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ward_description"			"瘴气现在在命中敌人时生成瘟疫守卫。在命中普通单位时有%creep_pct%%% 生成几率。击中首领和boss时分别生成%wards_cap%个和%wards_boss%个瘟疫守卫。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ring"						"(EXT) 瘴气环流"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_ring_description"			"瘴气现在同时射向%count%个方向。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_atk"						"(EXT) 剧毒打击"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_gale_atk_description"			"瘴气在命中每个敌人时触发一次攻击。"
+
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_boom"					"(EXT) 黑死病"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_boom_description"		"毒刺现在累积伤害并在效果结束或目标死亡时爆发。爆发时对%radius%范围内所有敌人造成%damage_pct%%% 累积造成的伤害。在非死亡触发的情况下仅造成%no_death_pct%%% 的伤害。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_side"					"(EXT) 药物的副作用"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_side_description"		"毒刺变为无法驱散，并且使目标生命回复降低%regen_pct%%% 。 同时，目标所有受到的治疗都会变为伤害。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash"					"(EXT) 绿宝石水花"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash_description"		"剧毒术士和他的守卫的攻击在命中受毒刺影响的敌人时会飞溅，溅射到中毒的单位还会再次飞溅。每次飞溅伤害变为之前的%pct_base%%% 加毒刺的减速百分比。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash_Note0"			"剧毒的攻击最多可以飞溅%bounce%次，每次飞溅的单位数与当前剩余飞溅次数一致。守卫的攻击只能飞溅%bounce_ward%次。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_sting_splash_Note1"			"飞溅会使目标中毒，但只有在目标之前已中毒的情况下才会触发次级飞溅。"
+
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_nova"						"(EXT) 我裂开了"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_nova_description"			"瘟疫守卫在死亡时释放%duration_mul%倍持续时间、%radius_mul%倍范围的剧毒新星。聚合瘟疫释放的新星的范围和持续时间是普通守卫的%chimera_mul%倍。在前%attacks%次攻击后还会额外触发一次新星。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_yugo"						"(EXT) 奇美拉植物学"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_yugo_description"			"新技能：剧毒融合。将指定区域内的所有瘟疫守卫作为素材，融合召唤奇美拉聚合瘟疫龙。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_move"						"(EXT) 拔根而起"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_ward_move_description"			"瘟疫守卫现在可以移动，并且继承%atk_pct%%% 剧毒术士的攻击力。"
+
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_heal"						"(EXT) 靶向药物"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_heal_description"			"剧毒新星现在也作用于友军，提供治疗而不是伤害。"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_worse"					"(EXT) 快速恶化"	
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_worse_description"		"剧毒新星额外造成%damage_pct%%% 原伤害乘以目标当前剩余生命百分比的伤害。"	
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_all"						"(EXT) 新新新冠"
+		"DOTA_Tooltip_ability_aghsfort_venomancer_legend_nova_all_description"			"释放新星时所有友方英雄也会同步释放。同时，剧毒新星的负面状态现在可以叠加层数，持续时间独立计算，每层使伤害提升%stack_pct%%% 。"
+
+	  //Ability
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale"							"瘴气"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_description"				"沿直线射出一个毒液球，碰到的敌人受到初始伤害和持续伤害，并受到减速效果影响。瘴气在持续时间内每%tick_interval%秒造成一次持续伤害。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_lore"						"一种由基迪岛丛林里搜集的各种毒针、毒液和毒素混合而成的药剂，几乎没有人能在沾到它后存活下来。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_distance"					"施法距离："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_radius"					"施法距离："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_duration"					"持续时间："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_strike_damage"				"初始伤害："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_tick_damage"				"每跳伤害："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_venomous_gale_movement_slow"				"%移动速度减缓："
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting"							"毒刺"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_description"				"在剧毒术士的普通攻击中加入毒性伤害，可以减缓敌人的移动速度。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_lore"						"造成他变异的生物身上的麻痹毒刺，现在属于剧毒术士了。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_duration"					"持续时间："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_damage"						"每秒伤害："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_sting_movement_speed"				"%移动速度减缓："
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward"								"瘟疫守卫"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_description"					"召唤一个瘟疫守卫来攻击敌方单位和建筑。守卫对魔法免疫。守卫拥有毒刺攻击，效果与毒刺技能的当前等级相同，造成50%的原技能伤害。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_lore"						"他通过将早先的草药学天赋，和后天获得的毒素专精混合起来，创造出一个活体化瘟疫。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_duration"					"守卫持续时间："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_ward_hp"						"守卫生命值："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_ward_damage"					"守卫攻击力："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_plague_ward_ward_as"						"守卫攻击速度："
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany"							"剧毒融合"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_description"				"将目标区域内所有「瘟疫守卫」作为素材，融合召唤奇美拉聚合瘟疫龙。\n <h1><font color='#abc82c'>奇美拉聚合瘟疫龙</font></h1> 【植物族 • 融合/效果】<br>「瘟疫守卫」1只以上<br>此卡只可融合召唤，不能以「瘟疫守卫」以外的怪兽作为素材 ◦ 此卡的基础攻击力 • 生命值变为融合素材数值的合计 X %power_mul% ◦ 此卡具有融合素材数量的多重攻击，且可以多重攻击相同目标。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_lore"						"别眨眼，这将是你见到的最后一只怪兽！"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_duration"					"持续时间："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_chimera_botany_ward_as"					"攻击速度："
+
+
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova"								"剧毒新星"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_description"					"施放一个剧毒之环，对剧毒术士周围的敌方单位造成持续伤害。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_lore"						"浓酸丛林中的生物通常会对攻击者释放毒性瘴气来保命；而剧毒术士却将这种瘟疫扩散出基迪岛。"
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_duration"					"持续时间："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_damage"						"每秒伤害："
+		"DOTA_Tooltip_Ability_aghsfort2_venomancer_poison_nova_radius"						"范围："
+
+
+	  //Minor
+		"aghsfort2_venomancer_venomous_gale_mana_cost_cooldown"		                   		"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort2_venomancer_venomous_gale_strike_damage"			                   		"+{s:value} {s:ability_name} 初始伤害"
+		"aghsfort2_venomancer_venomous_gale_distance"				                   		"+{s:value} {s:ability_name} 行进距离"
+		"aghsfort2_venomancer_venomous_gale_tick_damage"			                   		"+{s:value} {s:ability_name} 每跳伤害"
+
+		"aghsfort2_venomancer_poison_sting_damage"					                   		"+{s:value} {s:ability_name} 持续伤害"
+		"aghsfort2_venomancer_poison_sting_duration"				                   		"+{s:value}秒 {s:ability_name} 持续时间"
+		"aghsfort2_venomancer_poison_sting_slow"					                   		"{s:value}% {s:ability_name} 减速"
+			
+		"aghsfort2_venomancer_plague_ward_mana_cost_cooldown"		                   		"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort2_venomancer_plague_ward_duration"					                   		"+{s:value}秒 {s:ability_name} 持续时间"
+		"aghsfort2_venomancer_plague_ward_hp"						                   		"+{s:value} {s:ability_name} 生命值"
+		"aghsfort2_venomancer_plague_ward_damage"					                   		"+{s:value} {s:ability_name} 攻击力"
+		"aghsfort2_venomancer_plague_ward_attack_speed"				                   		"+{s:value} {s:ability_name} 攻击速度"
+
+		"aghsfort2_venomancer_poison_nova_mana_cost_cooldown"		                   		"+{s:value1}% {s:ability_name} 魔法消耗/冷却时间减少"
+		"aghsfort2_venomancer_poison_nova_duration"					                   		"+{s:value}秒 {s:ability_name} 持续时间"
+		"aghsfort2_venomancer_poison_nova_damage"					                   		"+{s:value} {s:ability_name} 伤害"
+		"aghsfort2_venomancer_poison_nova_radius"					                   		"+{s:value1} {s:ability_name} 范围"
+
+	  //Talent Tree
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_venomous_gale-cd"				"-{s:value}秒瘴气冷却"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_poison_sting-ms"				"+{s:value}%毒刺减速"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_poison_nova+dur"				"+{s:value}秒剧毒新星持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_poison_nova+radius"			"+{s:value}剧毒新星范围"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_plague_wardxstats"			"{s:value}倍瘟疫守卫攻击力和生命值"
+		"DOTA_Tooltip_Ability_special_bonus_unique_venomancer_plague_ward-cd"				"-{s:value}秒瘟疫守卫冷却"
+	
+	  //Modifier
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_venomous_gale"							"瘴气"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_venomous_gale_Description"				"持续受到伤害，移速减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_nova"							"剧毒新星"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting"							"毒刺"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting_Description"				"持续受到伤害，移速减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting_ward"						"毒刺（守卫）"
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_poison_sting_ward_Description"			"持续受到伤害，移速减缓 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+
+		"DOTA_Tooltip_modifier_aghsfort2_venomancer_chimera_botany"							"融合素材计数"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_sting_boom"								"黑死病"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_sting_side"								"药物副作用"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_ward_nova"								"我裂开了"
+		"DOTA_Tooltip_modifier_aghsfort_venomancer_ward_move"								"拔根前进"
+
+		"npc_dota_venomancer_plague_ward_1_aghs2"															"瘟疫守卫"
+		"npc_aghs2_venomancer_chimera_ward"															"奇美拉聚合瘟疫龙"
 
 	  // Double Daedalous
 	  "DOTA_Tooltip_ability_item_greater_crit_v2"									"(EXT) <font color='#FFC0CB'>达布洛斯之殇</font>"
