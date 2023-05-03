@@ -49,3 +49,8 @@
 - fix: remove thinker in AM blink abilities
 - fix: dead recursion of lion impale tripple with impale split
 - add: damage counter
+
+- fix: Anit-Mana first skill reduce mana
+- fix: Storm Spirit static remnant vfx
+- fix: difficult selector model
+- fix: Crystal Maid 'let it go' made crystal field unavailable
