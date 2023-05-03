@@ -347,8 +347,8 @@ function CAghanim:InitGameMode()
 	ListenToGameEvent( "player_chat", Dynamic_Wrap( CAghanim, "OnPlayerChat" ), self )
 
 	-- Filter Registration: Functions are found in filters.lua
-	--GameRules:GetGameModeEntity():SetHealingFilter( Dynamic_Wrap( CAghanim, "HealingFilter" ), self )
-	--GameRules:GetGameModeEntity():SetDamageFilter( Dynamic_Wrap( CAghanim, "DamageFilter" ), self )
+	GameRules:GetGameModeEntity():SetHealingFilter( Dynamic_Wrap( CAghanim, "HealingFilter" ), self )
+	GameRules:GetGameModeEntity():SetDamageFilter( Dynamic_Wrap( CAghanim, "DamageFilter" ), self )
 	GameRules:GetGameModeEntity():SetItemAddedToInventoryFilter( Dynamic_Wrap( CAghanim, "ItemAddedToInventoryFilter" ), self )
 	GameRules:GetGameModeEntity():SetModifierGainedFilter( Dynamic_Wrap( CAghanim, "ModifierGainedFilter" ), self )
 	GameRules:SetFilterMoreGold( true ) -- apply our gold filter to more than the usual set of stuff.
@@ -682,7 +682,7 @@ function CAghanim:InitScoreboardInfo()
 			kills = 0,
 			death_count = 0,
 			gold_bags = 0,
-			damage = 0,
+			damage = 1,
 			heal = 0,
 		}
 		CustomNetTables:SetTableValue( "aghanim_scores", tostring( nPlayerID ), kv )
@@ -717,7 +717,7 @@ function CAghanim:RegisterGoldBagCollectedStat( nPlayerID )
 		scores.gold_bags = scores.gold_bags + 1
 		CustomNetTables:SetTableValue( "aghanim_scores", tostring(nPlayerID), scores )
 
-		if self:GetCurrentRoom() ~= nil then
+		if self:GetCurrentRoom() ~= nil and self:GetCurrentRoom():GetDepth() > 1 then
 			local szRoomDepth = tostring( self:GetCurrentRoom():GetDepth() )
 			self:EnsurePlayerStatAtDepth( nPlayerID, szRoomDepth )
 			self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].gold_bags = 
@@ -2975,6 +2975,8 @@ function CAghanim:RegisterEncounterStartStats( nPlayerID, nDepth )
 	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].level = PlayerResource:GetLevel( nPlayerID )
 	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].death_count = 0
 	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].kills = 0
+	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].damage = 0
+	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].heal = 0
 	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].gold_bags = 0
 	self.SignOutTable[ "player_list" ][ nPlayerID ].depth_list[szRoomDepth].lives_purchased = 0
 

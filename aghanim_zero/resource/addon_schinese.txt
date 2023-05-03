@@ -219,6 +219,10 @@
 		"DOTA_HUD_GoldBags"													"收集的金袋"
 		"DOTA_HUD_GoldBagsMissed"											"错过的金袋"
 		"DOTA_HUD_TeamDeaths"												"全队死亡"
+		
+		"DOTA_HUD_TotalDamage" 												"伤害"
+		"DOTA_HUD_TotalHeal"  												"治疗"
+
 		"DOTA_HUD_Rewards"													"神杖碎片"
 		"DOTA_HUD_Blessings"												"福佑"
 		"DOTA_HUD_RoomRewards"												"房间奖励"

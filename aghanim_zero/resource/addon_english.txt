@@ -219,6 +219,10 @@
 		"DOTA_HUD_GoldBags"													"GOLD BAGS COLLECTED"
 		"DOTA_HUD_GoldBagsMissed"											"GOLD BAGS MISSED"
 		"DOTA_HUD_TeamDeaths"												"TEAM DEATHS"
+		
+		"DOTA_HUD_TotalDamage" 												"DAMAGE"
+		"DOTA_HUD_TotalHeal"  												"HEAL"
+		
 		"DOTA_HUD_Rewards"													"SCEPTER SHARDS"
 		"DOTA_HUD_Blessings"												"BLESSINGS"
 		"DOTA_HUD_RoomRewards"												"Room Rewards"
@@ -242,6 +246,7 @@
 		"DOTA_HUD_Rewards_AscensionLevel"									"Ascension Level: {d:ascension_level}"
 
 		"DOTA_HUD_TopBar_Difficulty"										"{s:difficulty_name}"
+
 
 		"boss_shop"															"Bristle's Baubles"
 		"DOTA_Subshop_1"													"Basics"

@@ -26,7 +26,6 @@ function CAghanim:DamageFilter( filterTable )
 		if PlayerResource and PlayerResource:IsValidPlayerID(nPlayerID) then
 			local hVictim = EntIndexToHScript(filterTable["entindex_victim_const"])
 			if IsValid(hVictim) and hVictim:GetTeamNumber() ~= hAttacker:GetTeamNumber() then
-				-- print(filterTable["damage"])		
 				self.playerDamageTable[nPlayerID] = self.playerDamageTable[nPlayerID] + filterTable["damage"]
 			end
 		end
