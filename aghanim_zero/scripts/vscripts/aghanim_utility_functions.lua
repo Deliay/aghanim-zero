@@ -64,11 +64,11 @@ end
 
 ---------------------------------------------------------------------------
 
-function LaunchGoldBag( nGoldAmount, vDropPos, vDropTarget )
+function LaunchGoldBag( nGoldAmount, vDropPos, vDropTarget, fDuration )
 
 	local newItem = CreateItem( "item_bag_of_gold", nil, nil )
 	newItem:SetPurchaseTime( 0 )
-	newItem.nGoldAmount = nGoldAmount
+	newItem.SetCurrentCharges(nGoldAmount)
 
 	-- curve fitting black magic
 	local flGoldBagScale = 40.63019 + (-0.4869773 - 40.63019)/(1 + math.pow(nGoldAmount/7576116000, 0.1814258))
@@ -84,6 +84,10 @@ function LaunchGoldBag( nGoldAmount, vDropPos, vDropTarget )
 	end
 
 	newItem:LaunchLoot( true, 75, 0.75, vDropTarget, nil )
+
+	if fDuration then
+		newItem:SetLifeTime(fDuration)
+	end
 
 	return newItem
 end
