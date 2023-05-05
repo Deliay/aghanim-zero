@@ -2873,5 +2873,6 @@
 	  "DOTA_Tooltip_modifier_item_cuiradiance_debuff"						"炎王光环"
 	  "DOTA_Tooltip_modifier_item_cuiradiance_active"						"炎王光环"
 
+		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut_omnislash_duration"	"+{s:bonus_duration}秒 无敌斩持续时间"
 	}
 }

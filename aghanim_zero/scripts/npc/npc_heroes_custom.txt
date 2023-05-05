@@ -306,9 +306,19 @@
 		"Ability3"		"aghsfort_juggernaut_blade_dance"
 		"Ability4"		"aghsfort_juggernaut_zen_ward"
 		"Ability5"		"generic_hidden"
+		"Ability10"		"special_bonus_all_stats_5"
+		"Ability11"		"special_bonus_unique_juggernaut"
 		"Ability6"		"aghsfort_juggernaut_omni_slash"
-		"Ability12"		"special_bonus_unique_juggernaut_4"
+		"Ability12"		"special_bonus_unique_juggernaut_slash+range"
+		"Ability13"		"special_bonus_movement_speed_25"
+		"Ability14"		"special_bonus_unique_juggernaut_blade_dance_lifesteal"
+		"Ability15"		"special_bonus_unique_juggernaut_4"
+		"Ability16"		"special_bonus_unique_juggernaut_3"
+		"Ability17"		"special_bonus_hp_475"
+		"Ability18"		"special_bonus_unique_juggernaut_omnislash_duration"
 		"ArmorPhysical"		"1"
+		"MovementSpeed"  	"305"
+		"ProjectileSpeed"			"900"
 	}
 
 	//=================================================================================================================

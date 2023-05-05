@@ -2957,5 +2957,6 @@
 	  "DOTA_Tooltip_Ability_item_phantom_wings_bonus_movement_speed"					"%+$move_speed"
 	  "DOTA_Tooltip_modifier_item_phantom_wings_active"						"Blitz!"
 	 // Item End
+		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut_omnislash_duration"	"+{s:bonus_duration}s Omnislash Duration"
 	}
 }
