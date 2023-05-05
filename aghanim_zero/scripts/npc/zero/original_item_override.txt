@@ -2,6 +2,16 @@
 {
 	"Version"	"1"
   "item_dagon" "REMOVED"
+	"item_dagon_2" "REMOVED"
+	"item_dagon_3" "REMOVED"
+	"item_dagon_4" "REMOVED"
+	"item_dagon_5" "REMOVED"
+	"item_recipe_dagon" "REMOVED"
+	"item_recipe_dagon_2" "REMOVED"
+	"item_recipe_dagon_3" "REMOVED"
+	"item_recipe_dagon_4" "REMOVED"
+	"item_recipe_dagon_5" "REMOVED"
+
   "item_blood_grenade" {
     "ItemStockTime"					"1"
   }
