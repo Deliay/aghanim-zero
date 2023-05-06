@@ -62,7 +62,7 @@
 - fix: fix & enhance jugg talent
 
 2023-05-07
-- fix: bounty hunter jinada attack not cooling down correctly
+- fix: bounty hunter jinada attack now cooling down correctly
 - fix: winter wyvern's egg
 - enhance: nevermore lord assault attack not trigger effect anymore
 - fix: remove penguin bonus due to bug not found
