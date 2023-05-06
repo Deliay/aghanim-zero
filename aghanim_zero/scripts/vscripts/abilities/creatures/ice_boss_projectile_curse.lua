@@ -84,6 +84,9 @@ function ice_boss_projectile_curse:OnProjectileHit( hTarget, vLocation )
 	if IsServer() then
 		if hTarget ~= nil then
 			hTarget:RemoveModifierByName( "modifier_ice_boss_egg_curse_marker" )
+			if TriggerStandardTargetSpell(hTarget, self) then
+				return
+			end
 			hTarget:AddNewModifier( self:GetCaster(), self, "modifier_winter_wyvern_winters_curse_aura", { duration = self:GetSpecialValueFor( "duration" ) } )
 			EmitSoundOn( "Hero_Winter_Wyvern.WintersCurse.Target", hTarget )
 		end
