@@ -2210,7 +2210,7 @@
 		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_loan"   									"(EXT) Loan"
 		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_loan_Description"   						"New Ability: Loan. Bounty Hunter can loan money for himself or loan to allied hero. When loaning to ally, Bounty Hunter will earn interest after a period of time. "
 		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder" 									"(EXT) Money or Life"
-		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder_Description" 						"Bounty Hunter's attack and Jinada not triggered by attack deals extra 100% Jinada bonus damage to enemies with money stolen. "
+		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_jinada_murder_Description" 						"Bounty Hunter's attack and Jinada not triggered by attack deals extra 75% Jinada bonus damage to enemies with money stolen. "
 
 		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy" 										"(EXT) Wind Walk"
 		"DOTA_Tooltip_ability_aghsfort_bounty_hunter_legend_walk_windy_Description" 							"Bounty Hunter gain %damage_reduction%%% totoal incoming damage reduction during Shadow Walk. On breaking invisibility, he receives a evasion and attackspeed percentage bonus buff lasting as long as Shadow Walk's debuff duration. "

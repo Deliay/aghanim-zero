@@ -72,7 +72,7 @@ function aghsfort_bounty_hunter_jinada:doAction(kv)
 				EmitSoundOn("DOTA_Item.Hand_Of_Midas", target)
 			else
 				if IsValid(self.shard_murder) then
-					damage = damage + damage
+					damage = damage + (damage * 0.75)
 				end
 			end
 
