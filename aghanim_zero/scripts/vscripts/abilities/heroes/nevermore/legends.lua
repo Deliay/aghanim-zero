@@ -101,7 +101,7 @@ end
 
 function modifier_aghsfort_nevermore_necromastery_thirst:gainStacks(nStacks)
     if IsServer() then        
-        print("gain extra stacks")
+        -- print("gain extra stacks")
         self.count = self.count + nStacks
         
         self:SetStackCount(math.min(self.count, self.max_stacks))
