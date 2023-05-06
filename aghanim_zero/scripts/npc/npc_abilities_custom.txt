@@ -37850,7 +37850,7 @@
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "FightRecapLevel"               "1"
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"
 
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
@@ -37858,7 +37858,7 @@
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "5000"
-        "AbilityCastPoint"              "1.2 1.1 1.0 0.9 0.8 0.8"
+        "AbilityCastPoint"              "1.2 1.1 1.0 0.9 0.8"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -37875,7 +37875,7 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "initial_projectile_speed"  "550 625 700 775 850 850"
+                "initial_projectile_speed"  "550 625 700 775 850"
             }
             "02"
             {
@@ -37895,7 +37895,7 @@
             "05"
             {
                 "var_type"                "FIELD_INTEGER"
-                "shatter_damage"          "300 370 440 510 580 600"
+                "shatter_damage"          "300 370 440 510 580"
             }
             "06"
             {
@@ -37910,12 +37910,12 @@
             "08"
             {
                 "var_type"                "FIELD_INTEGER"
-                "shatter_distance"            "300 340 380 420 460 460"
+                "shatter_distance"            "300 350 400 450 500"
             }
             "09"
             {
                 "var_type"                "FIELD_FLOAT"
-                "slow_duration"            "2.0 2.25 2.5 2.75 3.0 3.0"
+                "slow_duration"            "2.0 2.25 2.5 2.75 3.0"
             }
             "10"
             {
@@ -37942,7 +37942,7 @@
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"       
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"
         
         // Casting
@@ -37964,7 +37964,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "flight_speed"           "1200 1275 1350 1425 1500 1600"
+                "flight_speed"           "1200 1275 1350 1425 1500"
             }
             "02"
             {
@@ -37989,7 +37989,7 @@
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"       
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"
 
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
@@ -38028,7 +38028,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"
 
          // Casting
@@ -38038,7 +38038,7 @@
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "0.2 0.15 0.1 0.05 0.0 0.0"
+        "AbilityCooldown"               "0.2 0.15 0.1 0.05 0.0"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -38056,17 +38056,17 @@
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "initial_projectile_radius" "225 250 275 300 325 325"
+                "initial_projectile_radius" "225 250 275 300 325"
             }
             "03"
             {
                 "var_type"                "FIELD_INTEGER"
-                "burst_distance"          "325 375 425 475 525 525"
+                "burst_distance"          "325 375 425 475 525"
             }
             "04"
             {
                 "var_type"                "FIELD_INTEGER"
-                "shatter_damage"          "300 400 500 600 700 750"
+                "shatter_damage"          "300 400 500 600 700"
             }
             "05"
             {
@@ -38081,7 +38081,7 @@
             "07"
             {
                 "var_type"                "FIELD_FLOAT"
-                "slow_duration"           "3.0 3.25 3.5 3.75 4.0 4.0"
+                "slow_duration"           "3.0 3.25 3.5 3.75 4.0"
             }
             "08"
             {
@@ -38112,13 +38112,13 @@
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
         "AnimationPlaybackRate"         "1.0"     
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"
         
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "5000"
-        "AbilityCastPoint"              "1.25 1.2 1.15 1.1 1.05 1.05"
+        "AbilityCastPoint"              "1.25 1.2 1.15 1.1 1.05"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -38136,33 +38136,60 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage_reduction"      "30"
+                "damage_reduction"      "0"
             }
             "03"
             {   
                 "var_type"          "FIELD_FLOAT"
-                "damage_amplification"  "-30"
+                "damage_amplification"  "0"
             }
             "04"
             {   
                 "var_type"              "FIELD_INTEGER"
-                "bonus_attack_speed"    "140 180 220 260 300 300"
+                "bonus_attack_speed"    "140 180 220 260 300"
             }
             "05"
             {   
                 "var_type"              "FIELD_FLOAT"
-                "duration"              "3.0 3.25 3.5 3.75 4.0 4.25"
+                "duration"              "3.0 3.25 3.5 3.75 4.0"
             }
             "06"
             {
                 "var_type"              "FIELD_INTEGER"
-                "projectile_speed"      "2200 2400 2600 2800 3000 3200 3200"
+                "projectile_speed"      "2200 2400 2600 2800 3000 3200"
             }
-            "07"
-			{	
-				"var_type"			"FIELD_FLOAT"
-				"early_out_timer"	"2.5"
-			}
+        }
+    }
+
+
+
+    //=================================================================================================================
+    // Ice Boss Egg passive
+    //=================================================================================================================
+    "ice_boss_egg_passive"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/creatures/ice_boss_egg_passive"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "MaxLevel"                      "5"
+        "IsOnCastBar"                   "0"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {   
+                "var_type"          "FIELD_INTEGER"
+                "dragons_to_spawn"  "3 3 4 4 5"
+            }
+            "02"
+            {   
+                "var_type"          "FIELD_FLOAT"
+                "hatch_time"        "1.0"
+            }
         }
     }
 
