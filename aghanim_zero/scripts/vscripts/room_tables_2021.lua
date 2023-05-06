@@ -337,7 +337,7 @@ _G.MAP_ATLAS =
 		encounters =
 		{
 			"encounter_gaolers",
-			"encounter_spook_town",
+			-- "encounter_spook_town",
 			"encounter_eggs_holdout",
 
 			--Traps
