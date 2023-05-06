@@ -212,7 +212,7 @@ function modifier_aghsfort_nevermore_dark_lord_assault:OnAttack(event)
             self.multi_attacking = true
             for _, enemy in pairs(enemies) do
                 -- print("attack")
-                self.parent:PerformAttack(enemy, true, true, true, true, true, false, false)
+                self.parent:PerformAttack(enemy, false, true, true, true, true, false, false)
                 num = num + 1
                 if num >= self.count then
                     break
