@@ -316,7 +316,7 @@ _G.MAP_ATLAS =
 			"encounter_bonus_hooking",
 
 			--Legacy
-			"encounter_penguin_sledding"
+			-- "encounter_penguin_sledding"
 		},
 	},
 
