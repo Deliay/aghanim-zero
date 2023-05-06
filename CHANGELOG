@@ -60,3 +60,11 @@
 - fix: remove dagon again
 - enhance: now can buy wards normally
 - fix: fix & enhance jugg talent
+
+2023-05-07
+- fix: bounty hunter jinada attack not cooling down correctly
+- fix: winter wyvern's egg
+- enhance: nevermore lord assault attack not trigger effect anymore
+- fix: remove penguin bonus due to bug not found
+- fix: remove spook town dur to reported may takedown server
+- fix: reduce bounty hunter murder damage
