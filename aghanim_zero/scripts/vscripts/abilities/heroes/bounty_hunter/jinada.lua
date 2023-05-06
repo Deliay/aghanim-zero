@@ -192,7 +192,7 @@ function modifier_aghsfort_bounty_hunter_jinada:OnAttackLanded(event)
 		self.team)
 
 		if filter == UF_SUCCESS then
-			self.ability:UseResources(true, true, true)
+			self.ability:UseResources(true, false, true, true)
 			self.ability:doAction({
 				target = event.target,
 				caster = self.parent,
