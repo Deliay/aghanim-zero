@@ -68,3 +68,7 @@
 - fix: remove penguin bonus due to bug not found
 - fix: remove spook town dur to reported may takedown server
 - fix: reduce bounty hunter murder damage
+
+2023-05-20
+- fix: replace ForceKill to Kill due ForceKill not trigger 'kill' event
+- enhance: now neutual item fully sharable
