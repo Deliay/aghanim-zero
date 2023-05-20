@@ -98,7 +98,7 @@ function modifier_amoeba_suck_aura:OnIntervalThink()
 		local babies = FindUnitsInRadius( DOTA_TEAM_BADGUYS, self:GetParent():GetAbsOrigin(), nil, self.eat_radius, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_INVULNERABLE, FIND_ANY_ORDER, true )
 		for _,baby in pairs( babies ) do
 			if baby ~= nil and baby:IsNull() == false and baby:IsAlive() == true and baby:GetUnitName() == "npc_dota_creature_amoeba_baby" then
-				baby:ForceKill( false )
+				baby:Kill( nil, nil )
 				baby:AddEffects( EF_NODRAW )
 				self.nBabiesConsumed = self.nBabiesConsumed + 1
 

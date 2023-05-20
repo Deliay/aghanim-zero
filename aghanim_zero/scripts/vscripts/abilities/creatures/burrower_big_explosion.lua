@@ -68,7 +68,7 @@ function burrower_big_explosion:OnSpellStart()
 			end
 		end
 
-		self:GetCaster():ForceKill( false )
+		self:GetCaster():Kill( nil, nil )
 	end
 end
 

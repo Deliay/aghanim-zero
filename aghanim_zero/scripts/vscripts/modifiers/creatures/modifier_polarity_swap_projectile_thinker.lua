@@ -66,7 +66,7 @@ end
 
 function modifier_polarity_swap_projectile_thinker:OnDestroy()
 	if IsServer() then
-		self:GetParent():ForceKill( false )
+		self:GetParent():Kill( nil, nil )
 		UTIL_Remove( self:GetParent() )
 	end
 end

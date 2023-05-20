@@ -89,7 +89,7 @@ function modifier_boss_arc_warden_damage_counter:OnTakeDamage( params )
 
 				-- kill zombies that hit us during this phase
 				if hAttacker:IsZombie() then
-					hAttacker:ForceKill( false )
+					hAttacker:Kill( nil, nil )
 				end
 			end
 		end

@@ -59,6 +59,6 @@ function modifier_creature_landmine_detonate:OnDestroy()
 		ParticleManager:ReleaseParticleIndex( nFXIndex )
 
 		EmitSoundOn( "Hero_Techies.LandMine.Detonate", self:GetParent() )
-		self:GetParent():ForceKill( false )
+		self:GetParent():Kill( nil, nil )
 	end
 end

@@ -76,7 +76,7 @@ function modifier_acid_blob_acid_spray_thinker:OnDestroy()
 		ParticleManager:DestroyParticle( self.nFXIndex, false )
 		StopSoundOn( "Hero_Alchemist.AcidSpray", self:GetCaster() )
 
-		self:GetParent():ForceKill( false )
+		self:GetParent():Kill( nil, nil )
 		UTIL_Remove( self:GetParent() )
 	end
 end

@@ -107,7 +107,7 @@ function CMapEncounter_BossTimbersaw:OnBossKilled( hBoss, hAttacker )
 	local vecTreants = self:GetRoom():FindAllEntitiesInRoomByName( "npc_dota_furion_treant_4", false )
 	if #vecTreants > 0 then
 		for _,hTreant in pairs ( vecTreants ) do
-			hTreant:ForceKill( false )
+			hTreant:Kill( nil, nil )
 		end
 	end
 end

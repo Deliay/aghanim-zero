@@ -330,7 +330,7 @@ function CMapEncounter_BonusGallery:OnTriggerStartTouch( event )
 	if szTriggerName == "rogue_unit_trigger" then
 		if hUnit then
 			print( "Removing rogue unit!" )
-			hUnit:ForceKill( false )
+			hUnit:Kill( nil, nil )
 		end
 	end
 

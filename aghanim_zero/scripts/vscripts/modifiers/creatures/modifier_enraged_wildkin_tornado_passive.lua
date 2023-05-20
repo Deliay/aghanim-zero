@@ -78,7 +78,7 @@ function modifier_enraged_wildkin_tornado_passive:OnIntervalThink()
 	if IsServer() then
 		
 		--if self:GetCaster() == nil or self:GetCaster():IsAlive() ~= true then
-		--	self:GetParent():ForceKill(false)
+		--	self:GetParent():Kill( nil, nil )
 		--	return
 		--end	
 			

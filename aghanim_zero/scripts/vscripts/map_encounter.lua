@@ -2711,7 +2711,7 @@ function CMapEncounter:DestroyRemainingGoodUnits()
 			--print( '^^^Checking unit named - ' .. unit:GetUnitName() )
 			if unit:GetUnitName() == unitName then
 				--print( '^^^Matched! destroying!' )
-				unit:ForceKill( false )
+				unit:Kill( nil, nil )
 			end
 		end
 	end		

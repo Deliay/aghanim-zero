@@ -255,7 +255,7 @@ function CMapEncounter_Bonus_MangoOrchard:OnComplete()
 
 	for _,hMorty in pairs( self.hMorties ) do
 		hMorty:AddEffects( EF_NODRAW )
-		hMorty:ForceKill( false )
+		hMorty:Kill( nil, nil )
 	end
 
 	StopGlobalSound( "BonusRoom.ChaseMusicLoop" )

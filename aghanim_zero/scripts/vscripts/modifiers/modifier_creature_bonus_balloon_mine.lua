@@ -59,7 +59,7 @@ function modifier_creature_bonus_balloon_mine:OnIntervalThink()
 	end
 
 	if GameRules:GetGameTime() > self.flExpireTime then
-		self:GetParent():ForceKill(false)
+		self:GetParent():Kill( nil, nil )
 		return
 	end
 

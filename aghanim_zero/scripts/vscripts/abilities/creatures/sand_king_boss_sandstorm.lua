@@ -182,7 +182,7 @@ function sand_king_boss_sandstorm:OnChannelFinish( bInterrupted )
 				end
 
 				ParticleManager:DestroyParticle( Storm.nFXIndex, false )
-				Storm:ForceKill( false )
+				Storm:Kill( nil, nil )
 			end
 		end
 

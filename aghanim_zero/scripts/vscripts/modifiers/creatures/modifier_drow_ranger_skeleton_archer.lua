@@ -20,6 +20,6 @@ function modifier_drow_ranger_skeleton_archer:OnDestroy()
 			ParticleManager:DestroyParticle( self.nFXIndex, false )
 		end
 
-		self:GetParent():ForceKill( false )
+		self:GetParent():Kill( nil, nil )
 	end
 end

@@ -78,7 +78,7 @@ function modifier_thunder_mountain_zeus_cloud_thinker:OnDestroy()
 	end
 
 	if self.hCloudUnit and self.hCloudUnit:IsNull() == false then 
-		self.hCloudUnit:ForceKill( false )
+		self.hCloudUnit:Kill( nil, nil )
 	end
 
 	UTIL_Remove( self:GetParent() )

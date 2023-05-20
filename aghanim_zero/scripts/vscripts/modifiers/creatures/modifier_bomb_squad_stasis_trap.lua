@@ -83,7 +83,7 @@ end
 function modifier_bomb_squad_stasis_trap:OnDestroy()
   if IsServer() then
     if self:GetParent() ~= nil and self:GetParent():IsAlive() then
-      self:GetParent():ForceKill(false)
+      self:GetParent():Kill( nil, nil )
     end
   end
 end

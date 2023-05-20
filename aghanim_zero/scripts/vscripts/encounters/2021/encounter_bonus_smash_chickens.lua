@@ -167,7 +167,7 @@ function CMapEncounter_BonusSmashChickens:OnComplete()
 		hOgre:SetControllableByPlayer( -1, true )
 		hOgre:SetOwner( nil )
 		hOgre:AddEffects( EF_NODRAW )
-		hOgre:ForceKill( false )
+		hOgre:Kill( nil, nil )
 	end
 
 	for nPlayerID = 0,AGHANIM_PLAYERS-1 do

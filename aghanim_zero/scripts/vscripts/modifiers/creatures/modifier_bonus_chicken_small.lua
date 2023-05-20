@@ -160,7 +160,7 @@ function modifier_bonus_chicken_small:OnTakeDamage( params )
 
 					if self.total_gold <= 0 then
 						self:TeleportOut()
-						--self:GetParent():ForceKill( false )
+						--self:GetParent():Kill( nil, nil )
 					end
 				end
 			end
@@ -252,7 +252,7 @@ function modifier_bonus_chicken_small:TeleportOut()
 
 	local tower = Entities:FindByName( nil, "bonus_chicken_tp_target" )
 	if tower == nil then
-		self:GetParent():ForceKill( false )
+		self:GetParent():Kill( nil, nil )
 		return
 	end
 
@@ -275,7 +275,7 @@ function modifier_bonus_chicken_small:TeleportOut()
 	end
 
 	FindClearSpaceForUnit( self:GetParent(), tower:GetOrigin(), true )
-	self:GetParent():ForceKill( false )
+	self:GetParent():Kill( nil, nil )
 end
 
 --------------------------------------------------------------------------------
@@ -283,7 +283,7 @@ end
 function modifier_bonus_chicken_small:OnTeleported( params )
 	if IsServer() then
 		if params.unit == self:GetParent() then
-			self:GetParent():ForceKill( false )
+			self:GetParent():Kill( nil, nil )
 		end
 	end
 end

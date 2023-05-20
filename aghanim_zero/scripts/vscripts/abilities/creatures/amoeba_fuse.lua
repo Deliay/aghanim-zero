@@ -17,7 +17,7 @@ function amoeba_fuse:OnSpellStart()
 				SendOverheadEventMessage( nil, 10, hTarget, self:GetCaster():GetHealth() / 10, nil )
 				self:GetCaster():RemoveAllItemDrops()
 				self:GetCaster():AddEffects( EF_NODRAW )
-				self:GetCaster():ForceKill( false )
+				self:GetCaster():Kill( nil, nil )
 			end
 		end
 	end

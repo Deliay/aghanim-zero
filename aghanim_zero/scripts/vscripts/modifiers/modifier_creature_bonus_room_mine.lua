@@ -60,7 +60,7 @@ function modifier_creature_bonus_room_mine:OnIntervalThink()
 
 
 	if GameRules:GetGameTime() > self.flExpireTime and self:GetParent():FindModifierByName("modifier_aghsfort_bonus_pudge_meat_hook") == nil then
-		self:GetParent():ForceKill(false)
+		self:GetParent():Kill( nil, nil )
 		return
 	end
 

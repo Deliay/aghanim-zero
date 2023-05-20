@@ -141,7 +141,7 @@ function modifier_creature_bonus_pig:TeleportOut()
 	local tower = Entities:FindByName( nil, "bonus_tp_target" )
 	if tower == nil then
 		print( "Tower is nil" )
-		self:GetParent():ForceKill( false )
+		self:GetParent():Kill( nil, nil )
 		return
 	end
 
@@ -164,7 +164,7 @@ function modifier_creature_bonus_pig:TeleportOut()
 	end
 
 	FindClearSpaceForUnit( self:GetParent(), tower:GetOrigin(), true )
-	self:GetParent():ForceKill( false )
+	self:GetParent():Kill( nil, nil )
 end
 
 --------------------------------------------------------------------------------
@@ -172,7 +172,7 @@ end
 function modifier_creature_bonus_pig:OnTeleported( params )
 	if IsServer() then
 		if params.unit == self:GetParent() then
-			self:GetParent():ForceKill( false )
+			self:GetParent():Kill( nil, nil )
 		end
 	end
 end

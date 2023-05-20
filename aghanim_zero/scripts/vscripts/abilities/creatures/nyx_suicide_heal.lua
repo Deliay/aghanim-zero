@@ -21,7 +21,7 @@ end
 
 function nyx_suicide_heal:OnSpellStart()
 	if IsServer() then
-		self:GetCaster():ForceKill( false )
+		self:GetCaster():Kill( nil, nil )
 	end
 end
 

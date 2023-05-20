@@ -144,7 +144,7 @@ function CMapEncounter_SacredGrounds:KillSkeletons()
 	if #vecSkeletons > 0 then
 		for _,hSkeleton in pairs ( vecSkeletons ) do
 			print( 'Attempting to kill skeleton' )
-			hSkeleton:ForceKill( false )
+			hSkeleton:Kill( nil, nil )
 		end
 	end
 end

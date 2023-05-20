@@ -168,7 +168,7 @@ function modifier_aghanim_passive:OnIntervalThink()
 			local AlliedUnits = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetAbsOrigin(), nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_BUILDING, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false )
 			for _,Ally in pairs( AlliedUnits ) do
 				if Ally:GetUnitName() == "npc_dota_boss_aghanim_crystal" or Ally:GetUnitName() == "npc_dota_boss_aghanim_minion" or Ally:GetUnitName() == "npc_dota_thinker" or Ally:GetUnitName() == "npc_dota_boss_aghanim_spear" then
-					Ally:ForceKill( false )
+					Ally:Kill( nil, nil )
 				end
 			end
 
