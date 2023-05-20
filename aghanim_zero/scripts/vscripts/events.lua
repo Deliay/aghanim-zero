@@ -714,6 +714,9 @@ end
 
 function CAghanim:OnItemSpawned( event )
 	local item = EntIndexToHScript( event.item_ent_index )
+	if item:IsNeutralDrop() then
+		item:SetShareability(ITEM_FULLY_SHAREABLE)
+	end
 end
 
 ---------------------------------------------------------
@@ -729,6 +732,9 @@ function CAghanim:OnItemPickedUp( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	if event.PlayerID ~= nil and item ~= nil and item:GetAbilityName() == "item_bag_of_gold" then
 		self:RegisterGoldBagCollectedStat( event.PlayerID )
+	end
+	if item:IsNeutralDrop() then
+		item:SetShareability(ITEM_FULLY_SHAREABLE)
 	end
 end
 
