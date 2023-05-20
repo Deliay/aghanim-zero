@@ -29,7 +29,7 @@ function aghsfort_antimage_illusion:doAction(kv)
 
     if #self.illusions >= self:GetSpecialValueFor("max_illusions") then
         if not self.illusions[1]:IsNull() then 
-            self.illusions[1]:Kill( nil, nil )
+            self.illusions[1]:ForceKill(false)
         end
         table.remove(self.illusions,1)
     end

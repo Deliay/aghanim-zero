@@ -53,7 +53,7 @@ end
 
 function modifier_bomb_squad_landmine_detonate:OnDestroy()
 	if IsServer() then
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	end
 end
 
@@ -83,7 +83,7 @@ function modifier_bomb_squad_landmine_detonate:Detonate()
 		ParticleManager:ReleaseParticleIndex( nFXIndex )
 
 		EmitSoundOn( "Creature_Bomb_Squad.LandMine.Detonate", self:GetParent() )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	end
 
 end

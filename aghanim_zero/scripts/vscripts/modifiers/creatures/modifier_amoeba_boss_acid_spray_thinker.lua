@@ -76,7 +76,7 @@ function modifier_amoeba_boss_acid_spray_thinker:OnDestroy()
 		ParticleManager:DestroyParticle( self.nFXIndex, false )
 		StopSoundOn( "Hero_Alchemist.AcidSpray", self:GetCaster() )
 
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 		UTIL_Remove( self:GetParent() )
 	end
 end

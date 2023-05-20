@@ -88,7 +88,7 @@ end
 function storegga_ground_pound:OnChannelFinish( bInterrpted )
 	if IsServer() then
 		if self.hThinker ~= nil and self.hThinker:IsNull() == false then
-			self.hThinker:Kill( nil, nil )
+			self.hThinker:ForceKill( false )
 		end
 
 		self.fChannelTime = nil

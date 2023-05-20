@@ -88,7 +88,7 @@ function modifier_brewmaster_split:OnDestroy()
 	 	firespirit:SetInitialGoalEntity( target )
 		
 		self:GetParent():AddEffects( EF_NODRAW )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	end
 end
 

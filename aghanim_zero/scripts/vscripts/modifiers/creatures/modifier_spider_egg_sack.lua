@@ -135,7 +135,7 @@ function modifier_spider_egg_sack:Burst( hHero )
 		EmitSoundOn( "Broodmother.LarvalParasite.Burst", self:GetParent() )
 		EmitSoundOn( "EggSac.Burst", self:GetParent() )
 		self:GetParent():AddEffects( EF_NODRAW )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	end
 end
 

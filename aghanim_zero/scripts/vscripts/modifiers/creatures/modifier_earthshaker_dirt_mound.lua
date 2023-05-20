@@ -154,7 +154,7 @@ function modifier_earthshaker_dirt_mound:Burst()
 		EmitSoundOn( "EggSac.Burst", self:GetParent() )
 
 		self:GetParent():AddEffects( EF_NODRAW )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	end
 end
 

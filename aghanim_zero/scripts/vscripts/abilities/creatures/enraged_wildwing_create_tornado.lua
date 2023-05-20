@@ -88,7 +88,7 @@ end
 --		if self.m_hTornado ~= nil then
 --			self.m_hTornado:StopSound( "n_creep_Wildkin.Tornado" )
 --			self.m_hTornado:RemoveModifierByName("modifier_enraged_wildkin_tornado_passive")
---			self.m_hTornado:Kill( nil, nil )
+--			self.m_hTornado:ForceKill( false )
 --		end
 --		ParticleManager:DestroyParticle( self.nPreviewFX, false )
 --	end

@@ -139,7 +139,7 @@ function modifier_aghanim_spell_swap:RestoreSpell()
 			if self.hCrystal then
 				self.hCrystal:AddEffects( EF_NODRAW )
 				if self.hCrystal:IsAlive() then
-					self.hCrystal:Kill( nil, nil )
+					self.hCrystal:ForceKill( false )
 				end
 
 				local nFXIndex = ParticleManager:CreateParticle( "particles/creatures/aghanim/aghanim_crystal_destroy.vpcf", PATTACH_CUSTOMORIGIN, nil )

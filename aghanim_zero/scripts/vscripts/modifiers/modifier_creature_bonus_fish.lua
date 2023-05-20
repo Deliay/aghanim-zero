@@ -56,7 +56,7 @@ function modifier_creature_bonus_fish:OnIntervalThink()
 	end
 
 	if GameRules:GetGameTime() > self.flExpireTime then
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill(false)
 		return
 	end
 

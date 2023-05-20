@@ -112,14 +112,14 @@ function CMapEncounter_BossWinterWyvern:OnBossKilled( hBoss, hAttacker )
 	local vecDragons = self:GetRoom():FindAllEntitiesInRoomByName( "npc_dota_creature_baby_ice_dragon", false )
 	if #vecDragons > 0 then
 		for _,hDragon in pairs ( vecDragons ) do
-			hDragon:Kill( nil, nil )
+			hDragon:ForceKill( false )
 		end
 	end
 
 	local vecEggs = self:GetRoom():FindAllEntitiesInRoomByName( "npc_dota_creature_ice_boss_egg", false )
 	if #vecEggs > 0 then
 		for _,hEgg in pairs ( vecEggs ) do
-			hEgg:Kill( nil, nil )
+			hEgg:ForceKill( false )
 		end
 	end
 end

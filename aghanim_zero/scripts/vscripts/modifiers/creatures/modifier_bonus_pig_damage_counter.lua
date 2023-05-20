@@ -110,7 +110,7 @@ function modifier_bonus_pig_damage_counter:OnTakeDamage( params )
 			end
 
 			if self.nRecentDamageTaken >= self.nDamageThreshold and params.damage > 0 then
-				--self:GetParent():Kill( nil, nil )
+				--self:GetParent():ForceKill( false )
 				--self:Destroy()
 				local newItem = CreateItem( "item_bag_of_gold", nil, nil )
 				local nGoldAmount = 25
@@ -131,7 +131,7 @@ function modifier_bonus_pig_damage_counter:OnTakeDamage( params )
 				self.total_gold = self.total_gold - 20
 				if self.total_gold <= 0 then
 					--self:TeleportOut()
-					self:GetParent():Kill( nil, nil )
+					self:GetParent():ForceKill( false )
 					self:Destroy()
 				end
 			end

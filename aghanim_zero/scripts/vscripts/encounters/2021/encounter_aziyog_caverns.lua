@@ -217,7 +217,7 @@ function CMapEncounter_Aziyog_Caverns:OnComplete()
 	local units = FindUnitsInRadius( DOTA_TEAM_BADGUYS, self.hRoom:GetOrigin(), nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_INVULNERABLE, FIND_ANY_ORDER, true )
 	for _,unit in pairs( units ) do
 		if unit:GetUnitName() == "npc_dota_creature_aziyog_warrior" then
-			unit:Kill( nil, nil )
+			unit:ForceKill( false )
 		end
 	end
 end

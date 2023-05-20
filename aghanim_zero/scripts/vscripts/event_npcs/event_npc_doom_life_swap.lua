@@ -91,7 +91,7 @@ function CEvent_NPC_DoomLifeSwap:OnInteractWithNPCResponse( hPlayerHero, nOption
 
 		EmitSoundOn( "Hero_DoomBringer.Devour", hPlayerHero )
 		local nActualGold = self:GiveGoldToPlayer( hPlayerHero, EVENT_NPC_DOOM_GOLD_GAIN_FOR_LIFE )
-		hPlayerHero:Kill( nil, nil )
+		hPlayerHero:ForceKill( false )
 
 		local gameEvent = {}
 		gameEvent["int_value"] = tonumber( nActualGold )

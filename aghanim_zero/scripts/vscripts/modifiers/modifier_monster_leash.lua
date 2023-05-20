@@ -108,7 +108,7 @@ function modifier_monster_leash:OnIntervalThink()
 	if ( GameRules:GetGameTime() - self.flKillStartTime ) >= 3 and self:GetParent():GetUnitName() ~= "npc_dota_creature_aghsfort_primal_beast_boss" then
 		--SendToServerConsole( "say *** KILLING ROGUE UNIT " .. self:GetParent():GetUnitName() .. " at " .. tostring( vOrigin ) )
 		print( "*** KILLING ROGUE UNIT " .. self:GetParent():GetUnitName() .. " at " .. tostring( vOrigin ) )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 
 		self:Destroy()
 		return

@@ -207,7 +207,7 @@ function modifier_amoeba_boss_death_explosion:OnIntervalThink()
 	end
 
 	self:GetParent():AddEffects( EF_NODRAW )
-	self:GetParent():Kill( nil, nil )
+	self:GetParent():ForceKill( false )
 
 end
 

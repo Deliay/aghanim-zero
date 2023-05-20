@@ -983,7 +983,7 @@ function CBossArcWarden:RemoveTempestDoubles()
 	for i=#hClones,1,-1 do
 		if hClones[i] ~= nil and hClones[i]:IsNull() == false and hClones[i]:IsAlive() and hClones[i]:GetUnitName() == "npc_dota_aghsfort_arc_warden_boss_clone" then
 			--print( 'Removing a Clone!' )
-			hClones[i]:Kill( nil, nil )
+			hClones[i]:ForceKill( false )
 		end
 	end
 end

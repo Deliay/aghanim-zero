@@ -133,7 +133,7 @@ function SummonWards( nAmount )
 	local hCurrentWards = Entities:FindAllByName("npc_dota_base_additive")
 	for _,ward in pairs(hCurrentWards) do
 		printf('killing ward')
-		ward:Kill( nil, nil )
+		ward:ForceKill(false)
 	end
 	local bQueue = false
 

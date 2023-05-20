@@ -153,7 +153,7 @@ function modifier_mine_death_explosion:OnIntervalThink()
 
 	if self.is_ascension_ability == 0 then
 		self:GetParent():AddEffects( EF_NODRAW )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	else
 		self:Destroy()
 	end

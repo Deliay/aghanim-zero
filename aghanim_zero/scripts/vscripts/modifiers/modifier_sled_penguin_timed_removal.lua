@@ -17,7 +17,7 @@ end
 
 function modifier_sled_penguin_timed_removal:OnDestroy()
 	if IsServer() then
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 	end
 end
 

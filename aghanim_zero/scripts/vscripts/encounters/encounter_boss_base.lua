@@ -446,7 +446,7 @@ function CMapEncounter_BossBase:DestroyRemainingSpawnedUnits()
 
 	-- Necessary to make bosses drop loot in the case of win_encounter
 	for i = #self.Bosses,1,-1 do
-		self.Bosses[i]:Kill( nil, nil )
+		self.Bosses[i]:ForceKill( false )
 	end
 
 	CMapEncounter.DestroyRemainingSpawnedUnits( self )

@@ -76,7 +76,7 @@ function modifier_upheaval_urn_incoming_damage_rules:OnAttacked( params )
 		if params.target == self:GetParent() then
 			local nHealth = self:GetParent():GetHealth()
 			if nHealth - 1 <= 0 then
-				self:GetParent():Kill( nil, nil )
+				self:GetParent():ForceKill( false )
 			else
 				self:GetParent():ModifyHealth( self:GetParent():GetHealth() - 1, nil, true, 0 )
 			end

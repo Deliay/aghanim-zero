@@ -142,15 +142,15 @@ function CMapEncounter_BossVisage:OnBossKilled( hBoss, hAttacker )
 	CMapEncounter_BossBase.OnBossKilled( self, hBoss, hAttacker )
 
 	for _,Familiar in pairs ( self.vecFamiliars ) do
-		Familiar:Kill( nil, nil )
+		Familiar:ForceKill( false )
 	end
 
 	for _,StatueWest in pairs ( self.vecFamiliarStatuesWest ) do
-		StatueWest:Kill( nil, nil )
+		StatueWest:ForceKill( false )
 	end
 	
 	for _,StatueEast in pairs ( self.vecFamiliarStatuesEast ) do
-		StatueEast:Kill( nil, nil )
+		StatueEast:ForceKill( false )
 	end
 
 	-- Open the main gate

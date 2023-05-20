@@ -118,7 +118,7 @@ function modifier_acid_blob_death_explosion:OnIntervalThink()
 	end	
 
 	self:GetParent():AddEffects( EF_NODRAW )
-	self:GetParent():Kill( nil, nil )
+	self:GetParent():ForceKill( false )
 
 end
 

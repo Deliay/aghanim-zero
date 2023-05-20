@@ -76,7 +76,7 @@ function modifier_bomb_squad_landmine_intrinsic:OnAttacked( params )
 		
 		if params.target == self:GetParent() then
 
-			self:GetParent():Kill( nil, nil )
+			self:GetParent():ForceKill( false )
 		end
 	end
 

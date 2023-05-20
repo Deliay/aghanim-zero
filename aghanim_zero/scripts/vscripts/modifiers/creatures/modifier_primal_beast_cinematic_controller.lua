@@ -62,7 +62,7 @@ function modifier_primal_beast_cinematic_controller:OnDeathPrevented( params )
 			local AlliedUnits = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetAbsOrigin(), nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_BUILDING, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false )
 			for _,Ally in pairs( AlliedUnits ) do
 				if Ally:GetUnitName() == "aghsfort_primal_beast_rock_golem" or Ally:GetUnitName() == "aghsfort_primal_beast_rock" then
-					Ally:Kill( nil, nil )
+					Ally:ForceKill( false )
 				end
 			end
 		

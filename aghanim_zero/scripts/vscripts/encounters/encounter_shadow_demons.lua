@@ -190,7 +190,7 @@ end
 		print( 'Found unit named ' .. hUrns[i]:GetUnitName() )
 		if hUrns[i]:GetUnitName() == "npc_dota_creature_upheaval_urn" then
 			print( 'Removing urn #' .. i )
-			hUrns[i]:Kill( nil, nil )
+			hUrns[i]:ForceKill( false )
 			UTIL_Remove( hUrns[i] )
 		end
 	end

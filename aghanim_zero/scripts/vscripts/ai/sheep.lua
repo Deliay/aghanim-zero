@@ -63,7 +63,7 @@ function SheepThink()
 			local hBase = Entities:FindByName( nil, "a1_1a_teamspawn_left" )
 			local vTargetPoint = hBase:GetOrigin()
 			thisEntity:SetAbsOrigin( vTargetPoint )
-			thisEntity:Kill( nil, nil )
+			thisEntity:ForceKill(false)
 		end
 	end
 	

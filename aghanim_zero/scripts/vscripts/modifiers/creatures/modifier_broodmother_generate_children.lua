@@ -123,7 +123,7 @@ end
 function modifier_broodmother_generate_children:OnDestroy()
 	if IsServer() then
 		ParticleManager:DestroyParticle( self.nFXIndex, false )
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )		
 		UTIL_Remove( self:GetParent() )
 	end
 end

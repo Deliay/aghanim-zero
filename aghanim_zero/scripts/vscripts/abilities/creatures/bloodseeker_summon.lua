@@ -175,7 +175,7 @@ function bloodseeker_summon:OnProjectileHitHandle( hTarget, vLocation, nProjecti
 
 			EmitSoundOn( "Dungeon.BloodSplatterImpact", hBloodbag )
 
-			hBloodbag:Kill( nil, nil )
+			hBloodbag:ForceKill( false )
 
 			return true
 		end

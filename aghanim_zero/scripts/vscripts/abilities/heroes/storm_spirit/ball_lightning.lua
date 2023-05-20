@@ -281,7 +281,7 @@ function modifier_aghsfort_storm_spirit_ball_lightning_travel:OnRemoved()
     if IsServer() then
         self:playEffects(false)
         if self.caster == self.parent and IsValid(self.thinker) then
-            self.thinker:Kill( nil, nil )
+            self.thinker:ForceKill(false)
         end
         FindClearSpaceForUnit(self.parent, self.target_pos, false)
 

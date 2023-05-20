@@ -178,7 +178,7 @@ function modifier_aghanim_summon_portals_thinker:LaunchSpear()
 	if IsServer() then
 		if self.hSpear ~= nil then
 			self.hSpear:AddEffects( EF_NODRAW )
-			self.hSpear:Kill( nil, nil )
+			self.hSpear:ForceKill( false )
 		end
 
 		local hSpear = self:GetCaster():FindAbilityByName( "aghanim_spear" )

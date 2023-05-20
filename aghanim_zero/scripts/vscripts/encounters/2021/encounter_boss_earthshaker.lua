@@ -172,7 +172,7 @@ function CMapEncounter_BossEarthshaker:OnBossKilled( hBoss, hAttacker )
 	local vecMinions = self:GetRoom():FindAllEntitiesInRoomByName( "npc_dota_creature_earthshaker_minion", false )
 	if #vecMinions > 0 then
 		for _, hMinion in pairs ( vecMinions ) do
-			hMinion:Kill( nil, nil )
+			hMinion:ForceKill( false )
 		end
 	end
 end

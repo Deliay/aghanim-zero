@@ -199,7 +199,7 @@ function modifier_aghsfort_storm_spirit_static_remnant_thinker:OnDestroy()
         end
 
         if IsValid(self.parent) then
-            self.parent:Kill( nil, nil )
+            self.parent:ForceKill(false)
         end
     end
 end

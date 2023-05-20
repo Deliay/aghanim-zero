@@ -213,7 +213,7 @@ function UnitRescueThinker( thisEntity )
 				end
 			end
 			if bKill then
-				thisEntity:Kill( nil, nil )
+				thisEntity:ForceKill(false)
 			else
 				FindClearSpaceForUnit( thisEntity, vTargetPoint, true )
 				thisEntity:AddNewModifier( thisEntity, nil, "modifier_rescued_unit", {} )

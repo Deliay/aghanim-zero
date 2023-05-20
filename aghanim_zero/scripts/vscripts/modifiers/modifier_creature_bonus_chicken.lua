@@ -139,7 +139,7 @@ function modifier_creature_bonus_chicken:TeleportOut()
 
 	local tower = Entities:FindByName( nil, "bonus_chicken_tp_target" )
 	if tower == nil then
-		self:GetParent():Kill( nil, nil )
+		self:GetParent():ForceKill( false )
 		return
 	end
 
@@ -160,7 +160,7 @@ function modifier_creature_bonus_chicken:TeleportOut()
 	end
 
 	FindClearSpaceForUnit( self:GetParent(), tower:GetOrigin(), true )
-	self:GetParent():Kill( nil, nil )
+	self:GetParent():ForceKill( false )
 
 end
 
@@ -169,7 +169,7 @@ end
 function modifier_creature_bonus_chicken:OnTeleported( params )
 	if IsServer() then
 		if params.unit == self:GetParent() then
-			self:GetParent():Kill( nil, nil )
+			self:GetParent():ForceKill( false )
 		end
 	end
 end
