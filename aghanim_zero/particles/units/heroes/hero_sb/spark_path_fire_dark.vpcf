@@ -1,0 +1,285 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{d15c9157-10e0-47bc-9333-1ac81da07b8d} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 250
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 5
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 5
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 6
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_RemapSpeedtoCP"
+			m_nInControlPointNumber = 3
+			m_flInputMin = 20.000000
+			m_flInputMax = 800.000000
+			m_nOutControlPointNumber = 6
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_bInitFromKilledParentParticles = true
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 11
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 6.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMax = 18.000000
+			m_fLifetimeMin = 18.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMax = 70.000000
+			m_flRadiusMin = 0.000000
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_nControlPointNumber = 3
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				255,
+				209,
+				5,
+				255,
+			]
+			m_ColorMax = 
+			[
+				255,
+				175,
+				78,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+			m_nCPInput = 5
+			m_nFieldOutput = 1
+			m_flInputMax = 100.000000
+			m_flOutputMax = 101.000000
+		},
+		
+		{
+			_class = "C_INIT_RemapParticleCountToScalar"
+			m_nFieldOutput = 7
+			m_nInputMax = 1
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				128.000000,
+			]
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				128.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionPlaceOnGround"
+			m_flOffset = 16.000000
+			m_bIncludeWater = true
+			m_bSetNormal = true
+			m_flMaxTraceLength = 512.000000
+			m_CollisionGroupName = "DEBRIS"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_EndCapTimedDecay"
+			m_flDecayTime = 1.000000
+		},
+		
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_nFieldOutput = 7
+			m_flOutput = 0.000000
+			m_flLerpTime = 0.500000
+		},
+		
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_flOutput = 0.000000
+		},
+		
+		{
+			_class = "C_OP_DifferencePreviousParticle"
+			m_nFieldOutput = 16
+			m_flInputMin = 71.000000
+			m_flInputMax = 72.000000
+			m_flOutputMin = 1.000000
+			m_flOutputMax = 0.000000
+			m_bSetPreviousParticle = true
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_OFF"
+		},
+		
+		{
+			_class = "C_OP_CycleScalar"
+			m_nDestField = 3
+			m_flStartValue = 30.000000
+			m_flEndValue = 45.000000
+		},
+		
+		{
+			_class = "C_OP_RemapVisibilityScalar"
+			m_nFieldOutput = 7
+			m_flRadiusScale = 0.100000
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderRopes"
+			m_nMaxTesselation = 3
+			m_flTextureVWorldSize = 250.000000
+			m_flTextureVOffset = 50.000000
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+			m_flSelfIllumAmount = 1.000000
+			m_bSaturateColorPreAlphaBlend = false
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/beam_liquid_viscous.vtex"
+				},
+			]
+		},
+		
+		{
+			_class = "C_OP_RenderRopes"
+			m_nMaxTesselation = 3
+			m_flTextureVWorldSize = 250.000000
+			m_flTextureVScrollRate = 27.000000
+			m_flTextureVOffset = 100.000000
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+			m_flAnimationRate = 1.000000
+			m_bSaturateColorPreAlphaBlend = false
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/energy_flames/beam_energy_flames_red.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+		},
+		
+		{
+			_class = "C_OP_RenderRopes"
+			m_nMaxTesselation = 3
+			m_flTextureVWorldSize = 250.000000
+			m_flTextureVScrollRate = 27.000000
+			m_flTextureVOffset = 100.000000
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+			m_bSaturateColorPreAlphaBlend = false
+			m_flSelfIllumAmount = 0.841000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/beam_liquid_viscous_soft.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_sb/spark_path_fire_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_sb/spark_path_fire_c.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_sb/spark_path_embers.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_sb/spark_path_sparks.vpcf"
+		},
+	]
+}

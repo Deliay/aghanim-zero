@@ -1,0 +1,235 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{d15c9157-10e0-47bc-9333-1ac81da07b8d} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 12
+	m_flConstantRadius = 250.000000
+	m_ConstantColor = 
+	[
+		255,
+		158,
+		79,
+		255,
+	]
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 5
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 4.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 1.000000
+			m_fLifetimeMax = 1.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 3
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMin = 150.000000
+			m_flRadiusMax = 200.000000
+		},
+		
+		{
+			_class = "C_INIT_RingWave"
+			m_flParticlesPerOrbit = 4.000000
+			m_bEvenDistribution = true
+			m_flInitialRadius = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 100.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				512.000000,
+			]
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				512.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionPlaceOnGround"
+			m_flOffset = 24.000000
+			m_bIncludeWater = true
+			m_bSetNormal = true
+			m_flMaxTraceLength = 1024.000000
+			m_CollisionGroupName = "DEBRIS"
+			m_nTraceMissBehavior = "PARTICLE_TRACE_MISS_BEHAVIOR_KILL"
+		},
+		
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+			m_nCPInput = 2
+			m_nFieldOutput = 1
+			m_flInputMax = 20.000000
+			m_flOutputMax = 20.000000
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.000000
+			m_flBias = 0.990000
+		},
+		
+		{
+			_class = "C_OP_FadeInSimple"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_OFF"
+			m_flFadeInTime = 0.100000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.100000
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+			m_flStartFadeSize = 0.125000
+			m_flEndFadeSize = 0.750000
+			m_flOverbrightFactor = 5.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/lava_blasts/lava_glow.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_MOD2X"
+		},
+		
+		{
+			_class = "C_OP_RenderDeferredLight"
+			m_flRadiusScale = 2.000000
+			m_flAlphaScale = 16.000000
+			m_flStartFalloff = 0.100000
+			m_hTexture = resource:"materials/particle/particle_modulate_01.vtex"
+			m_vecColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL_COLOR"
+				m_LiteralColor = 
+				[
+					229,
+					54,
+					0,
+				]
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_flDelay = 5.000000
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_lava_scorch.vpcf"
+		},
+		
+		{
+			m_flDelay = 5.000000
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_lava_scorch_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_lava_c.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_lava_d.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_lava_a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_lava_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_projectile.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/neutral_fx/black_dragon_fireball_ember.vpcf"
+		},
+	]
+}
