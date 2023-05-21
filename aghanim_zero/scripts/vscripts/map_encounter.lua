@@ -2479,7 +2479,6 @@ function CMapEncounter:DropNeutralItemFromUnit( hVictim, hAttacker, bAnnounce )
 	if szItemDrop == nil then
 		return nil
 	end
-	szItemDrop:SetShareability(ITEM_FULLY_SHAREABLE)
 	local hItem = DropNeutralItemAtPositionForHero( szItemDrop, hVictim:GetAbsOrigin(), hHero, -1, true )
 	-- local newItem = CreateItem( szItemDrop, nil, nil )
 	-- newItem:SetPurchaseTime( 0 )
