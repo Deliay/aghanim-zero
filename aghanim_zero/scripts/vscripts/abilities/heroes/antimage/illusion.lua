@@ -30,7 +30,7 @@ function aghsfort_antimage_illusion:doAction(kv)
     if #self.illusions >= self:GetSpecialValueFor("max_illusions") then
         if not self.illusions[1]:IsNull() then 
             self.illusions[1]:ForceKill(false)
-            FireGameEvent( 'entity_killed', { entindex_killed = self.illusions[1]::GetEntityIndex() } )
+            FireGameEvent( 'entity_killed', { entindex_killed = self.illusions[1]:GetEntityIndex() } )
         end
         table.remove(self.illusions,1)
     end

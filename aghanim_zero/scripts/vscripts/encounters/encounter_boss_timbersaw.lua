@@ -108,7 +108,7 @@ function CMapEncounter_BossTimbersaw:OnBossKilled( hBoss, hAttacker )
 	if #vecTreants > 0 then
 		for _,hTreant in pairs ( vecTreants ) do
 			hTreant:ForceKill( false )
-			FireGameEvent( 'entity_killed', { entindex_killed = hTreant::GetEntityIndex() } )
+			FireGameEvent( 'entity_killed', { entindex_killed = hTreant:GetEntityIndex() } )
 		end
 	end
 end

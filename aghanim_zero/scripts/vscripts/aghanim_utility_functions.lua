@@ -214,7 +214,7 @@ function UnitRescueThinker( thisEntity )
 			end
 			if bKill then
 				thisEntity:ForceKill(false)
-				FireGameEvent( 'entity_killed', { entindex_killed = thisEntity::GetEntityIndex() } )
+				FireGameEvent( 'entity_killed', { entindex_killed = thisEntity:GetEntityIndex() } )
 			else
 				FindClearSpaceForUnit( thisEntity, vTargetPoint, true )
 				thisEntity:AddNewModifier( thisEntity, nil, "modifier_rescued_unit", {} )

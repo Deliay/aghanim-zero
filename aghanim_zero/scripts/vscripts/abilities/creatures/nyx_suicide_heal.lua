@@ -22,7 +22,7 @@ end
 function nyx_suicide_heal:OnSpellStart()
 	if IsServer() then
 		self:GetCaster():ForceKill( false )
-		FireGameEvent( 'entity_killed', { entindex_killed = self:GetCaster()::GetEntityIndex() } )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetCaster():GetEntityIndex() } )
 	end
 end
 

@@ -256,7 +256,7 @@ function CMapEncounter_Bonus_MangoOrchard:OnComplete()
 	for _,hMorty in pairs( self.hMorties ) do
 		hMorty:AddEffects( EF_NODRAW )
 		hMorty:ForceKill( false )
-		FireGameEvent( 'entity_killed', { entindex_killed = hMorty::GetEntityIndex() } )
+		FireGameEvent( 'entity_killed', { entindex_killed = hMorty:GetEntityIndex() } )
 	end
 
 	StopGlobalSound( "BonusRoom.ChaseMusicLoop" )

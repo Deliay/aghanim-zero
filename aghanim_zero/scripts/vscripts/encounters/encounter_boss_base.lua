@@ -447,7 +447,7 @@ function CMapEncounter_BossBase:DestroyRemainingSpawnedUnits()
 	-- Necessary to make bosses drop loot in the case of win_encounter
 	for i = #self.Bosses,1,-1 do
 		self.Bosses[i]:ForceKill( false )
-		FireGameEvent( 'entity_killed', { entindex_killed = self.Bosses[i]::GetEntityIndex() } )
+		FireGameEvent( 'entity_killed', { entindex_killed = self.Bosses[i]:GetEntityIndex() } )
 	end
 
 	CMapEncounter.DestroyRemainingSpawnedUnits( self )

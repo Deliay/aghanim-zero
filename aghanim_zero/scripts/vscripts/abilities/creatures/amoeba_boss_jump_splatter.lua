@@ -159,7 +159,7 @@ function amoeba_boss_jump_splatter:Splatter()
 		if self:GetCaster():GetUnitName() == "npc_dota_creature_amoeba_baby" then
 			self:GetCaster():AddEffects( EF_NODRAW )
 			self:GetCaster():ForceKill( false )
-			FireGameEvent( 'entity_killed', { entindex_killed = self:GetCaster()::GetEntityIndex() } )
+			FireGameEvent( 'entity_killed', { entindex_killed = self:GetCaster():GetEntityIndex() } )
 		end
 		]]--
 	end
