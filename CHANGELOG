@@ -72,3 +72,6 @@
 2023-05-20
 - fix: replace ForceKill to Kill due ForceKill not trigger 'kill' event
 - enhance: now neutual item fully sharable
+
+2023-05-22
+- fix: restore ForceKill changes, and fire 'entity_killed' manually after call ForceKill
