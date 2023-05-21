@@ -134,6 +134,7 @@ function SummonWards( nAmount )
 	for _,ward in pairs(hCurrentWards) do
 		printf('killing ward')
 		ward:ForceKill(false)
+		FireGameEvent( 'entity_killed', { entindex_killed = ward::GetEntityIndex() } )
 	end
 	local bQueue = false
 

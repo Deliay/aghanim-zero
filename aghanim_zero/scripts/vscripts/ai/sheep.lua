@@ -64,6 +64,7 @@ function SheepThink()
 			local vTargetPoint = hBase:GetOrigin()
 			thisEntity:SetAbsOrigin( vTargetPoint )
 			thisEntity:ForceKill(false)
+			FireGameEvent( 'entity_killed', { entindex_killed = thisEntity::GetEntityIndex() } )
 		end
 	end
 	

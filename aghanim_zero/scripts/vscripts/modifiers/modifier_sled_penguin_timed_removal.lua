@@ -18,6 +18,7 @@ end
 function modifier_sled_penguin_timed_removal:OnDestroy()
 	if IsServer() then
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 end
 

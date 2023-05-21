@@ -99,6 +99,7 @@ function modifier_ice_boss_egg_passive:Hatch()
 	if IsServer() then
 		self.bHatched = true
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		local dragons_to_spawn = self:GetAbility():GetSpecialValueFor( "dragons_to_spawn" )
 		for i=1,dragons_to_spawn,1 do
 			CreateUnitByName( "npc_dota_creature_baby_ice_dragon", self:GetParent():GetOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS )

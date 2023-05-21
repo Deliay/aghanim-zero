@@ -113,6 +113,7 @@ function CMapEncounter_BossWinterWyvern:OnBossKilled( hBoss, hAttacker )
 	if #vecDragons > 0 then
 		for _,hDragon in pairs ( vecDragons ) do
 			hDragon:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hDragon:GetEntityIndex() } )
 		end
 	end
 
@@ -120,6 +121,7 @@ function CMapEncounter_BossWinterWyvern:OnBossKilled( hBoss, hAttacker )
 	if #vecEggs > 0 then
 		for _,hEgg in pairs ( vecEggs ) do
 			hEgg:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hEgg:GetEntityIndex() } )
 		end
 	end
 end

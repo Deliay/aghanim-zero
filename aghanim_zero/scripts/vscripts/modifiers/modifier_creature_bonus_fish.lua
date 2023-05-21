@@ -57,6 +57,7 @@ function modifier_creature_bonus_fish:OnIntervalThink()
 
 	if GameRules:GetGameTime() > self.flExpireTime then
 		self:GetParent():ForceKill(false)
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		return
 	end
 

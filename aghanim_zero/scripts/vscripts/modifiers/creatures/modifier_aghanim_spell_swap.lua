@@ -140,6 +140,7 @@ function modifier_aghanim_spell_swap:RestoreSpell()
 				self.hCrystal:AddEffects( EF_NODRAW )
 				if self.hCrystal:IsAlive() then
 					self.hCrystal:ForceKill( false )
+					FireGameEvent( 'entity_killed', { entindex_killed = self.hCrystal:GetEntityIndex() } )
 				end
 
 				local nFXIndex = ParticleManager:CreateParticle( "particles/creatures/aghanim/aghanim_crystal_destroy.vpcf", PATTACH_CUSTOMORIGIN, nil )

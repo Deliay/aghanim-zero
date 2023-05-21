@@ -89,6 +89,7 @@ function storegga_ground_pound:OnChannelFinish( bInterrpted )
 	if IsServer() then
 		if self.hThinker ~= nil and self.hThinker:IsNull() == false then
 			self.hThinker:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = self.hThinker::GetEntityIndex() } )
 		end
 
 		self.fChannelTime = nil

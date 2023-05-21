@@ -136,6 +136,7 @@ function modifier_spider_egg_sack:Burst( hHero )
 		EmitSoundOn( "EggSac.Burst", self:GetParent() )
 		self:GetParent():AddEffects( EF_NODRAW )
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 end
 

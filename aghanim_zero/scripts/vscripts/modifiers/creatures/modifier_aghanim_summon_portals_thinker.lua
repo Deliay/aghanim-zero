@@ -179,6 +179,7 @@ function modifier_aghanim_summon_portals_thinker:LaunchSpear()
 		if self.hSpear ~= nil then
 			self.hSpear:AddEffects( EF_NODRAW )
 			self.hSpear:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = self.hSpear:GetEntityIndex() } )
 		end
 
 		local hSpear = self:GetCaster():FindAbilityByName( "aghanim_spear" )

@@ -185,6 +185,7 @@ function CMapEncounter_Twilight_Maze:OnComplete()
 	for _, unit in pairs( units ) do
 		if unit:GetUnitName() == "npc_dota_creature_skeleteeny" then
 			unit:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = unit:GetEntityIndex() } )
 		end
 	end
 end

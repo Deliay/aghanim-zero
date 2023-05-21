@@ -173,6 +173,7 @@ function CMapEncounter_BossEarthshaker:OnBossKilled( hBoss, hAttacker )
 	if #vecMinions > 0 then
 		for _, hMinion in pairs ( vecMinions ) do
 			hMinion:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hMinion:GetEntityIndex() } )
 		end
 	end
 end

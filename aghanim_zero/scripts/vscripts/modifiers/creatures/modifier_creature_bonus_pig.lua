@@ -142,6 +142,7 @@ function modifier_creature_bonus_pig:TeleportOut()
 	if tower == nil then
 		print( "Tower is nil" )
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		return
 	end
 
@@ -165,6 +166,7 @@ function modifier_creature_bonus_pig:TeleportOut()
 
 	FindClearSpaceForUnit( self:GetParent(), tower:GetOrigin(), true )
 	self:GetParent():ForceKill( false )
+	FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 end
 
 --------------------------------------------------------------------------------
@@ -173,6 +175,7 @@ function modifier_creature_bonus_pig:OnTeleported( params )
 	if IsServer() then
 		if params.unit == self:GetParent() then
 			self:GetParent():ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		end
 	end
 end

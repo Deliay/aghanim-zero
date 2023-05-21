@@ -77,6 +77,7 @@ function modifier_acid_blob_acid_spray_thinker:OnDestroy()
 		StopSoundOn( "Hero_Alchemist.AcidSpray", self:GetCaster() )
 
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		UTIL_Remove( self:GetParent() )
 	end
 end

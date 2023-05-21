@@ -176,6 +176,7 @@ function bloodseeker_summon:OnProjectileHitHandle( hTarget, vLocation, nProjecti
 			EmitSoundOn( "Dungeon.BloodSplatterImpact", hBloodbag )
 
 			hBloodbag:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hBloodbag::GetEntityIndex() } )
 
 			return true
 		end

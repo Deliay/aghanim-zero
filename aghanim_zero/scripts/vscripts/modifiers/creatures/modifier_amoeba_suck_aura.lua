@@ -99,6 +99,7 @@ function modifier_amoeba_suck_aura:OnIntervalThink()
 		for _,baby in pairs( babies ) do
 			if baby ~= nil and baby:IsNull() == false and baby:IsAlive() == true and baby:GetUnitName() == "npc_dota_creature_amoeba_baby" then
 				baby:ForceKill( false )
+				FireGameEvent( 'entity_killed', { entindex_killed = baby:GetEntityIndex() } )
 				baby:AddEffects( EF_NODRAW )
 				self.nBabiesConsumed = self.nBabiesConsumed + 1
 

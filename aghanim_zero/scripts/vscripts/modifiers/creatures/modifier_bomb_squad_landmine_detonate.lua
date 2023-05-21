@@ -54,6 +54,7 @@ end
 function modifier_bomb_squad_landmine_detonate:OnDestroy()
 	if IsServer() then
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 end
 
@@ -84,6 +85,7 @@ function modifier_bomb_squad_landmine_detonate:Detonate()
 
 		EmitSoundOn( "Creature_Bomb_Squad.LandMine.Detonate", self:GetParent() )
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 
 end

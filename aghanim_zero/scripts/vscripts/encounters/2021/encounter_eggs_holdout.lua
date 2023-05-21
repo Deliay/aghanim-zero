@@ -261,6 +261,7 @@ function CMapEncounter_EggsHoldout:OnComplete()
 		if hUnit:IsAlive() and hUnit:GetUnitName() == "npc_dota_creature_dragon_egg" then
 			nSurvivingEggs = nSurvivingEggs + 1
 			hUnit:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hUnit:GetEntityIndex() } )
 			hDragon = CreateUnitByName( "npc_dota_creature_baby_dragon", hUnit:GetOrigin(), true, nil, nil, DOTA_TEAM_GOODGUYS )
 			if hDragon ~= nil then
 				hDragon.bStartRescue = true

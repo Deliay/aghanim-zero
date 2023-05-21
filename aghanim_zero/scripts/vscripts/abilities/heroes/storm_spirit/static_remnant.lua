@@ -200,6 +200,7 @@ function modifier_aghsfort_storm_spirit_static_remnant_thinker:OnDestroy()
 
         if IsValid(self.parent) then
             self.parent:ForceKill(false)
+            FireGameEvent( 'entity_killed', { entindex_killed = self.parent::GetEntityIndex() } )
         end
     end
 end

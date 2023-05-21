@@ -59,5 +59,6 @@ function modifier_creature_techies_land_mine:OnIntervalThink()
 
 		EmitSoundOn( "TreasureChest.MineTrap.Detonate", self:GetParent() )
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 end

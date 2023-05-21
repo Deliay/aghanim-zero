@@ -75,6 +75,7 @@ function storegga_avalanche:OnChannelFinish( bInterrpted )
 		ParticleManager:DestroyParticle( self.nChannelFX, false )
 		if self.hThinker ~= nil and self.hThinker:IsNull() == false then
 			self.hThinker:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = self.hThinker::GetEntityIndex() } )
 		end
 
 	end

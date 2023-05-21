@@ -79,6 +79,7 @@ function modifier_thunder_mountain_zeus_cloud_thinker:OnDestroy()
 
 	if self.hCloudUnit and self.hCloudUnit:IsNull() == false then 
 		self.hCloudUnit:ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self.hCloudUnit:GetEntityIndex() } )
 	end
 
 	UTIL_Remove( self:GetParent() )

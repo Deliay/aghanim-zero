@@ -63,6 +63,7 @@ function modifier_primal_beast_cinematic_controller:OnDeathPrevented( params )
 			for _,Ally in pairs( AlliedUnits ) do
 				if Ally:GetUnitName() == "aghsfort_primal_beast_rock_golem" or Ally:GetUnitName() == "aghsfort_primal_beast_rock" then
 					Ally:ForceKill( false )
+					FireGameEvent( 'entity_killed', { entindex_killed = Ally:GetEntityIndex() } )
 				end
 			end
 		

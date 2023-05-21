@@ -399,6 +399,7 @@ function CMapEncounter_PrimalBeast:OnComplete()
 	for _,unit in pairs( units ) do
 		if unit:GetUnitName() == "aghsfort_primal_beast_rock" or unit:GetUnitName() == "aghsfort_primal_beast_rock_golem" then
 			unit:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = unit:GetEntityIndex() } )
 		end
 	end
 

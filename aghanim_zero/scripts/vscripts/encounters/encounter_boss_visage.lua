@@ -143,14 +143,17 @@ function CMapEncounter_BossVisage:OnBossKilled( hBoss, hAttacker )
 
 	for _,Familiar in pairs ( self.vecFamiliars ) do
 		Familiar:ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = Familiar::GetEntityIndex() } )
 	end
 
 	for _,StatueWest in pairs ( self.vecFamiliarStatuesWest ) do
 		StatueWest:ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = StatueWest::GetEntityIndex() } )
 	end
 	
 	for _,StatueEast in pairs ( self.vecFamiliarStatuesEast ) do
 		StatueEast:ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = StatueEast::GetEntityIndex() } )
 	end
 end
 

@@ -69,6 +69,7 @@ function burrower_big_explosion:OnSpellStart()
 		end
 
 		self:GetCaster():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetCaster()::GetEntityIndex() } )
 	end
 end
 

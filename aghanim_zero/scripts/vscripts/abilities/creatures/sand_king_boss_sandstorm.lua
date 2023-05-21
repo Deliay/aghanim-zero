@@ -183,6 +183,7 @@ function sand_king_boss_sandstorm:OnChannelFinish( bInterrupted )
 
 				ParticleManager:DestroyParticle( Storm.nFXIndex, false )
 				Storm:ForceKill( false )
+				FireGameEvent( 'entity_killed', { entindex_killed = Storm::GetEntityIndex() } )
 			end
 		end
 

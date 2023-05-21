@@ -124,6 +124,7 @@ function modifier_broodmother_generate_children:OnDestroy()
 	if IsServer() then
 		ParticleManager:DestroyParticle( self.nFXIndex, false )
 		self:GetParent():ForceKill( false )		
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		UTIL_Remove( self:GetParent() )
 	end
 end

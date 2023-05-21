@@ -168,6 +168,7 @@ function CMapEncounter_BonusSmashChickens:OnComplete()
 		hOgre:SetOwner( nil )
 		hOgre:AddEffects( EF_NODRAW )
 		hOgre:ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = hOgre::GetEntityIndex() } )
 	end
 
 	for nPlayerID = 0,AGHANIM_PLAYERS-1 do

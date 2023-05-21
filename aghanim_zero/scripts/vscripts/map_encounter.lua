@@ -2711,6 +2711,7 @@ function CMapEncounter:DestroyRemainingGoodUnits()
 			if unit:GetUnitName() == unitName then
 				--print( '^^^Matched! destroying!' )
 				unit:ForceKill( false )
+				FireGameEvent( 'entity_killed', { entindex_killed = unit::GetEntityIndex() } )
 			end
 		end
 	end		

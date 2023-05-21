@@ -71,6 +71,7 @@ function modifier_scarab_priest_summon_mound:OnDestroy()
 		end
 
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 
 	end
 

@@ -128,6 +128,7 @@ function modifier_bomber_death_explosion:OnIntervalThink()
 	if self.is_ascension_ability == 0 then
 		self:GetParent():AddEffects( EF_NODRAW )
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	else
 		self:Destroy()
 	end

@@ -169,6 +169,7 @@ function modifier_aghanim_passive:OnIntervalThink()
 			for _,Ally in pairs( AlliedUnits ) do
 				if Ally:GetUnitName() == "npc_dota_boss_aghanim_crystal" or Ally:GetUnitName() == "npc_dota_boss_aghanim_minion" or Ally:GetUnitName() == "npc_dota_thinker" or Ally:GetUnitName() == "npc_dota_boss_aghanim_spear" then
 					Ally:ForceKill( false )
+					FireGameEvent( 'entity_killed', { entindex_killed = Ally:GetEntityIndex() } )
 				end
 			end
 

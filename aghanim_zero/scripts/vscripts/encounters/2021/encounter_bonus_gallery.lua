@@ -331,6 +331,7 @@ function CMapEncounter_BonusGallery:OnTriggerStartTouch( event )
 		if hUnit then
 			print( "Removing rogue unit!" )
 			hUnit:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hUnit::GetEntityIndex() } )
 		end
 	end
 

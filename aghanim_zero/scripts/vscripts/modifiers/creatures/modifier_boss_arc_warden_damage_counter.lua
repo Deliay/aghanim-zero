@@ -90,6 +90,7 @@ function modifier_boss_arc_warden_damage_counter:OnTakeDamage( params )
 				-- kill zombies that hit us during this phase
 				if hAttacker:IsZombie() then
 					hAttacker:ForceKill( false )
+					FireGameEvent( 'entity_killed', { entindex_killed = hAttacker:GetEntityIndex() } )
 				end
 			end
 		end

@@ -136,6 +136,7 @@ function CMapEncounter_DrowRangerMiniboss:KillSkeletons()
 		for _,hSkeleton in pairs ( vecSkeletons ) do
 			print( 'Attempting to kill skeleton' )
 			hSkeleton:ForceKill( false )
+			FireGameEvent( 'entity_killed', { entindex_killed = hSkeleton::GetEntityIndex() } )
 		end
 	end
 end

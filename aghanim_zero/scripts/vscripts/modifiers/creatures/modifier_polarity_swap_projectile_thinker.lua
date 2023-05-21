@@ -67,6 +67,7 @@ end
 function modifier_polarity_swap_projectile_thinker:OnDestroy()
 	if IsServer() then
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 		UTIL_Remove( self:GetParent() )
 	end
 end

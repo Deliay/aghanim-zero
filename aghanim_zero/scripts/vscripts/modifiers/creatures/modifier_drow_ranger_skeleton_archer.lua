@@ -21,5 +21,6 @@ function modifier_drow_ranger_skeleton_archer:OnDestroy()
 		end
 
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 end

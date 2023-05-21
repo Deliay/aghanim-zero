@@ -350,7 +350,8 @@ function CMapEncounter_BossAmoeba:OnBossKilled( hBoss, hAttacker )
 		local vecBabies = self:GetRoom():FindAllEntitiesInRoomByName( "npc_dota_creature_amoeba_baby", false )
 		if #vecBabies > 0 then
 			for _,hBaby in pairs ( vecBabies ) do
-				hBaby:ForceKill( false )
+				hBaby:ForceKill( true )
+				FireGameEvent( 'entity_killed', { entindex_killed = hBaby:GetEntityIndex() } )
 			end
 		end
 

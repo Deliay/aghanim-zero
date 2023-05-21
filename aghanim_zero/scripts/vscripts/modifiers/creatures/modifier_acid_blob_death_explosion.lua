@@ -119,6 +119,7 @@ function modifier_acid_blob_death_explosion:OnIntervalThink()
 
 	self:GetParent():AddEffects( EF_NODRAW )
 	self:GetParent():ForceKill( false )
+	FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 
 end
 

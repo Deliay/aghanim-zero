@@ -132,6 +132,7 @@ function modifier_bonus_pig_damage_counter:OnTakeDamage( params )
 				if self.total_gold <= 0 then
 					--self:TeleportOut()
 					self:GetParent():ForceKill( false )
+					FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 					self:Destroy()
 				end
 			end

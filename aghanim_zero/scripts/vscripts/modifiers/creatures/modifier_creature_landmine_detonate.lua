@@ -60,5 +60,6 @@ function modifier_creature_landmine_detonate:OnDestroy()
 
 		EmitSoundOn( "Hero_Techies.LandMine.Detonate", self:GetParent() )
 		self:GetParent():ForceKill( false )
+		FireGameEvent( 'entity_killed', { entindex_killed = self:GetParent():GetEntityIndex() } )
 	end
 end
