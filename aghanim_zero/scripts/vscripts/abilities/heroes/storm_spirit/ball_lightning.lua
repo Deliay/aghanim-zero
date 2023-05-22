@@ -282,7 +282,6 @@ function modifier_aghsfort_storm_spirit_ball_lightning_travel:OnRemoved()
         self:playEffects(false)
         if self.caster == self.parent and IsValid(self.thinker) then
             self.thinker:ForceKill(false)
-            FireGameEvent( 'entity_killed', { entindex_killed = self.thinker:GetEntityIndex() } )
         end
         FindClearSpaceForUnit(self.parent, self.target_pos, false)
 
