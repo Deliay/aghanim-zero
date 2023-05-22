@@ -87,7 +87,7 @@ function modifier_item_dyson_sphere:GetAbsorbSpell(event)
 			ParticleManager:ReleaseParticleIndex(pfx)
 			self.parent:EmitSound("DOTA_Item.LinkensSphere.Activate")
 			self.ability:doAction()
-			self.ability:UseResources(false, false, true)
+			self.ability:UseResources(false, false, false, true)
 			return 1
 		end
 	end
