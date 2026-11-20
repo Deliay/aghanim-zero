@@ -10,7 +10,7 @@ function item_pocket_campfire:OnSpellStart()
 		if hPocketCampfire ~= nil then
 			EmitSoundOn( "PocketCampfire.Create", hCampfire )
 		end
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

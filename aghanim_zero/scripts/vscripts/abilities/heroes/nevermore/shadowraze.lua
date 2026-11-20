@@ -9,20 +9,33 @@ function aghsfort_nevermore_shadowraze:Init()
         self.next_raze = kv["LinkedAbility"]
         self.raze_id = ("raze_" .. string.sub(self:GetAbilityName(), -1))
         self.caster = self:GetCaster()
-        -- print(self:GetAbilityName() .. "->" .. self.next_raze)
-        -- print("raze id:", self.raze_id)
+        print(self:GetAbilityName() .. "->" .. tostring(self.next_raze))
+        print("raze id:", self.raze_id)
+        print("Init: ability=", self:GetAbilityName(), " level=", self:GetLevel(), " next_raze=", tostring(self.next_raze))
+        print("Init: shadowraze_damage=", tostring(self:GetSpecialValueFor("shadowraze_damage")))
+        print("Init: shadowraze_radius=", tostring(self:GetSpecialValueFor("shadowraze_radius")))
+        print("Init: shadowraze_range=", tostring(self:GetSpecialValueFor("shadowraze_range")))
+        print("Init: stack_bonus_damage=", tostring(self:GetSpecialValueFor("stack_bonus_damage")))
+        print("Init: max_stacks=", tostring(self:GetSpecialValueFor("max_stacks")))
+        print("Init: duration=", tostring(self:GetSpecialValueFor("duration")))
     end
 end
 -- 这个施法距离不加
 function aghsfort_nevermore_shadowraze:GetCastRange()
-    return self:GetSpecialValueFor("shadowraze_range") - self:GetCaster():GetCastRangeBonus()
+    local nRange = self:GetSpecialValueFor("shadowraze_range")
+    local hCaster = self:GetCaster()
+    local nBonus = hCaster:GetCastRangeBonus()
+    local nResult = nRange - nBonus
+    print("Shadowraze GetCastRange: ability=", self:GetAbilityName(), " shadowraze_range=", tostring(nRange), " cast_range_bonus=", tostring(nBonus), " result=", tostring(nResult))
+    return nResult
 end
 
 function aghsfort_nevermore_shadowraze:OnSpellStart()
+    print("Shadowraze OnSpellStart: ability=", self:GetAbilityName(), " level=", self:GetLevel(), " caster=", tostring(self.caster))
     local next_raze = self:doAction({
         caster = self.caster
     })
-    -- print("raze id:", self.raze_id)
+    print("raze id:", self.raze_id)
     
     -- shadow volley
     local shard = self.caster:FindAbilityByName("aghsfort_nevermore_legend_shadow_volley")
@@ -39,10 +52,12 @@ function aghsfort_nevermore_shadowraze:OnSpellStart()
 end
 
 function aghsfort_nevermore_shadowraze:doAction(kv)
+    print("Shadowraze doAction: ability=", self:GetAbilityName(), " server=", tostring(IsServer()), " level=", self:GetLevel())
     if IsServer() and self:GetLevel() > 0 then
         local caster = kv.caster
         local distance = self:GetSpecialValueFor("shadowraze_range")
         local point = caster:GetAbsOrigin() + caster:GetForwardVector() * distance
+        print("Shadowraze doAction: ability=", self:GetAbilityName(), " level=", self:GetLevel(), " distance=", tostring(distance), " point=", tostring(point))
         self:doShadowraze({
             point = point
         })
@@ -74,6 +89,11 @@ function aghsfort_nevermore_shadowraze:doShadowraze(kv)
         -- Find enemy units in radius
         local enemies = FindUnitsInRadius(caster:GetTeamNumber(), point, nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY,
             DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false)
+        local nEnemyCount = 0
+        for _, hEnemy in pairs( enemies ) do
+            nEnemyCount = nEnemyCount + 1
+        end
+        print("Shadowraze doShadowraze: point=", tostring(point), " radius=", tostring(radius), " enemies=", nEnemyCount)
 
         self:applyRazeEffect({
             targets = enemies
@@ -111,7 +131,9 @@ function aghsfort_nevermore_shadowraze:applyRazeEffect(kv)
 
         damage_table.damage = damage_table.damage + extra_damage
 
-        ApplyDamage(damage_table)
+        print("Shadowraze applyRazeEffect: enemy=", tostring(enemy), " base_damage=", tostring(base_damage), " stack=", tostring(stack), " stack_damage=", tostring(stack_damage), " extra_damage=", tostring(extra_damage), " final_damage=", tostring(damage_table.damage))
+        local nApplyResult = ApplyDamage(damage_table)
+        print("Shadowraze applyRazeEffect: ApplyDamage result=", tostring(nApplyResult))
         enemy:AddNewModifier(caster, self, "modifier_aghsfort_nevermore_shadowraze_debuff", {
             duration = stack_duration
         })
@@ -149,10 +171,12 @@ end
 
 function aghsfort_nevermore_shadowraze:shadowOverlay(kv)
     if IsServer() and kv.stacks > 0 then
+        print("Shadowraze shadowOverlay: stacks=", tostring(kv.stacks), " stack_duration=", tostring(kv.stack_duration))
         if not IsValid(self.shard_shadow_overlay) then
             self.shard_shadow_overlay = self.caster:FindAbilityByName("aghsfort_nevermore_legend_shadow_overlay")
         end
         if IsValid(self.shard_shadow_overlay) then
+            print("Shadowraze shadowOverlay: shard valid=", tostring(IsValid(self.shard_shadow_overlay)), " duration_multiplier=", tostring(self.shard_shadow_overlay:GetSpecialValueFor("duration_multiplier")), " damage_multiplier=", tostring(self.shard_shadow_overlay:GetSpecialValueFor("damage_multiplier")))
             local duration = kv.stack_duration * self.shard_shadow_overlay:GetSpecialValueFor("duration_multiplier")
             local modifier = self.caster:AddNewModifier(self.caster, self.shard_shadow_overlay,"modifier_aghsfort_nevermore_shadowraze_overlay", {
                 duration = duration,

@@ -40,7 +40,7 @@ function item_small_scepter_fragment:OnSpellStart()
 			
 			end		
 		end
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

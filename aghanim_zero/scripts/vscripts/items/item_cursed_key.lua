@@ -19,7 +19,7 @@ function item_cursed_key:OnSpellStart()
 				gameEvent[ "teamnumber" ] = -1
 	 			gameEvent[ "message" ] = "#DOTA_HUD_Curse_Lifted"
 	 			FireGameEvent( "dota_combat_event_message", gameEvent )
-	 			self:SpendCharge()
+	 			self:SpendCharge(-1)
 	 			break
 			end	
 		end

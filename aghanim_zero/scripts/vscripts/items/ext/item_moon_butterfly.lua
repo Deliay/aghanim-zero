@@ -11,7 +11,7 @@ end
 function item_moon_butterfly:OnSpellStart()
 	local caster = self:GetCaster()
 	local duration = self:GetSpecialValueFor("night_duration")
-	GameRules:BeginTemporaryNight(duration)
+	GameRules:BeginTemporaryNight(duration, 0)
 	caster:AddNewModifier(caster, self, "modifier_item_moon_butterfly_fly", {duration = duration})
 end
 ---------------------------------------------------------------------

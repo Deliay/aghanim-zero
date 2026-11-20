@@ -17,7 +17,7 @@ function item_life_rune:OnSpellStart()
 				local drop = CreateItemOnPositionSync( self:GetCaster():GetAbsOrigin(), newItem )
 				local dropTarget = self:GetCaster():GetAbsOrigin() + RandomVector( RandomFloat( 50, 150 ) )
 				newItem:LaunchLoot( false, 150, 0.75, dropTarget, nil )
-				self:SpendCharge()
+				self:SpendCharge(-1)
 				return
 			end
 
@@ -41,7 +41,7 @@ function item_life_rune:OnSpellStart()
 				FireGameEvent( "dota_combat_event_message", gameEvent )
 			end
 		end
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

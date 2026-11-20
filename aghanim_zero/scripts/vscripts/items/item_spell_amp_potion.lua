@@ -21,7 +21,7 @@ function item_spell_amp_potion:OnSpellStart()
 
 		EmitSoundOn( "SpellAmpPotion.Activate", self:GetCaster() )
 
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

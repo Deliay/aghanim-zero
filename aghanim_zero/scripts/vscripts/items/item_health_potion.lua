@@ -35,6 +35,6 @@ function item_health_potion:OnSpellStart()
 			end
 		end
 
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end

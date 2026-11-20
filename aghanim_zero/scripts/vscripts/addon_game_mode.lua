@@ -535,7 +535,10 @@ function CAghanim:InitPlayerInfo()
 
 	self.playerInfo = {}
 
-	local hEventGameDetails = GetLobbyEventGameDetails()
+	local hEventGameDetails = nil
+	if GetLobbyEventGameDetails ~= nil then
+		hEventGameDetails = GetLobbyEventGameDetails()
+	end
 
 	print("[Aghanim] EventGameDetails table:")
 	if hEventGameDetails == nil then
@@ -575,10 +578,11 @@ end
 
 function CAghanim:SetHeroAvailability()
 	local bAllHeroesAvailableInLocalGames = not Convars:GetBool("dota_aghslab_test_hero_unlocks_in_local_game")
+	local bHasEventGameDetails = ( GetLobbyEventGameDetails ~= nil and GetLobbyEventGameDetails() ~= nil )
 
 	for nPlayerID = 0, AGHANIM_PLAYERS - 1 do
 		local unlocks = PlayerResource:GetLabyrinthEventGameHeroUnlocks( nPlayerID )
-		if unlocks == nil or ( GetLobbyEventGameDetails() == nil and bAllHeroesAvailableInLocalGames ) then
+		if unlocks == nil or ( bHasEventGameDetails == false and bAllHeroesAvailableInLocalGames ) then
 			-- couldn't get the data from event.  Give all heroes to each player
 			-- ult names is a proxy for all heroes
 			for k,v in pairs( _G.ULTIMATE_ABILITY_NAMES ) do

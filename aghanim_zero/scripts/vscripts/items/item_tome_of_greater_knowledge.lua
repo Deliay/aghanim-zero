@@ -26,7 +26,7 @@ function item_tome_of_greater_knowledge:OnSpellStart()
 				end
 			end
 		end
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

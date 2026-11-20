@@ -21,7 +21,7 @@ function item_evasion_potion:OnSpellStart()
 
 		EmitSoundOn( "EvasionPotion.Activate", self:GetCaster() )
 
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

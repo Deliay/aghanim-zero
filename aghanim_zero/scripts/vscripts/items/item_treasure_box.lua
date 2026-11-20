@@ -16,7 +16,7 @@ function item_treasure_box:OnSpellStart()
 		end
 
 		if CurrentZone == nil then
-			self:SpendCharge()
+			self:SpendCharge(-1)
 			return
 		end
 
@@ -34,7 +34,7 @@ function item_treasure_box:OnSpellStart()
 			hTreasure.nTrapLevel = ChestTable.nTrapLevel
 			EmitSoundOn( "Dungeon.TreasureItemDrop", hTreasure )
 		end
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

@@ -1,0 +1,32 @@
+<!-- xml reconstructed by Source 2 Viewer 21.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/hud_aghanims_ability_upgrade.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/hud_aghanims_ability_upgrade.js" />
+	</scripts>
+	<snippets>
+		<snippet name="SkillInstanceSnippet">
+			<Panel class="SkillInstance" hittest="false">
+				<Panel class="AbilityContainer">
+					<DOTAAbilityImage id="Ability" showtooltip="true" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel hittest="false" class="CustomHudRoot">
+		<Panel id="AghanimAbilityUpgradeHUD" hittest="false">
+			<Panel id="UpgradeAbilitiesPanel" class="Hidden">
+				<Panel class="ClickCatcher" onactivate="ToggleSkillTree()" oncontextmenu="ToggleSkillTree()" />
+				<Panel id="SkillTree" hittest="true" />
+			</Panel>
+			<Panel id="UpgradeAbilitiesPanelButtonOuter" class="Hidden" hittest="false">
+				<Panel id="UpgradeAbilitiesPanelButton">
+					<Panel class="UpgradeAbilitiesPanelButtonBackground" onactivate="ToggleSkillTree()" />
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

@@ -27,7 +27,7 @@ EVENT_NPC_AGHANIM_SHARD = 2
 EVENT_NPC_AGHANIM_SHARD_AND_BLESSINGS = 3
 
 function CEvent_NPC_Aghanim:GetEventOptionsResponses( hPlayerHero )
-	local tBlessings = PlayerResource:GetEventGameUpgrades( hPlayerHero:GetPlayerOwnerID() )
+	local tBlessings = GameRules.Aghanim:GetBlessingsForPlayer( hPlayerHero:GetPlayerOwnerID() )
 	
 	if hPlayerHero.bHasFirstShard then
 		self.vecEventDescriptionOverrides[ hPlayerHero:GetPlayerID() ] = "npc_dota_announcer_aghanim_event_body_description_return"

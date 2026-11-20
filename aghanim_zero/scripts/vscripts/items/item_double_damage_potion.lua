@@ -15,7 +15,7 @@ function item_double_damage_potion:OnSpellStart()
 
 		EmitSoundOn( "DoubleDamagePotion.Activate", self:GetCaster() )
 
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

@@ -1,0 +1,53 @@
+<!-- xml reconstructed by Source 2 Viewer 21.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/hudstyles.css" />
+		<include src="file://{resources}/styles/custom_game/hud_hero_selection.css" />
+		<include src="file://{resources}/styles/custom_game/aghanim_game_info.css" />
+		<include src="file://{resources}/styles/popups/popup_manager.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/hud_hero_selection.js" />
+	</scripts>
+	<Panel hittest="false" class="CustomHeroSelectionRoot">
+		<Panel id="DimBackground" class="Hidden" hittest="false" acceptsinput="true" />
+		<Button id="BlurBackground" hittest="false" onactivate="PopupBlurBackgroundClicked()" />
+		<Panel id="GameInfoPopup" hittest="false" oncancel="OnGameInfoDismissed()">
+			<Panel id="CloseButton" onactivate="OnGameInfoDismissed()" />
+			<Panel class="GameInfoContents">
+				<Panel id="ObjectiveContainer">
+					<Panel class="PopupAghs" />
+					<Panel id="PopupAghanimsLogo" />
+				</Panel>
+				<Panel id="AghanimDescription" class="TopBottomFlow">
+					<Panel id="Header">
+						<Label id="HowToPlayHeader" class="Header" text="#aghanim_game_info_header_how_to_play" />
+						<Label id="BriefDescription" text="#aghanim_game_info_brief_description" />
+					</Panel>
+					<Panel class="InfoContainer">
+						<Image class="BodyImage" scaling="stretch-to-fit-y-preserve-aspect" src="file://{resources}/images/events/aghanim/introduce_outposts_fall_2021_png.vtex" />
+						<Panel class="BodyCopy">
+							<Label class="SubHeader" html="true" text="#aghanim_game_info_outposts_header" />
+							<Label class="BodyText" html="true" text="#aghanim_game_info_outposts" />
+						</Panel>
+					</Panel>
+					<Panel class="InfoContainer">
+						<Image class="BodyImage" scaling="stretch-to-fit-y-preserve-aspect" src="file://{resources}/images/events/aghanim/introduce_elite_difficulty_fall_2021_png.vtex" />
+						<Panel class="BodyCopy">
+							<Label class="SubHeader" html="true" text="#aghanim_game_info_elite_header" />
+							<Label class="BodyText" html="true" text="#aghanim_game_info_elite" />
+						</Panel>
+					</Panel>
+					<Panel class="InfoContainer">
+						<Image class="BodyImage" scaling="stretch-to-fit-y-preserve-aspect" src="file://{resources}/images/events/aghanim/introduce_extra_lives_fall_2021_png.vtex" />
+						<Panel class="BodyCopy">
+							<Label class="SubHeader" html="true" text="#aghanim_game_info_extra_lives_header" />
+							<Label class="BodyText" html="true" text="#aghanim_game_info_extra_lives" />
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

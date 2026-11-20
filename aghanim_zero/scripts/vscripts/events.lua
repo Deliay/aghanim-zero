@@ -232,6 +232,26 @@ function CAghanim:LoadBlessingsHub(hHero, nLevel)
 	return _G.BLESSING_LEVEL_HUB[nLevel + 1]
 end
 
+--------------------------------------------------------------------------------
+-- The upgrades/blessings a player brings into this run, as a table of
+-- [blessing name] = value (see BLESSING_DEFINITIONS).
+-- PlayerResource:GetEventGameUpgrades used to come from the engine's event game
+-- support and is gone now, so fall back to the level based package that hub
+-- games already use.
+function CAghanim:GetBlessingsForPlayer( nPlayerID )
+	if PlayerResource.GetEventGameUpgrades ~= nil then
+		return PlayerResource:GetEventGameUpgrades( nPlayerID )
+	end
+
+	-- No engine data available: fall back to the level based package that hub
+	-- games already used.
+	if GetMapName() == "hub" then
+		return self:LoadBlessingsHub( nil, self:GetAscensionLevel() )
+	end
+
+	return nil
+end
+
 -- Evaluate the state of the game
 function CAghanim:InitBlessings( hHero )
 	if hHero == nil then 
@@ -249,17 +269,10 @@ function CAghanim:InitBlessings( hHero )
 	print ( "Init blessings for " .. hHero:GetUnitName() )
 	
 	local nPlayerID = hHero:GetPlayerOwnerID()
-	local tBlessings = PlayerResource:GetEventGameUpgrades( nPlayerID )
+	local tBlessings = self:GetBlessingsForPlayer( nPlayerID )
 	if tBlessings == nil then
 		print ( "Well, " .. hHero:GetUnitName().." has no blessings." )
-		if GetMapName() == "hub" then
-			local level = self:GetAscensionLevel()
-			print ("However, this games starts in arcade mode at level:"..level)
-			
-			tBlessings = self:LoadBlessingsHub(hHero, level)
-		else
-			return
-		end
+		return
 	end
 
 

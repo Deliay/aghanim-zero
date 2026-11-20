@@ -46,10 +46,10 @@ function CEvent_NPC_NeutralItemShop:GetItemForOptionForPlayer( nPlayerID, nOptio
 		local szItemName = nil 
 		local hPlayerHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
 		if hPlayerHero then
-			local hNeutralItem = hPlayerHero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT ) 
-			if hNeutralItem then 
-				szItemName = hNeutralItem:GetAbilityName()
-			end
+			--local hNeutralItem = hPlayerHero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT ) 
+			--if hNeutralItem then 
+			--	szItemName = hNeutralItem:GetAbilityName()
+			--end
 		end
 
 		return szItemName

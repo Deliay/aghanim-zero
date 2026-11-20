@@ -446,7 +446,7 @@ function modifier_aghsfort_ogre_magi_multicast_proc:handleConsumables(bStart, bS
 			if bSuccess then
 			else
 				print("remove charge!")
-				self.ability_cast:SpendCharge()
+				self.ability_cast:SpendCharge(-1)
 			end
 		end
 	end

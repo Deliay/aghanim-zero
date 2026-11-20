@@ -1,0 +1,13 @@
+<!-- xml reconstructed by Source 2 Viewer 21.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+	</styles>
+	<Panel class="AghanimLoadingRoot">
+		<Panel id="seq" />
+		<Panel id="SplashArtcontainer">
+			<Panel id="SplashArt" />
+		</Panel>
+	</Panel>
+</root>

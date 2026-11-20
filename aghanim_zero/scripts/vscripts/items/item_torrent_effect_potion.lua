@@ -30,7 +30,7 @@ function item_torrent_effect_potion:OnSpellStart()
 
 		EmitSoundOn( "TorrentEffectPotion.Activate", self:GetCaster() )
 
-		self:SpendCharge()
+		self:SpendCharge(-1)
 	end
 end
 

@@ -25,7 +25,7 @@ function item_purification_potion:OnSpellStart()
 
 			self:HealAlly( hTarget )
 
-			self:SpendCharge()
+			self:SpendCharge(-1)
 		end
 		
 	end

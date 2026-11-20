@@ -822,13 +822,13 @@ function CMapEncounter:RunEncounterAbilityFunctions( szFunctionType )
 				end
 			end
 
-			local hNeutralItem = hPlayerHero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT )
-			if hNeutralItem then
-				local hNeutralFunction = FunctionTable[ hNeutralItem:GetAbilityName() ] 
-				if hNeutralFunction then 
-					hNeutralFunction( hNeutralItem, self )
-				end
-			end
+			--local hNeutralItem = hPlayerHero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT )
+			--if hNeutralItem then
+			--	local hNeutralFunction = FunctionTable[ hNeutralItem:GetAbilityName() ] 
+			--	if hNeutralFunction then 
+			--		hNeutralFunction( hNeutralItem, self )
+			--	end
+			--end
 
 			local vecModifiers = hPlayerHero:FindAllModifiers()
 			for _,hBuff in pairs ( vecModifiers ) do 
@@ -2883,11 +2883,11 @@ function CMapEncounter:ResetHeroState()
 				end
 			end
 
-			local hNeutralItem = hPlayerHero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT )
-			if hNeutralItem and hNeutralItem:IsRefreshable() then
-				hNeutralItem:SetFrozenCooldown( false )
-				hNeutralItem:EndCooldown()
-			end
+			--local hNeutralItem = hPlayerHero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT )
+			--if hNeutralItem and hNeutralItem:IsRefreshable() then
+			--	hNeutralItem:SetFrozenCooldown( false )
+			--	hNeutralItem:EndCooldown()
+			--end
 
 			local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/refresher.vpcf", PATTACH_CUSTOMORIGIN, hPlayerHero )
 			ParticleManager:SetParticleControlEnt( nFXIndex, 0, hPlayerHero, PATTACH_POINT_FOLLOW, "attach_hitloc", hPlayerHero:GetAbsOrigin(), true )
