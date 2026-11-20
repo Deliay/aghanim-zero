@@ -1496,12 +1496,12 @@
 	//=================================================================================================================
 	// Recipe: Scepter
 	//=================================================================================================================
-	"item_recipe_ultimate_scepter"
-	{
-		"ItemRequirements"				"0"
-		"ItemPurchasable"				"0"
-		"ShouldBeSuggested"				"0"
-	}
+	//"item_recipe_ultimate_scepter"
+	//{
+	//	"ItemRequirements"				"0"
+	//	"ItemPurchasable"				"0"
+	//	"ShouldBeSuggested"				"0"
+	//}
 
 	//=================================================================================================================
 	// Holy Locket
@@ -3514,7 +3514,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"5098"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"					"95099"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"

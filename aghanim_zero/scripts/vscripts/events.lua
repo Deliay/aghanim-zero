@@ -707,19 +707,6 @@ function CAghanim:OnPlayerGainedLevel( event )
 end
 
 ---------------------------------------------------------
--- dota_item-spawned
--- * player_id
--- * item_ent_index
----------------------------------------------------------
-
-function CAghanim:OnItemSpawned( event )
-	local item = EntIndexToHScript( event.item_ent_index )
-	if item:IsNeutralDrop() then
-		item:SetShareability(ITEM_FULLY_SHAREABLE)
-	end
-end
-
----------------------------------------------------------
 -- dota_item_picked_up
 -- * PlayerID
 -- * HeroEntityIndex
@@ -732,9 +719,6 @@ function CAghanim:OnItemPickedUp( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	if event.PlayerID ~= nil and item ~= nil and item:GetAbilityName() == "item_bag_of_gold" then
 		self:RegisterGoldBagCollectedStat( event.PlayerID )
-	end
-	if item:IsNeutralDrop() then
-		item:SetShareability(ITEM_FULLY_SHAREABLE)
 	end
 end
 

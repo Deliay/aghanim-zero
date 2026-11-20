@@ -708,24 +708,6 @@ function CMapEncounter:Start()
 		PlayerResource:SetCustomIntParam( nPlayerID, self.hRoom:GetDepth() - 1 )
 	end
 
-	for i=0,GameRules:NumDroppedItems()-1 do
-		local hDroppedItem = GameRules:GetDroppedItem( i ) 
-		if hDroppedItem then
-			local hContainedItem = hDroppedItem:GetContainedItem()
-			if hContainedItem and hContainedItem:IsNeutralDrop() then
-				PlayerResource:AddNeutralItemToStash( 0, DOTA_TEAM_GOODGUYS, hContainedItem )
-
-				local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/neutralitem_teleport.vpcf", PATTACH_CUSTOMORIGIN, nil ) 
-				ParticleManager:SetParticleControl( nFXIndex, 0, hDroppedItem:GetAbsOrigin() )
-				ParticleManager:ReleaseParticleIndex( nFXIndex )
-
-				EmitSoundOn( "NeutralItem.TeleportToStash", hDroppedItem )
-
-				UTIL_Remove( hDroppedItem )
-			end
-		end
-	end
-
 	self:RunEncounterAbilityFunctions( "ENCOUNTER_START" )
 
 	local nEntityKilledGameEvent = ListenToGameEvent( "entity_killed", Dynamic_Wrap( getclass( self ), "OnEntityKilled" ), self )
